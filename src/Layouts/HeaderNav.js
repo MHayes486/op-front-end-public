@@ -11,7 +11,7 @@ const HeaderNav = () => {
           <li>
             <NavLink
               to="/home"
-              className={(navData) => (navData.isActive ? classes.active : "")}
+              className={(navData) => (navData.isActive ? styles.active : "")}
             >
               Home
             </NavLink>
@@ -19,7 +19,7 @@ const HeaderNav = () => {
           <li>
             <NavLink
               to="/aboutus"
-              className={(navData) => (navData.isActive ? classes.active : "")}
+              className={(navData) => (navData.isActive ? styles.active : "")}
             >
               About
             </NavLink>
@@ -27,7 +27,7 @@ const HeaderNav = () => {
           <li>
             <NavLink
               to="/ourcider"
-              className={(navData) => (navData.isActive ? classes.active : "")}
+              className={(navData) => (navData.isActive ? styles.active : "")}
             >
               Ciders
             </NavLink>
@@ -35,7 +35,7 @@ const HeaderNav = () => {
           <li>
             <NavLink
               to="/findus"
-              className={(navData) => (navData.isActive ? classes.active : "")}
+              className={(navData) => (navData.isActive ? styles.active : "")}
             >
               FindUs
             </NavLink>
@@ -43,7 +43,7 @@ const HeaderNav = () => {
           <li>
             <NavLink
               to="/merch"
-              className={(navData) => (navData.isActive ? classes.active : "")}
+              className={(navData) => (navData.isActive ? styles.active : "")}
             >
               Merch
             </NavLink>

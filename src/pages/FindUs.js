@@ -1,9 +1,10 @@
 import { Fragement } from "react";
-import HeaderNav from "./Layouts/HeaderNav";
-import FooterDets from "./Layouts/FooterDets";
+import HeaderNav from ".././Layouts/HeaderNav";
+import FooterDets from ".././Layouts/FooterDets";
 
 const FindUs = () => {
   return (
+  
     <Fragement>
       <HeaderNav />
       <h1>Find Us</h1>

@@ -1,9 +1,10 @@
 import { Fragement } from "react";
-import HeaderNav from "./Layouts/HeaderNav";
-import FooterDets from "./Layouts/FooterDets";
+import HeaderNav from ".././Layouts/HeaderNav";
+import FooterDets from ".././Layouts/FooterDets";
 
 const OurCider = () => {
   return (
+
     <Fragement>
       <HeaderNav />
       <h1>Our Cider</h1>

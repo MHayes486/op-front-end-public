@@ -1,8 +1,8 @@
 import { Fragement } from "react";
-import HeaderNav from "./Layouts/HeaderNav";
-import FooterDets from "./Layouts/FooterDets";
+import HeaderNav from ".././Layouts/HeaderNav";
+import FooterDets from ".././Layouts/FooterDets";
 
-const Merch= () => {
+const Merch = () => {
   return (
     <Fragement>
       <HeaderNav />
