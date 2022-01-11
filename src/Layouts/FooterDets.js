@@ -1,8 +1,8 @@
-import styles from Footer.Modules.css
+import styles from FooterDets.Modules.css
 
 const currentYear = newDate().getFullYear();
 
-const Footer = () => {
+const FooterDets = () => {
   return (
     <footer>
       <p className={styles.disclaimer}>
@@ -26,4 +26,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterDets;

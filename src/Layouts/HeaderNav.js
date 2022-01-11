@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-import styles from "./Header.module.css";
+import styles from "./HeaderNav.module.css";
 
-const MainNavigation = () => {
+const HeaderNav = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>OP</div>
@@ -54,4 +54,4 @@ const MainNavigation = () => {
   );
 };
 
-export default MainNavigation;
+export default HeaderNav;
