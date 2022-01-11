@@ -4,7 +4,9 @@ const currentYear = newDate().getFullYear();
 
 const FooterDets = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
+      <h5>SIMPLE BRAND || SIMPLE PRODUCT</h5>
+      <p>ORCHARD PIG | ALL RIGHTS RESERVED</p>
       <p className={styles.disclaimer}>
         This website has been created as part of an assignment in an approved
         course of study for Curtin University and contains copyright material
