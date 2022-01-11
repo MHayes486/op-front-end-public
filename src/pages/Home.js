@@ -1,16 +1,16 @@
-import {Fragement} from 'react';
-import Header from './Layouts/header';
-import Footer from './Layouts/footer';
+import { Fragement } from "react";
+import HeaderNav from "./Layouts/HeaderNav";
+import FooterDets from "./Layouts/FooterDets";
 
-const Home = ()=>{
-    return (
-        <Fragement>
-        <Header />
-        <h1>Home sweet home</h1>
-        <p>Home page</p>
-        <Footer />
-        </Fragement>
-    )
+const Home = () => {
+  return (
+    <Fragement>
+      <HeaderNav />
+      <h1>Home sweet home</h1>
+      <p>Home page</p>
+      <FooterDets />
+    </Fragement>
+  );
 };
 
-default export Home;
+export default Home;
