@@ -2,6 +2,9 @@ import { Fragment, useState, useEffect, useCallback } from "react";
 
 import MerchList from '../components/merchandise/MerchList';
 
+import { SlSpinner } from '@shoelace-style/shoelace/dist/react';
+
+
 const Merchandise = () => {
 
   const [merch, setMerch] = useState([]);
@@ -18,7 +21,7 @@ const Merchandise = () => {
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
-      
+
       const data = await response.json();
 
       const transformedMerch = data.map(merchData => {
@@ -47,10 +50,10 @@ const Merchandise = () => {
     content = <MerchList merch={merch} />;
   }
   if (error) {
-    content = <p>{error}</p>
+    content = <p>{error}</p>;
   }
   if (isLoading) {
-    content = <p>Loading...</p>
+    content = <SlSpinner style={{ fontSize: '3rem' }} />;
   }
 
   return (
