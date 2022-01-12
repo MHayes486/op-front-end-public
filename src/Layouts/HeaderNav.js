@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-
+import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
 
 const HeaderNav = () => {
   return (
     <header className={styles.header}>
-      <img src="./images/Orchard_Pig_Logo.png" className={styles.pig_logo} alt="pics from backend" /> 
+      <img src="./images/Orchard_Pig_Logo.png" className={styles.pig_logo} alt="pics from backend" />
 
       <nav className={styles.nav}>
         <ul>
@@ -56,6 +56,9 @@ const HeaderNav = () => {
             >
               Merchandise
             </NavLink>
+          </li>
+          <li>
+            <HeaderCartButton />
           </li>
         </ul>
       </nav>
