@@ -16,8 +16,8 @@ const Home = () => {
         <button>LEARN MORE</button>
         <img src="./images/ciders/Homepage_Splash_Image_Cider.png" className={styles.bottle_size} alt="pics from backend" /> 
       </section>
-      <hr />
-      <section className={styles.standard}>
+      
+      <section className={styles.cream}>
         <h2>Rooted in Sommerset</h2>
         <p>OUR CORE VALUES</p>
         <div className={styles.dics}>
@@ -27,25 +27,26 @@ const Home = () => {
         </div>
         <button>ABOUT US</button>
       </section>
-      <hr />
+      
       <section className="farmRip">
-        <img alt="farmGate"></img>
-        <h1>MORE APPLES,</h1>
-        <h1>LESS BUBBLES</h1>
+      <img src="./images/backgrounds/Paper Rip Texture Downwards.png" className={styles.tear_top} alt="pics from backend" /> 
+      <img src="./images/backgrounds/Homepage Splash Image.jpg" className={styles.torn_banner} alt="pics from backend" /> 
+      <img src="./images/backgrounds/Paper Rip Texture Upwards.png" className={styles.tear_bottom} alt="pics from backend" /> 
+
       </section>
-      <hr />
-      <section className={styles.carosel}>
+      
+      <section className={styles.cream}>
         <h2>Our Pig is top dog!</h2>
         <p>Check Out Our Cider Range</p>
         <CiderCarosel />
       </section>
-      <hr />
+      
       <section className={styles.lightblue}>
         <h1>GO PIG OR GO HOME</h1>
         <p>Enjoy OUR PIG_TASTIC MERCH</p>
         <MerchCarosel />
       </section>
-      <hr />
+      
       <section>
         <SignUp />
       </section>
