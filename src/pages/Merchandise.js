@@ -6,27 +6,26 @@ const Merchandise = () => {
 
   const [merch, setMovies] = useState([]);
 
-  function fetchMerchHandler() {
-    fetch('https://dig33-apricot-backend.herokuapp.com/merchandise/').then(response => {
-      return response.json();
-    })
-    .then((data) => {
-      const transformedMerch = data.map(merchData => {
-        return {
-          id: merchData._id,
-          itemType: merchData.itemType,
-          itemName: merchData.itemName,
-          itemCost: merchData.itemCost,
-          image: merchData.image
-        }
-      });
-      setMovies(transformedMerch);
+  async function fetchMerchHandler() {
+    const response = await fetch('https://dig33-apricot-backend.herokuapp.com/merchandise/');
+    const data = await response.json();
+
+    const transformedMerch = data.map(merchData => {
+      return {
+        id: merchData._id,
+        itemType: merchData.itemType,
+        itemName: merchData.itemName,
+        itemCost: merchData.itemCost,
+        image: merchData.image
+      }
     });
-  }
+    setMovies(transformedMerch);
+  };
+
 
 
   return (
-    <Fragment on>
+    <Fragment>
 
       <h1>Merch</h1>
       <p>Pick up some swag</p>
