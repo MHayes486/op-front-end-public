@@ -9,12 +9,16 @@
   }
   
   .pairs h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #f7e702;
   }
   
   .pairs h3 {
     color: #eccf77;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.7rem;
+  }
+
+  .image {
+    height: 200px;
   }

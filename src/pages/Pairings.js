@@ -69,11 +69,12 @@ const Pairings = () => {
 
   return (
     <Fragment>
-      <h1>Pairs</h1>
-      <p>What to eat while you have a drink</p>
+      <h2>Pairings</h2>
+      <h3>What to eat while you have a drink</h3>
       <section>
         {content}
       </section>
+      <h3>Do you have a recipe and pairing to send us?</h3>
       <section>
         <AddPairings onAddPairings={addPairsHandler} />
       </section>

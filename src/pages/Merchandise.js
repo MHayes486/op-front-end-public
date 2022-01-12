@@ -58,8 +58,8 @@ const Merchandise = () => {
 
   return (
     <Fragment>
-      <h1>Merch</h1>
-      <p>Pick up some swag</p>
+      <h2>Merchandise</h2>
+      <h3>Pick up some swag and show off your inner pig.</h3>
       <section>
         {content}
       </section>
