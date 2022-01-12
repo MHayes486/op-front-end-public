@@ -34,6 +34,14 @@ const HeaderNav = () => {
           </li>
           <li>
             <NavLink
+              to="/pairings"
+              className={(navData) => (navData.isActive ? styles.active : "")}
+            >
+              Pairings
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/findus"
               className={(navData) => (navData.isActive ? styles.active : "")}
             >
