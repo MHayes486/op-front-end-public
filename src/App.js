@@ -6,7 +6,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import FindUs from "./pages/FindUs";
 import AboutUs from "./pages/AboutUs";
-import Merch from "./pages/Merch";
+import Merchandise from "./pages/Merchandise";
 import OurCider from "./pages/OurCider";
 import CiderDetails from "./pages/CiderDetails";
 import Pairings from "./pages/Pairings";
@@ -20,7 +20,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/findus" element={<FindUs />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/merch" element={<Merch />} />
+        <Route path="/merchandise" element={<Merchandise />} />
         <Route path="/ourcider" element={<OurCider />} />
         <Route path="/ourcider/:ciderId" element={<CiderDetails />}></Route>
         <Route path="/pairings" element={<Pairings />} />

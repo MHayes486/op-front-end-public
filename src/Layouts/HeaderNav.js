@@ -42,10 +42,10 @@ const HeaderNav = () => {
           </li>
           <li>
             <NavLink
-              to="/merch"
+              to="/merchandise"
               className={(navData) => (navData.isActive ? styles.active : "")}
             >
-              Merch
+              Merchandise
             </NavLink>
           </li>
         </ul>
