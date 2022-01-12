@@ -4,26 +4,50 @@ import MerchList from '../components/merchandise/MerchList';
 
 const Merchandise = () => {
 
-  const [merch, setMovies] = useState([]);
+  const [merch, setMerch] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   async function fetchMerchHandler() {
     setIsLoading(true);
-    const response = await fetch('https://dig33-apricot-backend.herokuapp.com/merchandise/');
-    const data = await response.json();
+    setError(null);
 
-    const transformedMerch = data.map(merchData => {
-      return {
-        id: merchData._id,
-        itemType: merchData.itemType,
-        itemName: merchData.itemName,
-        itemCost: merchData.itemCost,
-        image: merchData.image
+    try {
+      const response = await fetch('https://dig33-apricot-backend.herokuapp.com/merchandise/');
+
+      if (!response.ok) {
+        throw new Error('Something went wrong!');
       }
-    });
-    setMovies(transformedMerch);
+      
+      const data = await response.json();
+
+      const transformedMerch = data.map(merchData => {
+        return {
+          id: merchData._id,
+          itemType: merchData.itemType,
+          itemName: merchData.itemName,
+          itemCost: merchData.itemCost,
+          image: merchData.image
+        }
+      });
+      setMerch(transformedMerch);
+    } catch (error) {
+      setError(error.message);
+    }
     setIsLoading(false);
-  };
+  }
+
+  let content = <p></p>;
+
+  if (merch.length > 0) {
+    content = <MerchList merch={merch} />;
+  }
+  if (error) {
+    content = <p>{error}</p>
+  }
+  if (isLoading) {
+    content = <p>Loading...</p>
+  }
 
   return (
     <Fragment>
@@ -31,8 +55,7 @@ const Merchandise = () => {
       <p>Pick up some swag</p>
       <button onClick={fetchMerchHandler}>See our Merchandise</button>
       <section>
-        {!isLoading && <MerchList merch={merch} />}
-        {isLoading && <p>Loading...</p>}
+        {content}
       </section>
     </Fragment>
   );
