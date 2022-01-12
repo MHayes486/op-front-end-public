@@ -1,16 +1,17 @@
 import { Fragment } from "react";
+
+import styles from "./Layout.module.css";
 import HeaderNav from ".././Layouts/HeaderNav";
 import FooterDets from ".././Layouts/FooterDets";
 
-const Merch = () => {
+const Layout = (props) => {
   return (
     <Fragment>
       <HeaderNav />
-      <h1>Merch</h1>
-      <p>Pick up some swag</p>
+      <main className={styles.main}>{props.children}</main>
       <FooterDets />
     </Fragment>
   );
 };
 
-export default Merch;
+export default Layout;

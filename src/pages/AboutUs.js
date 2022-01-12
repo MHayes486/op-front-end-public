@@ -1,15 +1,13 @@
-import { Fragement } from "react";
-import HeaderNav from ".././Layouts/HeaderNav";
-import FooterDets from ".././Layouts/FooterDets";
+import { Fragment } from "react";
 
 const AboutUs = () => {
   return (
-    <Fragement>
-      <HeaderNav />
-      <h1>About Us</h1>
-      <p>Who are we?</p>
-      <FooterDets />
-    </Fragement>
+    <Fragment>
+      <div>
+        <h1>About Us</h1>
+        <p>Who are we?</p>
+      </div>
+    </Fragment>
   );
 };
 

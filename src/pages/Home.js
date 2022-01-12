@@ -1,7 +1,4 @@
-import { Fragement } from "react";
-import HeaderNav from ".././Layouts/HeaderNav";
-import FooterDets from ".././Layouts/FooterDets";
-
+import { Fragment } from "react";
 
 import CiderCarosel from ".././components/CiderCarosel";
 import MerchCarosel from ".././components/MerchCarosel";
@@ -11,18 +8,19 @@ import styles from "./styles/static.module.css";
 
 const Home = () => {
   return (
-        <Fragement>
-      <HeaderNav />
+    <Fragment>
       <h1>Home sweet home</h1>
       <p>Home page</p>
+      <hr />
       <section className={styles.topHome}>
-          <h1>Cider to snout about</h1>
-          <button>LEARN MORE</button>
-          <img alt="cider bottle"></img>
+        <h1>Cider to snout about</h1>
+        <button>LEARN MORE</button>
+        <img alt="cider bottle"></img>
       </section>
+      <hr />
       <section className={styles.standard}>
-          <h2>Rooted in Sommerset</h2>
-          <p>OUR CORE VALUES</p>
+        <h2>Rooted in Sommerset</h2>
+        <p>OUR CORE VALUES</p>
         <div className={styles.dics}>
           <div ClassName={styles.disc}>1</div>
           <div className={styles.disc}>2</div>
@@ -30,26 +28,27 @@ const Home = () => {
         </div>
         <button>ABOUT US</button>
       </section>
+      <hr />
       <section className="farmRip">
-          <img alt="farmGate"></img>
-          <h1>MORE APPLES,</h1>
-          <h1>LESS BUBBLES</h1>
+        <img alt="farmGate"></img>
+        <h1>MORE APPLES,</h1>
+        <h1>LESS BUBBLES</h1>
       </section>
+      <hr />
       <section className={styles.carosel}>
-          <h2>Our Pig is top dog!</h2>
-          <p>Check Out Our Cider Range</p>
-          <CiderCarosel />
+        <h2>Our Pig is top dog!</h2>
+        <p>Check Out Our Cider Range</p>
+        <CiderCarosel />
       </section>
+      <hr />
       <section className={styles.topHome}>
-          <h1>GO PIG OR GO HOME</h1>
-          <p>Enjoy OUR PIG_TASTIC MERCH</p>
-    <MerchCarosel />
+        <h1>GO PIG OR GO HOME</h1>
+        <p>Enjoy OUR PIG_TASTIC MERCH</p>
+        <MerchCarosel />
       </section>
-      <section>
-          <SignUp />
-      </section>
-      <FooterDets />
-    </Fragement>
+      <hr />
+      <section><SignUp /></section>
+    </Fragment>
   );
 };
 

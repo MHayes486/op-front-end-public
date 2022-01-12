@@ -1,14 +1,13 @@
-import { Fragement } from "react";
+import { Fragment } from "react";
 // import HeaderNav from ".././Layouts/HeaderNav";
 // import FooterDets from ".././Layouts/FooterDets";
 
 const NotFound = () => {
   return (
-    <Fragement>
-
+    <Fragment>
       <h1>Whoops</h1>
       <p>broken link</p>
-    </Fragement>
+    </Fragment>
   );
 };
 

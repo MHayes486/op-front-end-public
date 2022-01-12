@@ -26,17 +26,18 @@ body {
   src: url(https://www.dafont.com/dirty-headline.font);
 }
 
-h1, h4, h5{
- font-family: dirtyFont, cursive;
- color: #f0e6da;
+h1,
+h4,
+h5 {
+  font-family: dirtyFont, cursive;
+  color: #f0e6da;
 }
 
-h2, h3 {
- font-family: dirtyFont, cursive;
- color: #3f73a2;
+h2,
+h3 {
+  font-family: dirtyFont, cursive;
+  color: #3f73a2;
 }
-
-
 
 /* body {
   margin: 0;
