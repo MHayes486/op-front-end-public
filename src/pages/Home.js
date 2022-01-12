@@ -22,7 +22,7 @@ const Home = () => {
         <h2>Rooted in Sommerset</h2>
         <p>OUR CORE VALUES</p>
         <div className={styles.dics}>
-          <div ClassName={styles.disc}>1</div>
+          <div className={styles.disc}>1</div>
           <div className={styles.disc}>2</div>
           <div className={styles.disc}>3</div>
         </div>

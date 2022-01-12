@@ -8,7 +8,6 @@ const Merch = (props) => {
       <h2>{props.itemType}</h2>
       <h3>{props.itemCost}</h3>
       <p>{props.itemName}</p>
-      <p>{props.image}</p>
       <img src={( `${props.image}` )} alt="pic from backend" className="imageSize"/> 
     </li>
   );
