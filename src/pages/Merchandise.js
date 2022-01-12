@@ -5,8 +5,10 @@ import MerchList from '../components/merchandise/MerchList';
 const Merchandise = () => {
 
   const [merch, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function fetchMerchHandler() {
+    setIsLoading(true);
     const response = await fetch('https://dig33-apricot-backend.herokuapp.com/merchandise/');
     const data = await response.json();
 
@@ -20,20 +22,18 @@ const Merchandise = () => {
       }
     });
     setMovies(transformedMerch);
+    setIsLoading(false);
   };
-
-
 
   return (
     <Fragment>
-
       <h1>Merch</h1>
       <p>Pick up some swag</p>
       <button onClick={fetchMerchHandler}>See our Merchandise</button>
       <section>
-        <MerchList merch={merch} />
+        {!isLoading && <MerchList merch={merch} />}
+        {isLoading && <p>Loading...</p>}
       </section>
-
     </Fragment>
   );
 };
