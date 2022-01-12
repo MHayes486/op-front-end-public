@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect, useCallback } from "react";
 
 import MerchList from '../components/merchandise/MerchList';
 
@@ -8,7 +8,7 @@ const Merchandise = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  async function fetchMerchHandler() {
+  const fetchMerchHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
 
@@ -35,7 +35,11 @@ const Merchandise = () => {
       setError(error.message);
     }
     setIsLoading(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    fetchMerchHandler();
+  }, [fetchMerchHandler]);
 
   let content = <p></p>;
 
@@ -53,7 +57,6 @@ const Merchandise = () => {
     <Fragment>
       <h1>Merch</h1>
       <p>Pick up some swag</p>
-      <button onClick={fetchMerchHandler}>See our Merchandise</button>
       <section>
         {content}
       </section>
