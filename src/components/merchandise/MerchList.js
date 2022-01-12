@@ -4,6 +4,7 @@ import Merch from './Merch';
 import classes from './MerchList.module.css';
 
 const MerchList = (props) => {
+  const merchURL = "";
 
   return (
     <ul className={classes['merch-list']}>
