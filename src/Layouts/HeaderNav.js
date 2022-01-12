@@ -5,7 +5,8 @@ import styles from "./HeaderNav.module.css";
 const HeaderNav = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>OP</div>
+      <img src="./images/Orchard_Pig_Logo.png" className={styles.pig_logo} alt="pics from backend" /> 
+
       <nav className={styles.nav}>
         <ul>
           <li>

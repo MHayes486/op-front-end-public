@@ -23,7 +23,8 @@ body {
 
 @font-face {
   font-family: dirtyFont;
-  src: url(https://www.dafont.com/dirty-headline.font);
+  /*  src: url(https://www.dafont.com/dirty-headline.font); */
+  src: url('./pages/styles/fonts/DirtyHeadline.ttf');
 }
 
 h1,
