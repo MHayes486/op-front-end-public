@@ -1,4 +1,5 @@
 import { Fragment, useState, useEffect, useCallback } from "react";
+import AddPairings from "../components/pairings/AddPairings";
 
 import PairingsList from '../components/pairings/PairingsList';
 
@@ -41,6 +42,19 @@ const Pairings = () => {
     fetchPairsHandler();
   }, [fetchPairsHandler]);
 
+  async function addPairsHandler(pairs) {
+    const response = await fetch('https://dig33-apricot-backend.herokuapp.com/pairings/', {
+      method: 'POST',
+      body: JSON.stringify(pairs),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await response.json();
+    console.log(data);
+    fetchPairsHandler();
+  }
+
   let content = <p></p>;
 
   if (pairs.length > 0) {
@@ -59,6 +73,9 @@ const Pairings = () => {
       <p>What to eat while you have a drink</p>
       <section>
         {content}
+      </section>
+      <section>
+        <AddPairings onAddPairings={addPairsHandler} />
       </section>
     </Fragment>
   );
