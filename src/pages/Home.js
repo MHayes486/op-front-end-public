@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import CiderCarosel from ".././components/CiderCarosel";
 import MerchCarosel from ".././components/MerchCarosel";
-import SignUp from ".././components/SignUp"
+import SignUp from ".././components/SignUp";
 
 import styles from "./styles/static.module.css";
 
@@ -12,7 +12,7 @@ const Home = () => {
       <h1>Home sweet home</h1>
       <p>Home page</p>
       <hr />
-      <section className={styles.topHome}>
+      <section className={(styles.topHome, styles.darkblue)}>
         <h1>Cider to snout about</h1>
         <button>LEARN MORE</button>
         <img alt="cider bottle"></img>
@@ -41,13 +41,15 @@ const Home = () => {
         <CiderCarosel />
       </section>
       <hr />
-      <section className={styles.topHome}>
+      <section className={styles.lightblue}>
         <h1>GO PIG OR GO HOME</h1>
         <p>Enjoy OUR PIG_TASTIC MERCH</p>
         <MerchCarosel />
       </section>
       <hr />
-      <section><SignUp /></section>
+      <section>
+        <SignUp />
+      </section>
     </Fragment>
   );
 };
