@@ -1,18 +1,18 @@
 import React from 'react';
 
-import OurPairings from './OurPairings';
+import Pairs from './Pairs';
 import classes from './PairingsList.module.css';
 
 const PairingsList = (props) => {
   return (
-    <ul >
-      {props.ourPairings.map((ourPairings) => (
-        <OurPairings
-          key={ourPairings.id}
-          pigProduct={ourPairings.pigProduct}
-          itemCost={ourPairings.itemCost}
-          itemName={ourPairings.itemName}
-          image={ourPairings.image}          
+    <ul className={classes['pairings-list']}>
+      {props.pairs.map((pairs) => (
+        <Pairs
+          key={pairs.id}
+          pigProduct={pairs.pigProduct}
+          dishName={pairs.dishName}
+          ingredients={pairs.ingredients}
+          image={pairs.image}          
         />
       ))}
     </ul>

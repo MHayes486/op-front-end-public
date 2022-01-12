@@ -4,11 +4,11 @@ import PairingsList from '../components/pairings/PairingsList';
 
 const Pairings = () => {
 
-  const [pairings, setPairings] = useState([]);
+  const [pairs, setPairs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchPairingsHandler = useCallback(async () => {
+  const fetchPairsHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
 
@@ -21,16 +21,16 @@ const Pairings = () => {
       
       const data = await response.json();
 
-      const transformedPairings = data.map(pairingsData => {
+      const transformedPairs = data.map(pairsData => {
         return {
-          id: pairingsData._id,
-          pigProduct: pairingsData.pigProduct,
-          itemName: pairingsData.itemName,
-          itemCost: pairingsData.itemCost,
-          image: pairingsData.image
+          id: pairsData._id,
+          pigProduct: pairsData.pigProduct,
+          dishName: pairsData.dishName,
+          ingredients: pairsData.ingredients,
+          image: pairsData.image
         }
       });
-      setPairings(transformedPairings);
+      setPairs(transformedPairs);
     } catch (error) {
       setError(error.message);
     }
@@ -38,13 +38,13 @@ const Pairings = () => {
   }, []);
 
   useEffect(() => {
-    fetchPairingsHandler();
-  }, [fetchPairingsHandler]);
+    fetchPairsHandler();
+  }, [fetchPairsHandler]);
 
   let content = <p></p>;
 
-  if (pairings.length > 0) {
-    content = <PairingsList pairings={pairings} />;
+  if (pairs.length > 0) {
+    content = <PairingsList pairs={pairs} />;
   }
   if (error) {
     content = <p>{error}</p>
@@ -55,8 +55,8 @@ const Pairings = () => {
 
   return (
     <Fragment>
-      <h1>Pairings</h1>
-      <p>What to eat while you drink</p>
+      <h1>Pairs</h1>
+      <p>What to eat while you have a drink</p>
       <section>
         {content}
       </section>

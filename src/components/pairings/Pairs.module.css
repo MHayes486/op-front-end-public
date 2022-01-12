@@ -1,4 +1,4 @@
-.our-pairings {
+.pairs {
     margin: 1rem;
     padding: 1rem;
     background-color: #230052;
@@ -8,14 +8,13 @@
     color: white;
   }
   
-  .our-pairings h2 {
+  .pairs h2 {
     font-size: 2rem;
     color: #f7e702;
   }
   
-  .our-pairings h3 {
+  .pairs h3 {
     color: #eccf77;
     margin: 0;
     font-size: 1rem;
   }
-  
