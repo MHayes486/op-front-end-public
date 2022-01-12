@@ -10,3 +10,9 @@
 .lightblue {
   background-color: #3f73a2;
 }
+.bottle_size {
+  height: 300px;
+}
+.cider_element {
+  float: left;
+}

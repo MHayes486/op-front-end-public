@@ -9,13 +9,12 @@ import styles from "./styles/static.module.css";
 const Home = () => {
   return (
     <Fragment>
-      <h1>Home sweet home</h1>
-      <p>Home page</p>
-      <hr />
-      <section className={(styles.topHome, styles.darkblue)}>
-        <h1>Cider to snout about</h1>
+
+      
+      <section className={(styles.cider_element, styles.darkblue)}>
+        <h2>Cider to snout about</h2>
         <button>LEARN MORE</button>
-        <img alt="cider bottle"></img>
+        <img src="./images/ciders/Homepage_Splash_Image_Cider.png" className={styles.bottle_size} alt="pics from backend" /> 
       </section>
       <hr />
       <section className={styles.standard}>
