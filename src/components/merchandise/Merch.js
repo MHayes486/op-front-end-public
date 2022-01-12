@@ -9,7 +9,7 @@ const Merch = (props) => {
       <h3>{props.itemCost}</h3>
       <p>{props.itemName}</p>
       <p>{props.image}</p>
-      <img src={props.image} alt="pic from backend"/> 
+      <img src={( `${props.image}` )} alt="pic from backend"/> 
     </li>
   );
 };
