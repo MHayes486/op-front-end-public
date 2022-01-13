@@ -43,7 +43,7 @@ const Home = () => {
       </section>
       
       <section className={styles.lightblue}>
-        <h1>GO PIG OR GO HOME</h1>
+        <h2>GO PIG OR GO HOME</h2>
         <p>Enjoy OUR PIG_TASTIC MERCH</p>
         <MerchCarosel />
       </section>
