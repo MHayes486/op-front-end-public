@@ -9,6 +9,7 @@ const MerchList = (props) => {
     <ul className={classes['merch-list']}>
       {props.merch.map((merch) => (
         <Merch
+          id={merch.id}
           key={merch.id}
           itemType={merch.itemType}
           itemCost={merch.itemCost}
