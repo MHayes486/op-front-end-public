@@ -4,7 +4,7 @@ import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
 import Cart from '../components/cart/Cart';
 
-const HeaderNav = () => {
+const HeaderNav = (props) => {
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {
@@ -21,7 +21,7 @@ const HeaderNav = () => {
 
       <nav className={styles.nav}>
         <ul>
-          {cartIsShown && <Cart />}
+          {cartIsShown && <Cart onClose={hideCartHandler}/>}
           <li>
             <NavLink
               to="/home"
@@ -71,7 +71,7 @@ const HeaderNav = () => {
             </NavLink>
           </li>
           <li>
-            <HeaderCartButton />
+            <HeaderCartButton onClick={showCartHandler}/>
           </li>
         </ul>
       </nav>
