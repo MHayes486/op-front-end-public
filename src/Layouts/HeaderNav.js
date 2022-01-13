@@ -16,7 +16,7 @@ const HeaderNav = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} onShowCart={showCartHandler}>
       <img src="./images/Orchard_Pig_Logo.png" className={styles.pig_logo} alt="pics from backend" />
 
       <nav className={styles.nav}>
