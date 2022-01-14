@@ -1,16 +1,18 @@
 // Code modified from https://www.npmjs.com/package/agegate
 
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import agegate, { getData } from "agegate";
-import AgeIsValidContext from "../store/ageValid-context";
+import { ageCheckActions } from "../../store/age-check-slice";
+import { useDispatch } from "react-redux";
 
 const countries = getData();
 
 const AgeModal = (props) => {
+  const dispatch = useDispatch();
+
   const [date, setDate] = useState("");
   const [country, setCountry] = useState(countries[0].code);
   const [legal, setLegal] = useState(false);
-  const ctx = useContext(AgeIsValidContext);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -20,8 +22,7 @@ const AgeModal = (props) => {
 
       if (result) {
         localStorage.setItem("ageIsValid", "1");
-        ctx.ageValid = true;
-        console.log(ctx.ageValid);
+        dispatch(ageCheckActions.validate());
       }
       setLegal(result);
     }
