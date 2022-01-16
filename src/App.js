@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Layouts from "./Layouts/Layouts";
 // import logo from "./logo.svg";
 import "./App.css";
-import { Fragment, useContext, useState, useEffect } from "react";
+import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
 
 import Home from "./pages/Home";
@@ -18,16 +18,10 @@ import NotFound from "./pages/NotFound";
 function App() {
   const dispatch = useDispatch();
 
-  // const [ageValid, setAgeValid] = useState(false);
-  // const ctx = useContext(AgeIsValidContext);
-
-  // useEffect(() => {
-  //   const ageValidStorage = localStorage.getItem("ageIsValid");
-  if (ageValidStorage === "1") {
+   if (ageValidStorage === "1") {
     dispatch(ageCheckActions.validate());
   }
   const ageValidated = useSelector((state) => state.ageCheck.ageIsValid);
-  // }, [ageValid, ctx]);
 
   return (
     <Fragment>
