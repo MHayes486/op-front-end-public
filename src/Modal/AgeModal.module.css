@@ -1,40 +1,46 @@
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.75);
-}
-
 .modal {
   position: fixed;
-  top: 30vh;
+  top: 20vh;
   left: 10%;
   width: 80%;
   z-index: 100;
   overflow: hidden;
 }
 
-.header {
-  background: #4f005f;
-  padding: 1rem;
+.ageForm {
+  background-color: #f0e6da;
+  text-align: center;
 }
 
-.header h2 {
-  margin: 0;
-  color: white;
+.ageTitle {
+  font-size: 3em;
+  color: #3f73a2;
+}
+
+.agePara {
+  font-size: 2em;
+  color: #0d273e;
+}
+
+.ageInputs {
+  font-size: 2em;
+  color: #222222;
+}
+
+.countryInput {
+  font-size: 1.3em;
+  color: #222222;
+  text-align: center;
+}
+
+.ageButton {
+  font-size: 1.3em;
+  color: #222222;
+  margin-bottom: 1em;
 }
 
 .content {
   padding: 1rem;
-}
-
-.actions {
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
