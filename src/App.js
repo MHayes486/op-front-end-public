@@ -5,6 +5,7 @@ import Layouts from "./Layouts/Layouts";
 import "./App.css";
 import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
+import {ageCheckActions} from "./store/age-check-slice";
 
 import Home from "./pages/Home";
 import FindUs from "./pages/FindUs";
@@ -17,9 +18,10 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   const dispatch = useDispatch();
-
+   const ageValidStorage = localStorage.getItem("ageIsValid");
    if (ageValidStorage === "1") {
-    dispatch(ageCheckActions.validate());
+      dispatch(ageCheckActions.validate());
+      console.log("validation")
   }
   const ageValidated = useSelector((state) => state.ageCheck.ageIsValid);
 

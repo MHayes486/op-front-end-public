@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import agegate, { getData } from "agegate";
-import { ageCheckActions } from "../../store/age-check-slice";
+import { ageCheckActions } from "../store/age-check-slice";
 import { useDispatch } from "react-redux";
 
 const countries = getData();
