@@ -13,17 +13,14 @@ export async function getAllMerch() {
 
   const transformedMerchData = [];
 
-  console.log(data);
-
   for (const key in data) {
     const merchObj = {
       id: key,
       ...data[key],
     };
     transformedMerchData.push(merchObj);
-    
   }
-    return transformedMerchData;
+  return transformedMerchData;
 }
 
 export async function getAllCiders() {
@@ -35,7 +32,6 @@ export async function getAllCiders() {
 
   const transformedCiderData = [];
 
-
   for (const key in data) {
     const ciderObj = {
       id: key,
@@ -46,17 +42,24 @@ export async function getAllCiders() {
   return transformedCiderData;
 }
 
-//   for (const _id in data) {
-//     const merchObj = {
-//       id: _id,
-//       ...data[_id],
-//     };
+export async function getAllPairings() {
+  const response = await fetch(`${OP_DOMAIN}/pairings`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch pairings.");
+  }
 
-// transformedMerchData.push(merchObj)
-//   }
+  const transformedPairingsData = [];
 
-//   return transformedMerchData;
-// }
+  for (const key in data) {
+    const pairingObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedPairingsData.push(pairingObj);
+  }
+  return transformedPairingsData;
+}
 
 // export async function getSingleQuote(quoteId) {
 //   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
