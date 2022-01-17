@@ -26,6 +26,26 @@ export async function getAllMerch() {
     return transformedMerchData;
 }
 
+export async function getAllCiders() {
+  const response = await fetch(`${OP_DOMAIN}/ciders`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch ciders.");
+  }
+
+  const transformedCiderData = [];
+
+
+  for (const key in data) {
+    const ciderObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedCiderData.push(ciderObj);
+  }
+  return transformedCiderData;
+}
+
 //   for (const _id in data) {
 //     const merchObj = {
 //       id: _id,
