@@ -2,7 +2,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import { useEffect } from "react";
-import CiderList from "../ciders/CiderList";
 import Cider from "../ciders/Cider";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
@@ -50,27 +49,26 @@ const CiderCarosel = (props) => {
   }
 
   if (status === "completed" && (!loadedCiders || loadedCiders.length === 0)) {
-    
-        return <p>No cider available?!?</p>;
+    return <p>No cider available?!?</p>;
   }
-    const ciderListings = [];
-    
-    for (const cider in loadedCiders){
-        const currentCider=
-        (<div>    
-        <Cider
-          key={cider.id}
-          ciderTitle={cider.ciderTitle}
-          ciderType={cider.ciderType}
-          ciderSlogan={loadedCiders[0].ciderSlogan}
-          image={loadedCiders[0].image}
-        />
-        </div>)
-        ciderListings.push(currentCider);
+  const ciderListings = [];
 
-      }
-    
-  
+  for (const cider in loadedCiders) {
+    const currentCider = (
+      <div>
+        <Cider
+          key={cider}
+          ciderId={loadedCiders[cider].id}
+          ciderTitle={loadedCiders[cider].ciderTitle}
+          ciderType={loadedCiders[cider].ciderType}
+          ciderSlogan={loadedCiders[cider].ciderSlogan}
+          image={loadedCiders[cider].image}
+        />
+      </div>
+    );
+    ciderListings.push(currentCider);
+  }
+
   return (
     <Carousel responsive={responsive}>
       {ciderListings}
