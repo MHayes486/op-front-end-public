@@ -1,3 +1,6 @@
+//useHTTP.js custom hook struture created by Maximilian Schwarzmüller of Academind as part of React the complete guide on Udemy (https://www.udemy.com/course/react-the-complete-guide-incl-redux/).
+//Code modifed from that source
+
 import { useReducer, useCallback } from "react";
 
 function httpReducer(state, action) {

@@ -1,3 +1,6 @@
+//api.js struture created by Maximilian Schwarzmüller of Academind as part of React the complete guide on Udemy (https://www.udemy.com/course/react-the-complete-guide-incl-redux/).
+//Code modifed from that source
+
 const OP_DOMAIN = "https://dig33-apricot-backend.herokuapp.com";
 
 export async function getAllMerch() {
@@ -8,31 +11,28 @@ export async function getAllMerch() {
     throw new Error(data.message || "Could not fetch merch.");
   }
 
-  //   const transformedMerchData = [];
+  const transformedMerchData = [];
 
-      const transformedMerch = data.map((merchData) => {
-        return {
-          id: merchData._id,
-          itemType: merchData.itemType,
-          itemName: merchData.itemName,
-          itemCost: merchData.itemCost,
-          image: merchData.image,
-        };
-      });
-  // return transformedMerch;
-};
+  console.log(data);
+
+  for (const key in data) {
+    const merchObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedMerchData.push(merchObj);
+    
+  }
+    return transformedMerchData;
+}
+
 //   for (const _id in data) {
 //     const merchObj = {
-//       //         id: merchData._id,
-//       //         itemType: merchData.itemType,
-//       //         itemName: merchData.itemName,
-//       //         itemCost: merchData.itemCost,
-//       //         image: merchData.image
 //       id: _id,
 //       ...data[_id],
 //     };
 
-    // transformedMerchData.push(merchObj)
+// transformedMerchData.push(merchObj)
 //   }
 
 //   return transformedMerchData;
