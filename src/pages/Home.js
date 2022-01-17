@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import CiderCarosel from ".././components/UI/CiderCarosel";
 import MerchCarosel from ".././components/UI/MerchCarosel";
 import SignUp from ".././components/UI/SignUp";
-import OurCider from "./OurCider";
+
 
 import styles from "./styles/static.module.css";
 

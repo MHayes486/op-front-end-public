@@ -15,6 +15,7 @@ import OurCider from "./pages/OurCider";
 import CiderDetails from "./pages/CiderDetails";
 import Pairings from "./pages/Pairings";
 import NotFound from "./pages/NotFound";
+import References from "./pages/References";
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function App() {
             <Route path="/ourcider" element={<OurCider />} />
             <Route path="/ourcider/:ciderId" element={<CiderDetails />}></Route>
             <Route path="/pairings" element={<Pairings />} />
+            <Route path="/references" element={<References />} />
             {/* Capture page not found: */}
             <Route path="*" element={<NotFound />} />
           </Routes>

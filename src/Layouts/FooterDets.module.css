@@ -1,6 +1,11 @@
 .footer {
-background-color: #3f73a2;
-color: #f0e6da;
+  background-color: #3f73a2;
+  color: #f0e6da;
+  text-align: center;
+}
+
+.card {
+  background-color: #f0e6da;
 }
 
 .disclaimer {
