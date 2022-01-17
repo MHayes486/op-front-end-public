@@ -41,6 +41,7 @@ const OurCider = () => {
       </section>
     </Fragment>
   );
+  
 };
 
 export default OurCider;
