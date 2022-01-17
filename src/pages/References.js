@@ -7,6 +7,10 @@ const References = () => {
       <div className={styles.card}>
         <h2>Here be references</h2>
         <p>We will put references here</p>
+        <ul className={styles.codeRefs}>
+          <li>Age verification supplied and modified by agechecker from npm:</li>
+          <li>Backend connection (useHttp,js and api.js) modified code from Udemy course:</li>
+        </ul>
         <p className={styles.disclaimer}>
           This website has been created as part of an assignment in an approved
           course of study for Curtin University and contains copyright material
