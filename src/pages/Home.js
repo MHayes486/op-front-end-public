@@ -1,9 +1,9 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 import CiderCarosel from ".././components/UI/CiderCarosel";
 import MerchCarosel from ".././components/UI/MerchCarosel";
 import SignUp from ".././components/UI/SignUp";
-
 
 import styles from "./styles/static.module.css";
 
@@ -51,13 +51,13 @@ const Home = () => {
 
       <section className={styles.cream}>
         <h2>Our Pig is top dog!</h2>
-        <p>Check Out Our Cider Range</p>
+        <Link to="/OurCider">Check Out Our Cider Range</Link>
         <CiderCarosel />
       </section>
 
       <section className={styles.lightblue}>
         <h2>GO PIG OR GO HOME</h2>
-        <p>Enjoy OUR PIG_TASTIC MERCH</p>
+        <Link to="/Merchandise">Enjoy OUR PIG_TASTIC MERCH</Link>
         <MerchCarosel />
       </section>
 

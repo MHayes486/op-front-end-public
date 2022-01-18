@@ -3,11 +3,11 @@ import "react-multi-carousel/lib/styles.css";
 
 import { useEffect } from "react";
 
-import Merch from "../merchandise/Merch";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
 import useHttp from "../../hooks/use-http";
 import { getAllMerch } from "../../lib/api";
+import MerchCard from "../merchandise/MerchCard";
 
 const responsive = {
   superLargeDesktop: {
@@ -57,7 +57,7 @@ const MerchCarosel = (props) => {
   for (const merch in loadedMerch) {
     const currentMerch = (
       <div>
-        <Merch
+        <MerchCard
           key={merch}
           ciderId={loadedMerch[merch].id}
           itemType={loadedMerch[merch].itemType}
