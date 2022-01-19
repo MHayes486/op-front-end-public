@@ -5,8 +5,8 @@ const References = () => {
   return (
     <Fragment>
       <div className={styles.card}>
-        <h2 calssName={styles.heading}>Here be references</h2>
-        
+        <h2 calssName={styles.heading1}>Here be references</h2>
+
         <ul className={styles.codeRefs}>
           <li>
             The basis of this site is from the training provided by:
