@@ -1,0 +1,28 @@
+.event {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #0d273e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  height: 350px;
+  width: auto;
+}
+
+.event h2 {
+  font-size: 2.2rem;
+  color: #f7e702;
+}
+
+.event h3 {
+  color: #eccf77;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.imageSize {
+  max-height: 200px;
+  width: auto;
+  max-width: 150px;
+}

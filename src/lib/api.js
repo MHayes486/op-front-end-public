@@ -61,6 +61,26 @@ export async function getAllPairings() {
   return transformedPairingsData;
 }
 
+export async function getAllEvents() {
+  const response = await fetch(`${OP_DOMAIN}/event`);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch events.");
+  }
+
+  const transformedEventData = [];
+
+  for (const key in data) {
+    const eventObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedEventData.push(eventObj);
+  }
+  return transformedEventData;
+}
+
 // export async function getSingleQuote(quoteId) {
 //   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
 //   const data = await response.json();
