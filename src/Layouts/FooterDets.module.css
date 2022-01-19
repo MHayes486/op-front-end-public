@@ -6,6 +6,11 @@
 
 .card {
   background-color: #f0e6da;
+  margin: 0.5em;
+}
+
+.card li {
+  margin: 10px;
 }
 
 .disclaimer {
@@ -15,4 +20,8 @@
 .authors {
   font-size: 0.8rem;
   font-style: italic;
+}
+
+.heading {
+  text-align: center;
 }
