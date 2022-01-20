@@ -101,6 +101,7 @@ Button, .btn2 {
   margin-top: -18%;
   margin-right: 14%;
   height: 420px;
+  width: 30%;
   animation: bounce-in-right 4s ease infinite;
 }
 @keyframes bounce-in-right {
