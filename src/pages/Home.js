@@ -18,7 +18,7 @@ const Home = () => {
         <Button className={styled.btn1} type="submit">LEARN MORE</Button>
         <img src="./images/ciders/Homepage_Splash_Image_Cider.png" className={styles.bottle_size} alt="pics from backend" />
         <img src="./images/backgrounds/Paper Rip Texture Upwards.png" className={styles.tear_bottom} alt="pics from backend" />
-
+{/* hi */}
       </section>
 
       <section className={styles.cream}>
