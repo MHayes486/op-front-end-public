@@ -10,9 +10,8 @@ const EventList = (props) => {
       {props.event.map((event) => (
         <Event
           key={event.id}
-          eventTitle={event.eventTitle}
-          eventType={event.eventDate}
-          eventSlogan={event.eventLocation}
+          eventName={event.eventName}
+          eventAddress={event.eventAddress}
           image={event.image}          
         />
       ))}
