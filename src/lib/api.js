@@ -62,7 +62,7 @@ export async function getAllPairings() {
 }
 
 export async function getAllEvents() {
-  const response = await fetch(`${OP_DOMAIN}/event`);
+  const response = await fetch(`${OP_DOMAIN}/events`);
   const data = await response.json();
 
   if (!response.ok) {
