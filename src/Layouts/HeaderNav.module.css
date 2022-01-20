@@ -7,8 +7,8 @@
   align-items: center;
   background-color: #3f73a2;
   color: #f0e6da;
-}
 
+}
 .logo {
   font-size: 2rem;
   color: white;
@@ -17,13 +17,19 @@
 .nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
+  justify-content: center;
+
+  margin-top: 15%;
   padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 80%;
 }
 
 .nav li {
   margin-left: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+
 }
 
 .nav a {
@@ -36,8 +42,13 @@
 .nav a:active,
 .nav a.active {
   color: #e6fcfc;
+  margin-top: 20%;
+  justify-content: center;
 }
 
 .pig_logo {
-  height: 95%;
+  margin-left: 42%;
+  justify-content: center;
+  height: 60%;
+
 }

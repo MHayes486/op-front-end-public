@@ -1,0 +1,30 @@
+.Button:btn2{
+  display:inline-flex;
+
+
+}
+
+.about_us{
+display:flex;
+justify-content: center;
+}
+
+.about_page{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+}
+
+img {
+  width: 40%;
+}
+.about_img{
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  margin:auto;
+
+}
