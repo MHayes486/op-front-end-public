@@ -5,8 +5,8 @@ import styles from "./FooterDets.module.css";
 const FooterDets = () => {
   return (
     <footer className={styles.footer}>
-      <h5>SIMPLE BRAND || SIMPLE PRODUCT</h5>
-      <p>ORCHARD PIG | ALL RIGHTS RESERVED</p>
+      <h5 className={styles.footer_h5}>SIMPLE BRAND || SIMPLE PRODUCT</h5>
+      <p className={styles.footer_p}>ORCHARD PIG | ALL RIGHTS RESERVED</p>
       <p className={styles.disclaimer}>
         This website has been created as part of an assignment in an approved
         course of study for Curtin University and contains copyright material
@@ -15,13 +15,13 @@ const FooterDets = () => {
         of the Copyright Act 1968 (Commonwealth of Australia). No part of this
         work may be reproduced without consent of the original copyright owners.
         See code comments for references. Website created at{" "}
-        <a href="https://www.curtin.edu.au/">Curtin University Australia.</a>
+        <a className={styles.footer_a} href="https://www.curtin.edu.au/">Curtin University Australia.</a>
       </p>
-      <hr></hr>
+      {/* <hr></hr> */}
       <p className={styles.authors}>
         Website built by Team Apricot: Adam Walker, Kym Nazim, Michael Hayes and
-        Zac Roberts 
-        <sup>&copy; 2022</sup>
+        Zac Roberts
+        <sup className={styles.footer_sup}>&copy; 2022</sup>
       </p>
     </footer>
   );
