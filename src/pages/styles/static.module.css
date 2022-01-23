@@ -1,0 +1,36 @@
+.darkblue {
+  background-color: #335c7c;
+}
+.darkgrey {
+  background-color: #0d273e;
+}
+.grey {
+  background-color: #222222;
+}
+.lightblue {
+  background-color: #3f73a2;
+}
+.cream {
+  background-color: #f0e6da;
+}
+.bottle_size {
+  height: 300px;
+}
+.cider_element {
+  float: left;
+}
+.tear_top {
+  height: 50px;
+  width: 100%;
+}
+.tear_bottom {
+  height: 50px;
+  width: 100%;
+}
+.torn_banner {
+  height: 400px;
+}
+
+.txt_dark {
+  color:#335c7c;
+}

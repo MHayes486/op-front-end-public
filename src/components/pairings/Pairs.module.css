@@ -1,0 +1,24 @@
+.pairs {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #0d273e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+  
+  .pairs h2 {
+    font-size: 2.2rem;
+    color: #f7e702;
+  }
+  
+  .pairs h3 {
+    color: #eccf77;
+    margin: 0;
+    font-size: 1.7rem;
+  }
+
+  .image {
+    height: 200px;
+  }

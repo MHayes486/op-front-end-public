@@ -1,0 +1,55 @@
+/* COLOURS:
+#f0e6da is the creme colour (background of the presentation slides)
+#3f73a2 is the main blue colour
+#222222 is the black (dark grey) I've used in the design
+#0d273e is a navy blue colour that I used for some design accents
+
+MAIN FONT LINK (Dirty Headline):
+https://www.dafont.com/dirty-headline.font
+
+
+BODY TEXT FONT:
+I used Arial but can be easily substituted for any other script font. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #3f73a2;
+}
+
+@font-face {
+  font-family: dirtyFont;
+  /*  src: url(https://www.dafont.com/dirty-headline.font); */
+  src: url('./pages/styles/fonts/DirtyHeadline.ttf');
+}
+
+h1,
+h4,
+h5 {
+  font-family: dirtyFont, cursive;
+  color: #f0e6da;
+}
+
+h2,
+h3 {
+  font-family: dirtyFont, cursive;
+  color: #3f73a2;
+}
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */

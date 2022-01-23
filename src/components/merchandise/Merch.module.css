@@ -1,0 +1,30 @@
+.merch {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #0d273e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  height: 600px;
+  width: auto;
+}
+
+.merch h2 {
+  font-size: 2.1rem;
+  color: #f7e702;
+}
+
+.merch h3 {
+  color: #eccf77;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.imageSize {
+  height: auto;
+  max-width: 250px;
+  margin-bottom: 20px;
+  /* max-height: 100%;
+  width: auto; */
+}
