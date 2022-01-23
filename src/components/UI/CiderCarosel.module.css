@@ -1,0 +1,41 @@
+.slider {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .slider-item {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  transition: transform 400ms;
+}
+
+.slider .slider-item.active,
+.slider .slider-item.prev-item,
+.slider .slider-item.next-item {
+  display: block;
+}
+.slider-control-prev,
+.slider-control-next {
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    transition: opacity 300ms;
+}
+
+.slider-control-prev {
+    left: 20px;
+}
+
+.slider-control-prev:hover {
+    opacity: 1;
+}
+
+.slider-control-next {
+    right: 20px;
+}
