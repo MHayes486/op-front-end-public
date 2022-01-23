@@ -46,15 +46,17 @@
   justify-content: center;
   justify-content: space-between;
   margin: auto;
+  /* max-width: 100%;
+  height: auto; */
 }
 /* paper rip image */
 .tear_upwards,
-img {
+.tear_upward_img {
   width: 100%;
   margin-top: 3%;
 }
 /* hero h1 & sub heading */
-h1 {
+.about_us_h1 {
   text-align: left;
   margin: auto;
   font-size: 3.5rem;
@@ -68,7 +70,7 @@ h1 {
 }
 
 .sub_heading,
-p {
+.about_us_p {
   display: flex;
   text-align: left;
   flex-wrap: wrap;
