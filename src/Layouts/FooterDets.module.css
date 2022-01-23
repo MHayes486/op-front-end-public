@@ -2,6 +2,12 @@
   background-color: #3f73a2;
   color: #f0e6da;
   text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.footerPara {
+  text-align: center;
 }
 
 .card {

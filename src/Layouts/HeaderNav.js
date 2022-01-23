@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { useState } from 'react';
+import { useState } from "react";
 import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
-import Cart from '../components/cart/Cart';
+import Cart from "../components/cart/Cart";
 import CartProvider from "../store/CartProvider";
 
 const HeaderNav = (props) => {
@@ -19,7 +19,11 @@ const HeaderNav = (props) => {
   return (
     <CartProvider>
       <header className={styles.header} onShowCart={showCartHandler}>
-        <img src="./images/Orchard_Pig_Logo.png" className={styles.pig_logo} alt="pics from backend" />
+        <img
+          src="./logo192.png"
+          className={styles.pig_logo}
+          alt="pics from backend"
+        />
 
         <nav className={styles.nav}>
           <ul>
