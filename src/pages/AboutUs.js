@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-
 import styles from "./styles/AboutUs.module.css";
+import Layout from "../Layouts/Layouts";
 
 const AboutUs = () => {
   return (
@@ -108,7 +108,7 @@ const AboutUs = () => {
         <div className={styles.icons_text}>
           <div className={styles.bottom_p_3}>
             <img
-              src="\images\About Page Icon 1.png"
+              src="\images\icons\About Page Icon 1.png"
               className={styles.icon1}
               alt="pics from backend"
             />
@@ -121,7 +121,7 @@ const AboutUs = () => {
 
           <div className={styles.bottom_p_1}>
             <img
-              src="\images\About Page Icon 2.png"
+              src="\images\icons\About Page Icon 2.png"
               className={styles.icon2}
               alt="pics from backend"
             />
@@ -134,7 +134,7 @@ const AboutUs = () => {
 
           <div className={styles.bottom_p_2}>
             <img
-              src="\images\About Page Icon 3.png"
+              src="\images\icons\About Page Icon 3.png"
               className={styles.icon3}
               alt="pics from backend"
             />

@@ -16,9 +16,11 @@
   /*  src: url(https://www.dafont.com/dirty-headline.font); */
   src: url("./fonts/DirtyHeadline.ttf");
 }
+
 /* HOME CONTENT  */
 
 /* home button btn1 */
+
 Button,
 .btn1 {
   margin-left: 27%;
@@ -72,19 +74,23 @@ Button,
 }
 
 .heading {
+
   display: block;
   text-align: left;
-  margin-left: 19%;
-  margin-top: 10%;
+  margin-left: 16%;
+  margin-top: 16%;
   width: 299px;
-  line-height: 50px;
+  line-height: 57px;
   font-feature-settings: 16px;
   font-kerning: 16px;
   font-size: 3.5rem;
   color: #f0e6da;
-  transform: rotate(350deg);
-  animation: slide-in-left 4s ease infinite;
+  transform: rotate(
+350deg
+);
+  animation: Home_Home_slide-in-left__2Sl1V__3jkS9 4s ease infinite;
 }
+
 @keyframes bounce-in-right {
   from {
     margin-left: 0px;
@@ -99,9 +105,9 @@ Button,
   float: right;
   margin-top: -18%;
   margin-right: 14%;
-  height: 420px;
-  width: 30%;
-  animation: bounce-in-right 4s ease infinite;
+  height: 438px;
+  width: 25%;
+  animation: Home_bounce-in-right__2IhGI 4s ease infinite;
 }
 @keyframes bounce-in-right {
   from {
@@ -120,16 +126,18 @@ Button,
   height: 500px;
   width: 100%;
 }
-.tear_top {
-  height: 100px;
-  width: 100%;
-}
 
 .tear_bottom {
   margin-top: -35%;
   height: 100px;
   width: 100%;
   margin-bottom: -3%;
+}
+
+.tear_top {
+  height: 100px;
+  width: 100%;
+  z-index: 2;
 }
 
 .torn_banner {
@@ -163,12 +171,14 @@ Button,
 .home_cream_h2 {
   font-size: 4rem;
   width: 193%;
-  margin-bottom: 10px;
+  margin-top: 3%;
+  margin: auto;
+  text-align: center;
 }
 
-.border {
+/* .border {
   border: 10px inset #0d273e;
-}
+} */
 .internal {
   margin: 10px;
 }
@@ -177,23 +187,25 @@ Button,
   font-family: dirtyFont, cursive;
   text-shadow: #0d273e;
   font-size: 1.5rem;
-  color: green;
+  color: #222222;
+  margin-top: -3%;
 }
 
-.home_merch_h2 {
-  color: #f0e6da;
-  font-size: 4rem;
-  margin-bottom: 10px;
-  text-align: right;
-}
 .cream_p {
   width: 100%;
   font-weight: 800;
   font-style: bold;
   text-align: center;
   font-size: 1.2rem;
+  margin-top: -2%;
+
+}
+.values{
+  width: 50%;
+  z-index: 1;
 }
 
+/*
 .dics {
   width: 100%;
   display: flex;
@@ -201,7 +213,7 @@ Button,
   margin-top: 15%;
   margin: auto;
   justify-content: space-evenly;
-}
+} */
 
 .disc {
   background-color: #3f73a2;
@@ -242,7 +254,14 @@ Button,
 }
 .heading2 {
   font-size: 4rem;
-  margin-bottom: 10px;
+  margin-top: 17px;
+}
+
+.home_merch_h2 {
+  color: #f0e6da;
+  font-size: 4rem;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .heading3,

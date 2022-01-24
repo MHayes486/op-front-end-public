@@ -35,20 +35,13 @@ const Home = () => {
         <section className={styles.cream}>
           <h2 className={styles.heading2}>Rooted in Sommerset</h2>
           <p className={styles.cream_p}>OUR CORE VALUES</p>
-          <div className={styles.dics}>
-            {/* <img
-            src="./images/backgrounds/values.svg"
+          <img className={styles.values}
+            src="\images\icons\values.png"
             alt="Orchard Pig: BOLD,MISCHEVIOUS AND SIMPLE"
-          /> */}
-            <div className={styles.disc}>1</div>
-            <div className={styles.disc}>2</div>
-            <div className={styles.disc}>3</div>
-          </div>
-          <div className={styles.disc_title}>
-            <div className={styles.title}>BOLD</div>
-            <div className={styles.title}>MISCHEVIOUS</div>
-            <div className={styles.title}>SIMPLE</div>
-          </div>
+          />
+
+
+
           {/* <Button className={styles.btn2} type="submit">
           ABOUT US
         </Button> */}
@@ -56,20 +49,22 @@ const Home = () => {
 
         <section className="farmRip">
           <div className={styles.div}>
-            <div>
+          <div>
               <img
                 src="./images/backgrounds/Paper Rip Texture Downwards.png"
                 className={styles.tear_top}
                 alt="pics from backend"
               />
             </div>
-            <div>
+          <div>
               <img
                 src="./images/backgrounds/Homepage Splash Image.jpg"
                 className={styles.torn_banner}
                 alt="pics from backend"
               />
             </div>
+
+
             <div>
               <img
                 src="./images/backgrounds/Paper Rip Texture Upwards.png"

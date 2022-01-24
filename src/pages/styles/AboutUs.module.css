@@ -1,3 +1,4 @@
+
 /* ABOUT US CONTENT */
 .AboutUs {
   background-color: #f0e6da;
@@ -8,9 +9,6 @@
   height: 20rem;
 }
 
-/* .HeaderNav_header{
-  background-color: #f0e6da;
-} */
 
 /* button */
 .about_btn {
@@ -38,7 +36,7 @@
   box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
   padding: 0.2rem 1rem;
 }
-/* Hero image */
+/* Hero about image */
 .about_img {
   display: flex;
   flex-direction: column;
@@ -46,14 +44,12 @@
   justify-content: center;
   justify-content: space-between;
   margin: auto;
-  /* max-width: 100%;
-  height: auto; */
 }
-/* paper rip image */
+
 .tear_upwards,
 .tear_upward_img {
   width: 100%;
-  margin-top: 3%;
+  margin-top: 8%;
 }
 /* hero h1 & sub heading */
 .about_us_h1 {
@@ -79,17 +75,18 @@
   font-weight: bold;
 }
 
-/* SECTION 2 */
+
 .about_img .splash1 {
+  width: 100%;
   z-index: -1;
   margin-top: 7%;
+
 }
 
 .About_us_4 {
   background-color: #222222;
-  height: 400px;
+  height: 500px;
   margin-top: -1%;
-
   display: flex;
 }
 
@@ -98,7 +95,7 @@
   margin-top: -20%;
   z-index: 4;
 }
-/* SECTION 3 */
+
 .heading2 {
   display: flex;
   position: absolute;
@@ -118,7 +115,9 @@
 }
 .pg1,
 .pg2 {
+
   width: 78%;
+  padding-top: 2rem;
 }
 .about_img4 {
   width: 100%;
@@ -140,9 +139,11 @@
 
 .about1 {
   margin-top: 1%;
+  width: 80%;
 }
 .about2 {
   margin-top: 6%;
+  width: 80%;
 }
 .tear3 {
   width: 100%;
@@ -169,7 +170,7 @@
   z-index: -1;
   margin-top: -16%;
 }
-/* SECTION 6 */
+
 
 .About_us_6 {
   background-color: #f0e6da;
@@ -183,7 +184,8 @@
   justify-content: center;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 2%;
+  font-size: 3rem;
+  margin-top: 4%;
 }
 
 .about_p6_1 {
@@ -191,6 +193,7 @@
   display: flex;
   justify-content: center;
   margin: auto;
+  font-weight: 600;
   margin-top: -2%;
 }
 .about_p6_2 {
@@ -198,6 +201,7 @@
   width: 100%;
   justify-content: center;
   margin: auto;
+  font-weight: 600;
   margin-top: 0.5%;
 }
 
@@ -235,14 +239,18 @@
   display: flex;
 }
 
-.about_s1 {
+.about_s1, .about_s2, .about_s3 {
   display: flex;
-  justify-content: center;
+}
+.about_s2{
+  margin-left: 8%;
 }
 .block1,
 .block2,
 .block3 {
-  width: 70%;
-  margin-left: 0%;
+  display: flex;
+  justify-content: center;
+  width: 72%;
+  margin-left: -9%;
   font-weight: 400;
 }

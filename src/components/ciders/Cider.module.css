@@ -1,7 +1,7 @@
 .cider {
   margin: 1rem;
   padding: 1rem;
-  background-color: #0d273e;
+  background-color: #335c7c;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 12px;
   text-align: center;
@@ -12,11 +12,11 @@
 
 .cider h2 {
   font-size: 2.2rem;
-  color: #f7e702;
+  color: #222222;
 }
 
 .cider h3 {
-  color: #eccf77;
+  color: #f0e6da;
   margin: 0;
   font-size: 1.5rem;
 }
