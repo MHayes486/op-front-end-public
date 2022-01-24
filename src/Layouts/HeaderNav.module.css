@@ -58,3 +58,13 @@
   margin-top: -13%;
   margin-left: 38%;
 }
+
+/* Extra large devices (large desktops, 1240px and up) */
+@media (min-width: 1200px) {
+  .header{
+    margin-top: 5%;
+  }
+  .pig_logo {
+    margin-top: -7%;
+  }
+}

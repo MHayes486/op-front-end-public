@@ -278,3 +278,49 @@ cream_p {
   margin-top: -6%;
   margin: auto;
 }
+
+
+/* Extra large devices (large desktops, 1240px and up) */
+@media (min-width: 1200px) {
+  .heading{
+    font-size: 4.5rem;
+    width:400px;
+    margin-top: 20%;
+    line-height: 75px;
+  }
+  .bottle_size{
+    margin-top: -8%;
+    width: 25%;
+    height: 20%;
+  }
+  .values{
+    width: 30%;
+
+  }
+  .cider_element {
+    height:350%;
+  }
+  .heading2{
+    font-size: 4rem;
+    margin-top: 6%;
+  }
+  .cream_p{
+    margin-top: -4%;
+  }
+  .cream{
+    height: 368px;
+  }
+  .values{
+    height: 23%;
+    width: 27%;
+    margin-top: -1%;
+  }
+  .torn_banner{
+    width: 100%;
+    height:100%;
+  }
+  .tear_bottom{
+    margin-top: -6%;
+
+  }
+   }
