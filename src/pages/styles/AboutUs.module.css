@@ -49,7 +49,7 @@
 .tear_upwards,
 .tear_upward_img {
   width: 100%;
-  margin-top: 16%;
+  margin-top: 3%;
 }
 /* hero h1 & sub heading */
 .about_us_h1 {
@@ -293,6 +293,9 @@
 }
 .about_s3{
   margin-left: 2%;
+}
+.tear_upward_img{
+  margin-top: 16%;
 }
 }
 
