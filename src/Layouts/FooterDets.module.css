@@ -31,3 +31,11 @@
 .heading1 {
   text-align: center;
 }
+
+
+/* min device 768px ) */
+@media (max-width: 768px) {
+.footer{
+width: 150%;
+}
+}

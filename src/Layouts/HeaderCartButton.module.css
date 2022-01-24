@@ -12,7 +12,7 @@
   border-radius: 50px;
   font-weight: bold;
   height: 100%;
-  margin-left: 143%;
+  margin-left: 43%;
   margin-top: 0%;
 }
 
@@ -67,8 +67,14 @@
 /* Extra large devices (large desktops, 1240px and up) */
 @media (min-width: 1200px) {
   .button{
-    margin-left: 400%;
+    margin-left: 140%;
 
   }
 
+}
+/* max device 729px ) */
+@media (max-width: 768px) {
+  .button{
+    margin-left: 10%;
+  }
 }

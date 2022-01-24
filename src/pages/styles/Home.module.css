@@ -321,6 +321,67 @@ cream_p {
   }
   .tear_bottom{
     margin-top: -6%;
+    width: 113%
 
   }
    }
+
+/* min device 1200 px ) */
+@media (max-width: 1200px) {
+  .internal{
+      width: 114%;
+    }
+    .cider_element{
+      width: 100%;
+    }
+    .bottle_size{
+      width: 25%;
+      height: 25%;
+    }
+
+  }
+
+/* max device 768px ) */
+@media (max-width: 768px) {
+.internal{
+    width: 100%;
+  }
+  .cider_element{
+    width: 150%;
+  }
+  .bottle_size{
+    width: 25%;
+    height: 25%;
+  }
+
+}
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width:480px)  {
+
+  .internal{
+    width: 150%;
+  }
+  .cider_element{
+    width: 150%;
+  }
+  .bottle_size{
+    width: 25%;
+    height: 25%;
+  }
+
+}
+/* smartphones, Android phones, landscape iPhone */
+@media (max-width:320px)  {
+
+  .internal{
+    width: 200%;
+  }
+  .cider_element{
+    width: 200%;
+  }
+  .bottle_size{
+    width: 25%;
+    height: 25%;
+  }
+
+}

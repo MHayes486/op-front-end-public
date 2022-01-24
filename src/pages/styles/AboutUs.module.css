@@ -49,7 +49,7 @@
 .tear_upwards,
 .tear_upward_img {
   width: 100%;
-  margin-top: 8%;
+  margin-top: 16%;
 }
 /* hero h1 & sub heading */
 .about_us_h1 {
@@ -255,14 +255,18 @@
   font-weight: 400;
 }
 
-
+/* ***MEDIA QUERIES**** */
 /* Extra large devices (large desktops, 1240px and up) */
 @media (min-width: 1200px) {
+  .main{
+    width: 115%;
+  }
+
  .cider_element{
    height: 500px;
  }
  .tear_upwards{
-   margin-top: 25%;
+   margin-top: 2%;
   z-index: 6;
   }
   .about_img{
@@ -275,6 +279,9 @@
   }
   .about1, .about2{
     width: 60%;
+  }
+  .heading2{
+    margin-left: 72%;
   }
   .pigstail_text{
     margin-left: auto;
@@ -289,3 +296,55 @@
 }
 }
 
+/* max device 768px ) */
+@media (max-width: 768px) {
+  .cider_element{
+    height: 400px;
+    width: 148%;
+  }
+  .tear_upwards{
+    margin-top: -17%;
+   z-index: 6;
+   }
+   .tear2{
+     width: 150%;
+   }
+   .about_img{
+     margin-top: -8%;
+     width: 148%;
+   }
+   .About_us_4{
+     height: 110%;
+     margin-top: -5%;
+     width: 150%;
+   }
+   .tear3 {
+    width: 150%;
+    margin-top: -9%;
+    z-index: 4;
+  }
+
+  .about5{
+    width: 150%;
+  }
+  .tear5{
+    width: 150%;
+  }
+  .About_us_6{
+    width: 150%;
+  }
+   .about1, .about2{
+     width: 60%;
+   }
+   .pigstail_text{
+     margin-left: auto;
+   }
+
+ .about_s1, .about_s2, .about_s3{
+   margin-left: 10%;
+   font-size:1.5rem;
+ }
+ .about_s3{
+   margin-left: 2%;
+ }
+}
