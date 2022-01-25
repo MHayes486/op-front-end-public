@@ -7,19 +7,19 @@ const AboutUs = () => {
     <Fragment>
       <section className={styles.cider_element}>
         <div className={styles.cream}></div>
-        <h1>Mischief in the Mainstream</h1>
+        <h1 className={styles.about_us_h1}>Mischief in the Mainstream</h1>
         <p className={styles.sub_heading}>
           We like to poke fun at the world and ourselves...And Each Other{" "}
         </p>
         <div className={styles.tear1}>
           <img
-            className={styles.tear_upwards}
+            className={(styles.tear_upwards, styles.tear_upward_img)}
             src="\images\backgrounds\Paper Rip Texture Downwards.png"
             alt="pics from backend"
           />
-          <button className={styles.about_btn} onClick>
+          {/* <button className={styles.about_btn} onClick>
             Learn More
-          </button>
+          </button> */}
         </div>
       </section>
 

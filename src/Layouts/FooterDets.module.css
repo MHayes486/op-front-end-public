@@ -2,6 +2,12 @@
   background-color: #3f73a2;
   color: #f0e6da;
   text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.footerPara {
+  text-align: center;
 }
 
 .card {
@@ -11,48 +17,15 @@
 
 .card li {
   margin: 10px;
-  background-color: #3f73a2;
-  color: #f0e6da;
-  width: 100%;
-}
-.footer_h5,
-.footer_p,
-.disclaimer,
-.authors,
-.footer_sup {
-  margin: auto;
-  text-align: center;
-  font-size: 1rem;
-  font-kerning: 20px;
-}
-.footer_h5 {
-  letter-spacing: 6px;
-  font-weight: 600;
-}
-.footer_p {
-  padding: 0.5rem;
-  font-size: smaller;
-}
-.disclaimer {
-  font-size: 0.6rem;
-  width: 86%;
-  font-weight: 100;
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer_a {
-  text-align: center;
-  margin: auto;
-}
-.authors {
-  font-size: 0.7rem;
-  font-style: italic;
-  color: #f0e6da;
 }
 
-.footer_sup {
-  font-weight: 100px;
-  color: #95999e;
+.disclaimer {
+  font-size: 0.8rem;
+}
+
+.authors {
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .heading1 {

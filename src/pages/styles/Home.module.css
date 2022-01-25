@@ -1,0 +1,261 @@
+/* .darkblue {
+  background-color: #335c7c;
+} */
+.darkgrey {
+  background-color: #0d273e;
+}
+.grey {
+  background-color: #222222;
+}
+.lightblue {
+  background-color: #3f73a2;
+  width: 100%;
+}
+@font-face {
+  font-family: dirtyFont;
+  /*  src: url(https://www.dafont.com/dirty-headline.font); */
+  src: url("./fonts/DirtyHeadline.ttf");
+}
+/* HOME CONTENT  */
+
+/* home button btn1 */
+Button,
+.btn1 {
+  margin-left: 27%;
+  margin-top: 5%;
+  font-size: 0.75rem;
+  color: #fff;
+  width: 100px;
+  box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+}
+
+Button,
+.btn1:hover,
+Button,
+.btn1:active {
+  background: #3f73a2;
+  border-color: #0d273e;
+  color: #fdfafa;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1);
+  box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+  padding: 0.2rem 1rem;
+  width: 100px;
+}
+
+Button,
+.btn2 {
+  font: inherit;
+  border: 1px solid #0d273e;
+  background: #3f73a2;
+  color: white;
+  box-shadow: 0 2 12px rgba(0, 0, 0, 0.26);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 2rem;
+  width: 8rem;
+  justify-items: center;
+  margin: auto;
+}
+.btn2:hover,
+.btn2:active {
+  background: #3f73a2;
+  border-color: #0d273e;
+  color: #494848;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1);
+  box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+  padding: 0.2rem 1rem;
+}
+
+.heading {
+  display: block;
+  text-align: left;
+  margin-left: 19%;
+  margin-top: 10%;
+  width: 299px;
+  line-height: 50px;
+  font-feature-settings: 16px;
+  font-kerning: 16px;
+  font-size: 3.5rem;
+  color: #f0e6da;
+  transform: rotate(350deg);
+  animation: slide-in-left 4s ease infinite;
+}
+@keyframes bounce-in-right {
+  from {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 100px;
+  }
+}
+/* HERO IMAGE - BOTTLE */
+.bottle_size {
+  display: flex;
+  float: right;
+  margin-top: -18%;
+  margin-right: 14%;
+  height: 420px;
+  width: 30%;
+  animation: bounce-in-right 4s ease infinite;
+}
+@keyframes bounce-in-right {
+  from {
+    margin-right: 0px;
+  }
+  50% {
+    margin-right: 100px;
+  }
+}
+
+.cider_element {
+  background: #3f73a2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+}
+.tear_top {
+  height: 100px;
+  width: 100%;
+}
+
+.tear_bottom {
+  margin-top: -35%;
+  height: 100px;
+  width: 100%;
+  margin-bottom: -3%;
+}
+
+.torn_banner {
+  height: 400px;
+  width: 100%;
+  z-index: 1;
+}
+.cider_element,
+.button {
+  margin-top: 20%;
+  display: block;
+}
+
+/* STATIC PAGE - ABOUT US */
+.carosel_cider {
+  background-color: #f0e6da;
+  margin-top: 0;
+}
+.cream {
+  background-color: #f0e6da;
+  width: 100%;
+  height: 21rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10%;
+  margin: 0;
+  justify-content: center;
+}
+
+.cream_h2,
+.home_cream_h2 {
+  font-size: 4rem;
+  width: 193%;
+  margin-bottom: 10px;
+}
+
+.border {
+  border: 10px inset #0d273e;
+}
+.internal {
+  margin: 10px;
+}
+.links {
+  text-align: center;
+  font-family: dirtyFont, cursive;
+  text-shadow: #0d273e;
+  font-size: 1.5rem;
+  color: green;
+}
+
+.home_merch_h2 {
+  color: #f0e6da;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-align: right;
+}
+.cream_p {
+  width: 100%;
+  font-weight: 800;
+  font-style: bold;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.dics {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.disc {
+  background-color: #3f73a2;
+  justify-content: space-between;
+  padding: 1.9rem 2.5rem;
+  border-radius: 59px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.disc_title {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 16px;
+  margin-left: 2%;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1%;
+}
+.title {
+  letter-spacing: 4px;
+}
+
+/* STATIC PAGE- SPLASH */
+.farmRip {
+  width: 100%;
+}
+
+/* STATIC SECTION drinks */
+.cream1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  height: 300px;
+  background-color: #f0e6da;
+}
+.heading2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.heading3,
+.home_h2 {
+  text-align: right;
+  margin-top: 1%;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+cream1_p,
+cream_p {
+  width: 100%;
+  display: flex;
+  margin-top: -6%;
+  margin: auto;
+}
