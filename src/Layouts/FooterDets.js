@@ -2,6 +2,7 @@ import styles from "./FooterDets.module.css";
 import { NavLink } from "react-router-dom";
 
 import navStyles from "./HeaderNav.module.css";
+import SignUp from "../components/UI/SignUp";
 
 const FooterDets = () => {
   return (
@@ -11,6 +12,7 @@ const FooterDets = () => {
         <br />
         ORCHARD PIG | ALL RIGHTS RESERVED
       </p>
+      <SignUp />
 
       <nav className={navStyles.nav}>
         <NavLink

@@ -1,3 +1,32 @@
 .form {
-  background-color: aliceblue;
+  text-align: left;
+  margin: 5px;
+  max-width: 90%;
+  font-size: medium;
+}
+
+.wholeForm {
+  background-color: rgb(88, 88, 88);
+  box-shadow: 0 2 8px rgba(0, 0, 0, 0.685);
+  border: 3px inset #0d273e;
+}
+
+.wholeForm h2,
+.wholeForm p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wholeForm h2 {
+  box-shadow: 0 2 8px rgb(115, 197, 207);
+  color: #61dafb;
+}
+
+.formButton {
+  text-align: center;
+}
+
+.form input {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }

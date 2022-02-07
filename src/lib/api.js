@@ -81,6 +81,23 @@ export async function getAllEvents() {
   return transformedEventData;
 }
 
+export async function addMailListMember(signUpData) {
+  const response = await fetch(`${OP_DOMAIN}/contacts`, {
+    method: "POST",
+    body: JSON.stringify(signUpData),
+     headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not sign up to mail list.");
+  }
+
+  return null;
+}
+
 // export async function getSingleQuote(quoteId) {
 //   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
 //   const data = await response.json();
