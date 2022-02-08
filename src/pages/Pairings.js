@@ -6,6 +6,7 @@ import { getAllPairings } from "../lib/api";
 
 import PairingsList from "../components/pairings/PairingsList";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
+import styles from "../../src/components/pairings/Pairs.module.css";
 
 const Pairings = () => {
   const {
@@ -35,15 +36,18 @@ const Pairings = () => {
   }
 
   return (
-  <Fragment>
-    <h2>Pairings</h2>
-    <h3>What to eat while you have a drink</h3>
-    <PairingsList pairs={loadedPairings} />
-    <h3>Do you have a recipe and pairing to send us?</h3>
-    {/* <section>
+    <Fragment>
+      <h2 className={styles.pairsh2}>Pairings</h2>
+      <h3 className={styles.pairsh3}>What to eat while you have a drink</h3>
+      <PairingsList pairs={loadedPairings} />
+      <h3 className={styles.pairsh3}>
+        Do you have a recipe and pairing to send us?
+      </h3>
+      <AddPairings />
+      {/* <section>
       <AddPairings onAddPairings={addPairsHandler} />
     </section> */}
-  </Fragment>
+    </Fragment>
   );
 
   // const [pairs, setPairs] = useState([]);
