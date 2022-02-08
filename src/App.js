@@ -26,8 +26,8 @@ function App() {
    const ageValidStorage = localStorage.getItem("ageIsValid");
    if (ageValidStorage === "1") {
       dispatch(ageCheckActions.validate());
-      console.log("validation")
   }
+  
   const ageValidated = useSelector((state) => state.ageCheck.ageIsValid);
 
   return (

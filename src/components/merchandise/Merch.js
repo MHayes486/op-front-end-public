@@ -1,9 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import MerchItemForm from "./MerchItemForm";
 import classes from "./Merch.module.css";
+import { cartActions } from "../../store/cart-slice";
 
 const Merch = (props) => {
+  const dispatch = useDispatch();
+
+  
+const addToCartHandler = () => {
+  dispatch(cartActions.addItemToCart({}));
+};
+
+
   return (
     <li className={classes.merch}>
       <div>
@@ -17,7 +27,7 @@ const Merch = (props) => {
         />
       </div>
       <div>
-        <MerchItemForm />
+        <MerchItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );

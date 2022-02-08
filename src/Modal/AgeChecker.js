@@ -1,6 +1,6 @@
 // Code modified from https://www.npmjs.com/package/agegate
 
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import agegate, { getData } from "agegate";
 import { ageCheckActions } from "../store/age-check-slice";
 import { useDispatch } from "react-redux";
@@ -19,7 +19,8 @@ const AgeModal = (props) => {
 
   const [date, setDate] = useState("");
   const [country, setCountry] = useState(countries[0].code);
-  // const [notLegal, setNotLegal] = useState(false);
+  const [notLegal, setNotLegal] = useState(false);
+  const [initVisit, setInitialVisit] = useState(true);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -30,8 +31,9 @@ const AgeModal = (props) => {
       if (result) {
         localStorage.setItem("ageIsValid", "1");
         dispatch(ageCheckActions.validate());
-        // } else {
-        //   setNotLegal(result);
+      } else {
+        setNotLegal(result);
+        setInitialVisit(false);
       }
     }
   };
@@ -67,7 +69,14 @@ const AgeModal = (props) => {
         <button className={styles.ageButton} type="submit">
           Submit
         </button>
-        {/* {notLegal && notLegalAlert} */}
+        {!notLegal && !initVisit && (
+          <Fragment>
+            <h3 className={styles.notOldEnough}>Sorry!</h3>
+            <p className={styles.notOldEnough}>
+              You are not old enough to visit the PIG!
+            </p>
+          </Fragment>
+        )}
       </form>
     </div>
   );

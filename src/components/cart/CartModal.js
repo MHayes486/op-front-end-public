@@ -1,6 +1,10 @@
 import { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import {useSelector} from 'react-redux';
 
+
+
+import CartItem from "./CartItem"
 import classes from './CartModal.module.css';
 
 const Backdrop = props => {
@@ -15,13 +19,36 @@ const CartModalOverlay = props => {
 
 const portalElement = document.getElementById('overlays');
 
-const CartModal = props => {
+
+const CartModal = (props) => {
+    const cartItems = useSelector((state)=> state.cart.items);
     return (
-        <Fragment>
-            {ReactDOM.createPortal(<Backdrop onClose={props.onClose}/>, portalElement)};
-            {ReactDOM.createPortal(<CartModalOverlay>{props.children}</CartModalOverlay>, portalElement)};
-        </Fragment>
+      <Fragment>
+        <h2>Your Order</h2>
+        <ul>
+          {cartItems.map((item) => (
+            <CartItem
+              key={item.id}
+              item={{
+                id: item.id,
+                title: item.name,
+                quantity: item.quantity,
+                total: item.totalPrice,
+                price: item.price,
+              }}
+            />
+          ))}
+        </ul>
+      </Fragment>
     );
-};
+}
+// const CartModal = props => {
+//     return (
+//         <Fragment>
+//             {ReactDOM.createPortal(<Backdrop onClose={props.onClose}/>, portalElement)};
+//             {ReactDOM.createPortal(<CartModalOverlay>{props.children}</CartModalOverlay>, portalElement)};
+//         </Fragment>
+//     );
+// };
 
 export default CartModal;
