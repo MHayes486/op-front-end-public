@@ -4,6 +4,7 @@ import useHttp from "../hooks/use-http";
 import { getAllMerch } from "../lib/api";
 
 import MerchList from "../components/merchandise/MerchList";
+import Loading from "../components/Loading";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
@@ -21,6 +22,7 @@ const Merchandise = () => {
 
   if (status === "pending") {
     return <SlSpinner style={{ fontSize: "3rem" }} />;
+ 
   }
 
   if (error) {

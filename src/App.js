@@ -6,6 +6,7 @@ import "./App.css";
 import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
 import {ageCheckActions} from "./store/age-check-slice";
+import 'bootstrap'
 
 import Home from "./pages/Home";
 import FindUs from "./pages/FindUs";
@@ -16,6 +17,9 @@ import CiderDetails from "./pages/CiderDetails";
 import Pairings from "./pages/Pairings";
 import NotFound from "./pages/NotFound";
 import References from "./pages/References";
+import LoginUser from "./pages/LoginUser";
+import RegisterUser from "./pages/RegisterUser";
+import Admin from "./pages/Admin";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +45,9 @@ function App() {
             <Route path="/ourcider/:ciderId" element={<CiderDetails />}></Route>
             <Route path="/pairings" element={<Pairings />} />
             <Route path="/references" element={<References />} />
+            <Route path="/login" element={<LoginUser />} />
+            <Route path="/register" element={<RegisterUser />} />
+            <Route path="/admin" element={<Admin />} />
             {/* Capture page not found: */}
             <Route path="*" element={<NotFound />} />
           </Routes>

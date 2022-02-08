@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, setState } from "react";
 import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
 import Cart from "../components/cart/Cart";
 import CartProvider from "../store/CartProvider";
+import { useSelector, useDispatch } from "react-redux";
+import {logoutUser} from "../actions/userActions"
+
+
+
 
 const HeaderNav = (props) => {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -16,8 +21,16 @@ const HeaderNav = (props) => {
     setCartIsShown(false);
   };
 
+  const userstate = useSelector((state) => state.loginUserReducer || {});
+  const { currentUser } = userstate;
+  const merchUser = localStorage.getItem("merchUser")//, JSON.stringify({currentUser}))
+  console.log(merchUser)
+
   return (
+  
+    
     <CartProvider>
+      
       <header className={styles.header} onShowCart={showCartHandler}>
         <img
           src="./logo192.png"
@@ -26,6 +39,7 @@ const HeaderNav = (props) => {
         />
 
         <nav className={styles.nav}>
+
           <ul>
             {cartIsShown && <Cart onClose={hideCartHandler} />}
             <li>
@@ -74,6 +88,33 @@ const HeaderNav = (props) => {
                 className={(navData) => (navData.isActive ? styles.active : "")}
               >
                 Merchandise
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/login"
+                className={(navData) => (navData.isActive ? styles.active : "")}
+              >
+                  
+                {merchUser ? (
+                  <li className="nav-item">
+                    <a className="nav-link" href="/admin" >
+                      Admin
+                    </a>
+
+                    <a className="nav-link" href="/login" onClick={logoutUser()}>
+                      Logout
+                    </a>
+                  </li>
+                ) : (
+                  <li className="nav-item">
+                    <a className="nav-link" href="/login">
+                      Login
+                    </a>
+                  </li>
+                )}
+
               </NavLink>
             </li>
             <li>
