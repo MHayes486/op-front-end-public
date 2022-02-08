@@ -27,7 +27,7 @@ const addToCartHandler = () => {
         />
       </div>
       <div>
-        <MerchItemForm />
+        <MerchItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );

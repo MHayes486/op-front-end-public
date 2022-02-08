@@ -2,6 +2,11 @@ import classes from './MerchItemForm.module.css';
 import Input from './Input'
 
 const MerchItemForm = props => {
+
+    const addCartHandler=()=>({
+        // props.onAddToCart(),
+});
+
     return (
         <form className={classes.form}>
 
@@ -13,7 +18,7 @@ const MerchItemForm = props => {
                 step: '1',
                 defaultValue: '1'
             }} />
-            <button>+ Add</button>
+            <button onClick={addCartHandler}>+ Add</button>
 
         </form>
     );
