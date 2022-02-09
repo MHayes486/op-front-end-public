@@ -14,11 +14,13 @@ const SignUp = () => {
   }
 
   const signUpValidated = useSelector((state) => state.signUpCheck.signedUp);
-  const { sendRequest, status } = useHttp(addMailListMember);
+  const { sendRequest } = useHttp(addMailListMember);
 
   const signUpHandler = (signUpData) => {
     sendRequest(signUpData);
   };
+
+
 
   return (
     <div className={styles.wholeForm}>
