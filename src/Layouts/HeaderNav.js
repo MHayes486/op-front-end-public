@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
-<<<<<<< HEAD
-import { useState, setState } from "react";
+import { useState, setState, Fragment } from "react";
 import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
 import Cart from "../components/cart/Cart";
@@ -10,12 +9,9 @@ import {logoutUser} from "../actions/userActions"
 
 
 
-=======
-import { Fragment } from "react";
-import HeaderCartButton from "./HeaderCartButton";
+
 import styles from "./HeaderNav.module.css";
 import { useNavigate } from "react-router-dom";
->>>>>>> A3
 
 const HeaderNav = (props) => {
   // const [cartIsShown, setCartIsShown] = useState(false);
@@ -39,14 +35,10 @@ const HeaderNav = (props) => {
   console.log(merchUser)
 
   return (
-<<<<<<< HEAD
   
-    
-    <CartProvider>
       
-=======
+
     <Fragment>
->>>>>>> A3
       <header className={styles.header} onShowCart={showCartHandler}>
         <img
           src="./logo192.png"
