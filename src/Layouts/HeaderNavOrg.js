@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { Fragment } from "react";
+import { useState } from "react";
 import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
+import CartInfo from "../components/cart/CartInfo";
 import { useNavigate } from "react-router-dom";
 
 const HeaderNav = (props) => {
@@ -21,7 +22,7 @@ const HeaderNav = (props) => {
   };
 
   return (
-    <Fragment>
+    <CartProvider>
       <header className={styles.header} onShowCart={showCartHandler}>
         <img
           src="./logo192.png"
@@ -31,7 +32,8 @@ const HeaderNav = (props) => {
 
         <nav className={styles.nav}>
           <ul>
-              <li>
+            {cartIsShown && <CartInfo onClose={hideCartHandler} />}
+            <li>
               <NavLink
                 to="/home"
                 className={(navData) => (navData.isActive ? styles.active : "")}
@@ -85,7 +87,7 @@ const HeaderNav = (props) => {
           </ul>
         </nav>
       </header>
-    </Fragment>
+    </CartProvider>
   );
 };
 

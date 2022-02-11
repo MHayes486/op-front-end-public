@@ -5,39 +5,54 @@ const cartSlice = createSlice({
   initialState: {
     items: [],
     totalQuantity: 0,
-    totalAmount: 1,
+    totalFullPrice: 0.0,
   },
   reducers: {
     addItemToCart(state, action) {
       const newItem = action.payload;
-      const existingItem = state.item.find((item) => item.id === newItem.id);
+
+      const existingItem = state.items.find(
+        (item) => item.itemId === newItem.id
+      );
+
+      state.totalQuantity++;
+      state.totalFullPrice = parseFloat(state.totalFullPrice) + parseFloat(newItem.price);
+      console.log("Total " + state.totalFullPrice);
 
       if (!existingItem) {
         state.items.push({
           itemId: newItem.id,
-          price: newItem.price,
-          quantity: newItem.quantity,
-          totalPrice: newItem.price * newItem.quantity,
+          price: parseFloat(newItem.price),
+          quantity: parseInt(newItem.quantity, 10),
+          totalPrice: parseFloat(newItem.price),
           name: newItem.title,
+          tag: newItem.tagline,
         });
       } else {
-        existingItem.quantity = existingItem.quantity + newItem.quantity;
-        existingItem.totalPrice = existingItem.totalPrice + newItem.totalPrice;
+        existingItem.quantity = parseInt(existingItem.quantity, 10) + 1;
+        existingItem.totalPrice =
+          parseFloat(existingItem.totalPrice) + parseFloat(newItem.price);
       }
     },
     removeItemFromCart(state, action) {
       const id = action.payload;
-      const existingItem = state.items.find((item) => item.id === id);
+      const existingItem = state.items.find((item) => item.itemId === id);
+      state.totalQuantity--;
+      state.totalFullPrice =
+        parseFloat(state.totalFullPrice) - parseFloat(existingItem.price);
+      console.log(existingItem);
+
       if (existingItem.quantity === 1) {
-        state.items = state.items.filter((item) => item.id !== id);
+        state.items = state.items.filter((item) => item.itemId !== id);
       } else {
-        existingItem.quantity--;
-        existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
+        existingItem.quantity = parseInt(existingItem.quantity, 10) - 1;
+        existingItem.totalPrice =
+          existingItem.totalPrice - parseFloat(existingItem.price);
       }
     },
   },
 });
 
-export const cartActions = cartSlice.action;
+export const cartActions = cartSlice.actions;
 
 export default cartSlice;

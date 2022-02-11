@@ -1,11 +1,22 @@
 import classes from './MerchItemForm.module.css';
 import Input from './Input'
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../store/cart-slice';
 
 const MerchItemForm = props => {
+    const dispatch = useDispatch();
 
-    const addCartHandler=()=>({
-        // props.onAddToCart(),
-});
+     const { title, price, description, id } = props;
+     
+  const addCartHandler = () => {
+    dispatch(
+      cartActions.addItemToCart({
+        id,
+        title,
+        price,
+      })
+    );
+  };
 
     return (
         <form className={classes.form}>
