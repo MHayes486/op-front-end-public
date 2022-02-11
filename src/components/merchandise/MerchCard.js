@@ -1,6 +1,5 @@
 import React from "react";
 
-import MerchItemForm from "./MerchItemForm";
 import classes from "./MerchCard.module.css";
 
 const MerchCard = (props) => {

@@ -17,9 +17,13 @@ import CiderDetails from "./pages/CiderDetails";
 import Pairings from "./pages/Pairings";
 import NotFound from "./pages/NotFound";
 import References from "./pages/References";
+<<<<<<< HEAD
 import LoginUser from "./pages/LoginUser";
 import RegisterUser from "./pages/RegisterUser";
 import Admin from "./pages/Admin";
+=======
+import Cart from "./pages/Cart";
+>>>>>>> A3
 
 function App() {
   const dispatch = useDispatch();
@@ -45,9 +49,13 @@ function App() {
             <Route path="/ourcider/:ciderId" element={<CiderDetails />}></Route>
             <Route path="/pairings" element={<Pairings />} />
             <Route path="/references" element={<References />} />
+<<<<<<< HEAD
             <Route path="/login" element={<LoginUser />} />
             <Route path="/register" element={<RegisterUser />} />
             <Route path="/admin" element={<Admin />} />
+=======
+            <Route path="/cart" element = {<Cart />} />
+>>>>>>> A3
             {/* Capture page not found: */}
             <Route path="*" element={<NotFound />} />
           </Routes>

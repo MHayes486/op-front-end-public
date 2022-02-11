@@ -1,21 +1,9 @@
 import { NavLink } from "react-router-dom";
-<<<<<<< HEAD
-import { useState, setState } from "react";
+import { useState } from "react";
 import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
-import Cart from "../components/cart/Cart";
-import CartProvider from "../store/CartProvider";
-import { useSelector, useDispatch } from "react-redux";
-import {logoutUser} from "../actions/userActions"
-
-
-
-=======
-import { Fragment } from "react";
-import HeaderCartButton from "./HeaderCartButton";
-import styles from "./HeaderNav.module.css";
+import CartInfo from "../components/cart/CartInfo";
 import { useNavigate } from "react-router-dom";
->>>>>>> A3
 
 const HeaderNav = (props) => {
   // const [cartIsShown, setCartIsShown] = useState(false);
@@ -33,20 +21,8 @@ const HeaderNav = (props) => {
     navigate("/cart");
   };
 
-  const userstate = useSelector((state) => state.loginUserReducer || {});
-  const { currentUser } = userstate;
-  const merchUser = localStorage.getItem("merchUser")//, JSON.stringify({currentUser}))
-  console.log(merchUser)
-
   return (
-<<<<<<< HEAD
-  
-    
     <CartProvider>
-      
-=======
-    <Fragment>
->>>>>>> A3
       <header className={styles.header} onShowCart={showCartHandler}>
         <img
           src="./logo192.png"
@@ -55,9 +31,9 @@ const HeaderNav = (props) => {
         />
 
         <nav className={styles.nav}>
-
           <ul>
-              <li>
+            {cartIsShown && <CartInfo onClose={hideCartHandler} />}
+            <li>
               <NavLink
                 to="/home"
                 className={(navData) => (navData.isActive ? styles.active : "")}
@@ -105,40 +81,13 @@ const HeaderNav = (props) => {
                 Merchandise
               </NavLink>
             </li>
-
-            <li>
-              <NavLink
-                to="/login"
-                className={(navData) => (navData.isActive ? styles.active : "")}
-              >
-                  
-                {merchUser ? (
-                  <li className="nav-item">
-                    <a className="nav-link" href="/admin" >
-                      Admin
-                    </a>
-
-                    <a className="nav-link" href="/login" onClick={logoutUser()}>
-                      Logout
-                    </a>
-                  </li>
-                ) : (
-                  <li className="nav-item">
-                    <a className="nav-link" href="/login">
-                      Login
-                    </a>
-                  </li>
-                )}
-
-              </NavLink>
-            </li>
             <li>
               <HeaderCartButton onClick={showCartHandler} />
             </li>
           </ul>
         </nav>
       </header>
-    </Fragment>
+    </CartProvider>
   );
 };
 

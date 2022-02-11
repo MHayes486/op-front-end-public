@@ -115,6 +115,22 @@ export async function addAPairing(pairingData) {
   return null;
 }
 
+export async function placeOrder(orderData) {
+  const response = await fetch(`${OP_DOMAIN}/orders`, {
+    method: "POST",
+    body: JSON.stringify(orderData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not add to pairings database.");
+  }
+
+  return null;
+}
 // export async function getSingleQuote(quoteId) {
 //   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
 //   const data = await response.json();
