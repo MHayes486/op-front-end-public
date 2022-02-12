@@ -2,6 +2,7 @@ import { Fragment, useEffect } from "react";
 
 import useHttp from "../hooks/use-http";
 import { getAllMerch } from "../lib/api";
+import { deleteMerchandise } from "../lib/api";
 
 import MerchList from "../components/admin/merch/MerchList";
 import Loading from "../components/Loading";
@@ -9,6 +10,14 @@ import Loading from "../components/Loading";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
 const Admin = () => {
+
+  const { sendDelRequest } = useHttp(deleteMerchandise);
+
+  const delReqHandler = (delRequest) => {
+    sendDelRequest(delRequest);
+  };
+
+
   const {
     sendRequest,
     status,
@@ -38,7 +47,8 @@ const Admin = () => {
       <h1>Admin</h1>
       <h4>Update Merchandise</h4>
       <section>
-        <MerchList merch={loadedMerch} />
+        <MerchList merch={loadedMerch} onSignUp={delReqHandler}/>
+        <h4>Add Merchandise Form goes here</h4>
       </section>
     </Fragment>
   );

@@ -14,7 +14,7 @@ const Merch = (props) => {
 
 
   return (
-    <li className={classes.merch}>
+    <li className={classes.merchAdmin}>
       <div>
         <h2>{props.itemType}</h2>
         <h3>${props.itemCost}</h3>
@@ -22,7 +22,7 @@ const Merch = (props) => {
         <img
           src={`${props.image}`}
           alt="pic from backend"
-          className={classes.imageSize}
+          className={classes.imageSizeAdmin}
         />
       </div>
       <div>

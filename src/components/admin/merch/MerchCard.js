@@ -1,7 +1,8 @@
 import React from "react";
 
 import MerchItemForm from "./MerchItemForm";
-import classes from "../../merchandise/MerchCard.module.css";
+//import classes from "../../merchandise/MerchCard.module.css";
+import classes from './Admin-Merch.modules.css';
 
 const MerchCard = (props) => {
   return (
