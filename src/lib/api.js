@@ -57,7 +57,7 @@ export async function getAllPairings() {
       ...data[key],
     };
     transformedPairingsData.push(pairingObj);
-  }
+   }
   return transformedPairingsData;
 }
 

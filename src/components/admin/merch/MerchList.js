@@ -1,9 +1,10 @@
 import React from 'react';
 
 import Merch from './Merch';
-import classes from '../../merchandise/MerchList.module.css';
+
 import { useDispatch, useSelector } from "react-redux";
 import { activateMerchandise, deactivateMerchandise } from "../../../actions/adminActions";
+import classes from "../Admin.module.css";
 
 const MerchList = (props) => {
   const dispatch = useDispatch();
@@ -34,8 +35,8 @@ const MerchList = (props) => {
               <td>{merch.itemName}</td>
               <td>{merch.image}</td>
               <td>{merch.isActive}</td>
-              <button onClick={()=>{dispatch(activateMerchandise(merch._id))}}>Activate</button>
-              <button onClick={()=>{dispatch(deactivateMerchandise(merch._id))}}>De-activate</button>
+              <button className={classes.button1} onClick={()=>{dispatch(activateMerchandise(merch._id))}}>Activate</button>
+              <button className={classes.button2} onClick={()=>{dispatch(deactivateMerchandise(merch._id))}}>Deactivate</button>
             </tr>
           );
         })}

@@ -6,6 +6,7 @@ import { deleteMerchandise } from "../lib/api";
 
 import AdminMerch from "./AdminMerch";
 import AdminPairs from "./AdminPairs";
+import AdminEditPairings from "../components/admin/AdminEditPairs";
 import Loading from "../components/Loading";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
@@ -45,6 +46,7 @@ const Admin = () => {
     <Fragment>
       <h1>Admin</h1>
       <section>
+
         <h4>Update Merchandise</h4>
         <AdminMerch />
         <h4>Update Pairings</h4>

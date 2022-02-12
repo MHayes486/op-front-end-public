@@ -151,3 +151,31 @@ export const deactivatePairings = (pairsid) => async dispatch => {
     }
 
 }
+
+
+export const getPairingById=(pairingid)=>async dispatch=>{
+
+    dispatch({type:'GET_PAIRINGBYID_REQUEST'})
+
+    try {
+        const response = await axios.post('https://dig33-apricot-backend.herokuapp.com/pizzas/getpizzabyid' , {pairingid})
+        console.log(response);
+        dispatch({type:'GET_PAIRINGBYID_SUCCESS' , payload : response.data})
+    } catch (error) {
+        dispatch({type:'GET_PAIRINGBYID_FAILED' , payload : error})
+    }
+
+}
+
+
+export const editPairing=(editedPairing)=>async dispatch=>{
+    dispatch({type:'EDIT_PAIRING_REQUEST'})
+    try {
+        const response= await axios.post('https://dig33-apricot-backend.herokuapp.com/pairing/editpairings' , {editedPairing})
+        console.log(response);
+        dispatch({type:'EDIT_PAIRING_SUCCESS'})
+        window.location.href='/admin/pairingslist'
+    } catch (error) {
+        dispatch({type:'EDIT_PAIRING_FAILED' , payload : error})
+    }
+}
