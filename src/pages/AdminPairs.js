@@ -2,23 +2,22 @@ import { Fragment, useEffect } from "react";
 
 import useHttp from "../hooks/use-http";
 import { getAllMerch, getAllPairings } from "../lib/api";
-import { deleteMerchandise } from "../lib/api";
 
-import AdminMerch from "./AdminMerch";
-import AdminPairs from "./AdminPairs";
+import AdminPairings from "../components/admin/AdminPairings";
 import Loading from "../components/Loading";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
+
 const Admin = () => {
 
-  // GET MERCHANDISE
+// GET MERCHANDISE
   const {
     sendRequest,
     status,
-    data: loadedMerch,
+    data: loadedPairs,
     error,
-  } = useHttp(getAllMerch, true);
+  } = useHttp(getAllPairings, true);
 
   useEffect(() => {
     sendRequest();
@@ -32,7 +31,7 @@ const Admin = () => {
     return <p>{error}</p>;
   }
 
-  if (status === "completed" && (!loadedMerch || loadedMerch.length === 0)) {
+  if (status === "completed" && (!loadedPairs || loadedPairs.length === 0)) {
     return <p>No merch available?!?</p>;
   }
 
@@ -43,13 +42,10 @@ const Admin = () => {
 
   return (
     <Fragment>
-      <h1>Admin</h1>
-      <section>
-        <h4>Update Merchandise</h4>
-        <AdminMerch />
-        <h4>Update Pairings</h4>
-        <AdminPairs />
 
+      <section>
+      <AdminPairings pairs={loadedPairs} />
+        <h4><i>Add Pairings Form goes here</i></h4>
 
       </section>
     </Fragment>

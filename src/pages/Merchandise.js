@@ -44,3 +44,4 @@ const Merchandise = () => {
   );
 };
 export default Merchandise;
+

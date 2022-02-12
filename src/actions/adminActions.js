@@ -114,3 +114,40 @@ export const deactivateMerchandise = (merchid) => async dispatch => {
     }
 
 }
+
+
+export const activatePairings = (pairsid) => async dispatch => {
+
+    try {
+        //    console.log(merchid);
+        const newURL = 'https://dig33-apricot-backend.herokuapp.com/pairings/activatepairings/' + pairsid;
+        //    console.log(newURL);
+        const response = await axios.put(newURL, { pairsid })
+        console.log(response);
+        //    console.log(merchid);
+        alert('This merchandise item is now live and able to be purchased')
+        //  const orders = await axios.get('https://dig33-apricot-backend.herokuapp.com/merchandise/')
+        //  dispatch({type:'GET_ALLORDERS_SUCCESS' , payload:orders.data})
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+export const deactivatePairings = (pairsid) => async dispatch => {
+
+    try {
+        //    console.log(pairsid);
+        const newURL = 'https://dig33-apricot-backend.herokuapp.com/pairings/deactivatepairings/' + pairsid;
+        //    console.log(newURL);
+        const response = await axios.put(newURL, { pairsid })
+        console.log(response);
+        //    console.log(pairsid);
+        alert('This merchandise item has be deactived and cannot be purchased')
+        //  const orders = await axios.get('https://dig33-apricot-backend.herokuapp.com/merchandise/')
+        //  dispatch({type:'GET_ALLORDERS_SUCCESS' , payload:orders.data})
+    } catch (error) {
+        console.log(error);
+    }
+
+}

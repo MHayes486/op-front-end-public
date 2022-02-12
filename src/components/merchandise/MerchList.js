@@ -14,7 +14,8 @@ const MerchList = (props) => {
           itemType={merch.itemType}
           itemCost={merch.itemCost}
           itemName={merch.itemName}
-          image={merch.image}          
+          image={merch.image}    
+          active={merch.isActive}      
         />
       ))}
     </ul>

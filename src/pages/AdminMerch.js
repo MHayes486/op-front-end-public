@@ -4,15 +4,15 @@ import useHttp from "../hooks/use-http";
 import { getAllMerch, getAllPairings } from "../lib/api";
 import { deleteMerchandise } from "../lib/api";
 
-import AdminMerch from "./AdminMerch";
-import AdminPairs from "./AdminPairs";
+import MerchList from "../components/admin/merch/MerchList";
+import AdminPairings from "../components/admin/AdminPairings";
 import Loading from "../components/Loading";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
 const Admin = () => {
 
-  // GET MERCHANDISE
+// GET MERCHANDISE
   const {
     sendRequest,
     status,
@@ -38,18 +38,11 @@ const Admin = () => {
 
 
 
-
-
-
   return (
     <Fragment>
-      <h1>Admin</h1>
       <section>
-        <h4>Update Merchandise</h4>
-        <AdminMerch />
-        <h4>Update Pairings</h4>
-        <AdminPairs />
-
+      <MerchList merch={loadedMerch} />
+        <h4><i>Add Merchandise Form goes here</i></h4>
 
       </section>
     </Fragment>
