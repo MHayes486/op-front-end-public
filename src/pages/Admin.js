@@ -1,14 +1,19 @@
 import { Fragment, useEffect } from "react";
 
 import useHttp from "../hooks/use-http";
-import { getAllMerch } from "../lib/api";
+import { getAllMerch, getAllPairings } from "../lib/api";
+import { deleteMerchandise } from "../lib/api";
 
-import MerchList from "../components/admin/merch/MerchList";
+import AdminMerch from "./AdminMerch";
+import AdminPairs from "./AdminPairs";
+import AdminEditPairings from "../components/admin/AdminEditPairs";
 import Loading from "../components/Loading";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
 const Admin = () => {
+
+  // GET MERCHANDISE
   const {
     sendRequest,
     status,
@@ -22,7 +27,6 @@ const Admin = () => {
 
   if (status === "pending") {
     return <SlSpinner style={{ fontSize: "3rem" }} />;
- 
   }
 
   if (error) {
@@ -33,12 +37,22 @@ const Admin = () => {
     return <p>No merch available?!?</p>;
   }
 
+
+
+
+
+
   return (
     <Fragment>
       <h1>Admin</h1>
-      <h4>Update Merchandise</h4>
       <section>
-        <MerchList merch={loadedMerch} />
+
+        <h4>Update Merchandise</h4>
+        <AdminMerch />
+        <h4>Update Pairings</h4>
+        <AdminPairs />
+
+
       </section>
     </Fragment>
   );

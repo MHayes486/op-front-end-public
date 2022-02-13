@@ -12,7 +12,8 @@ const PairingsList = (props) => {
           pigProduct={pairs.pigProduct}
           dishName={pairs.dishName}
           ingredients={pairs.ingredients}
-          image={pairs.image}          
+          image={pairs.image}   
+          isActive={pairs.isActive}       
         />
       ))}
     </ul>

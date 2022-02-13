@@ -57,7 +57,7 @@ export async function getAllPairings() {
       ...data[key],
     };
     transformedPairingsData.push(pairingObj);
-  }
+   }
   return transformedPairingsData;
 }
 
@@ -97,6 +97,35 @@ export async function addMailListMember(signUpData) {
 
   return null;
 }
+
+// Update Merchandise
+export async function deleteMerchandise(merchDeleteData) {
+  const response = await fetch(`${OP_DOMAIN}/merchandise`, {
+    method: "DELETE",
+    body: JSON.stringify(merchDeleteData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not sign up to mail list.");
+  }
+
+  return null;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 export async function addAPairing(pairingData) {
   const response = await fetch(`${OP_DOMAIN}/pairings`, {

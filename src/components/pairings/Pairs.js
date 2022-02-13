@@ -4,6 +4,7 @@ import classes from './Pairs.module.css';
 
 const Pairs = (props) => {
   return (
+   
     <li className={classes.pairs}>
       <h2>{props.dishName}</h2>
       <p><b>Pairs With:</b>

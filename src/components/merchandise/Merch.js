@@ -13,12 +13,14 @@ const Merch = (props) => {
   const price = props.itemCost;
   const title = props.itemType;
   const quantity = 1;
+  const active = props.isActive;
 
   const addToCartHandler = () => {
     dispatch(cartActions.addItemToCart({ id, tagline, price, quantity, title }));
   };
 
   return (
+  
     <li className={classes.merch}>
       <div>
         <h2>{props.itemType}</h2>

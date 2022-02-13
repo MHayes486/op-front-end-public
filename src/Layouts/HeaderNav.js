@@ -4,6 +4,8 @@ import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
 // import Cart from "../components/cart/Cart";
 // import CartProvider from "../store/CartProvider";
+//import Cart from "../components/cart/Cart";
+import CartProvider from "../store/CartProvider";
 import { useSelector, useDispatch } from "react-redux";
 import {logoutUser} from "../actions/userActions"
 
