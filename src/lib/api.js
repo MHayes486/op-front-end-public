@@ -57,7 +57,7 @@ export async function getAllPairings() {
       ...data[key],
     };
     transformedPairingsData.push(pairingObj);
-   }
+  }
   return transformedPairingsData;
 }
 
@@ -116,16 +116,22 @@ export async function deleteMerchandise(merchDeleteData) {
   return null;
 }
 
+export async function addAEvent(eventData) {
+  const response = await fetch(`${OP_DOMAIN}/pairings`, {
+    method: "POST",
+    body: JSON.stringify(eventData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
 
+  if (!response.ok) {
+    throw new Error(data.message || "Could not add to events database.");
+  }
 
-
-
-
-
-
-
-
-
+  return null;
+}
 
 export async function addAPairing(pairingData) {
   const response = await fetch(`${OP_DOMAIN}/pairings`, {
