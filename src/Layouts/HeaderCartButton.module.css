@@ -1,16 +1,20 @@
 .button {
-  cursor: pointer;
   font: inherit;
-  border: none;
-  background-color: #0d273e;
-  color: white;
-  padding: 0.75rem 3rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 50px;
-  font-weight: bold;
-  height: 100%;
+    border: none;
+    background-color: #f0e6da8e;
+    opacity: 2;
+    color: #222222;
+    padding: 0.25rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: 500;
+    height: 100%;
+    position: relative;
+    bottom: 6rem;
+    left: -1rem;
+    z-index: 2;
 }
 
 .button:hover,

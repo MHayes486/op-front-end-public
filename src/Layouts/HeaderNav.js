@@ -2,8 +2,10 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import HeaderCartButton from "./HeaderCartButton";
 import styles from "./HeaderNav.module.css";
+import {Container, Grid, Col, Row} from "react-bootstrap";
 import Cart from "../components/cart/Cart";
 import CartProvider from "../store/CartProvider";
+
 
 const HeaderNav = (props) => {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -17,13 +19,22 @@ const HeaderNav = (props) => {
   };
 
   return (
+    <Container fluid="true" >
+        <Col className="justify-content-md-center">
     <CartProvider>
+
+
       <header className={styles.header} onShowCart={showCartHandler}>
-        <img
+      <Row className="justify-content-center">
+      <Col fluid={{ span: 6, offset: 3 }}>  <img
           src="./logo192.png"
           className={styles.pig_logo}
           alt="pics from backend"
-        />
+        /></Col>
+
+</Row>
+<Row>
+      <Col fluid={{ span: 6, offset: 3 }}>
 
         <nav className={styles.nav}>
           <ul>
@@ -39,7 +50,8 @@ const HeaderNav = (props) => {
             <li>
               <NavLink
                 to="/aboutus"
-                className={(navData) => (navData.isActive ? styles.active : "")}
+
+  className={(navData) => (navData.isActive ? styles.active : "" )}
               >
                 About
               </NavLink>
@@ -81,8 +93,13 @@ const HeaderNav = (props) => {
             </li>
           </ul>
         </nav>
-      </header>
+        </Col>
+</Row>
+        </header>
     </CartProvider>
+    </Col>
+
+    </Container>
   );
 };
 

@@ -54,10 +54,10 @@ width: 100vw;
 }
 /* Hero image */
 /* paper rip image */
-.about_tear1 {
+.about_tear1{
   width: 100vw;
   position: absolute;
-  top: 12rem;
+  top: 25rem;
   z-index: 2;
 }
 /* hero h1 & sub heading */
@@ -76,8 +76,8 @@ width: 100vw;
 .about_sub_heading{
   position: relative;
   top: 1rem;
-  left: -14rem;
-  /* width: 369px; */
+  left: 5rem;
+  width: 350px;
   text-align: left;
   font-weight: bold;
   z-index: 3;
@@ -86,9 +86,10 @@ width: 100vw;
 /* SECTION 2 */
 .about_img .about_splash1 {
   z-index: -1;
-  position: relative;
-  top: 5rem;
-  width: 100vw;
+    position: relative;
+    top: 4rem;
+    height: 80vh;
+    width: 100vw;
 }
 
 
@@ -96,7 +97,7 @@ width: 100vw;
   background-color: #222222;
   height: 500px;
   position: relative;
-  top: -13rem;
+  top: -10rem;
   width: 100vw;
   display: flex;
   z-index: 1;
@@ -105,37 +106,39 @@ width: 100vw;
 .about_tear2 {
   width: 100vw;
   position: relative;
-  top: 0rem;
-  z-index: 2;}
+  top: 1rem;
+  z-index: 2;
+}
+
 
 /* SECTION 3 */
 .about_heading2 {
   display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    color: #f0e6da;
-    z-index: 4;
-    top: 6rem;
-    left: 33rem;
-    width: 100%;
-    font-size: 3rem;
-    width: 100%;
-    font-size: 3rem;
+  position: absolute;
+  flex-wrap: wrap;
+  color: #f0e6da;
+  z-index: 4;
+  top: 3rem;
+  left: 46%;
 }
 .pigstail_text {
-
   color: #f0e6da;
   font-size: 16px;
   position: relative;
-  /* margin-top: 33%; */
+  margin-left: -126%;
+  margin-top: 34%;
+  /* left: -544%; */
+  text-align: left;
+  /* right: 446%; */
   font-weight: 400;
-  left: 9rem;
-  top: 7rem;
-
+  z-index: 6;
 }
 .about_pg1,
 .about_pg2 {
-
+  width: 40vw;
+  text-align: left;
+  top: 13rem;
+  left: -11rem;
   z-index: 3;
 }
 .about_img4 {
@@ -154,7 +157,7 @@ width: 100vw;
   position: absolute;
   justify-content: space-between;
   left: 11%;
-  top: 5rem;
+  top: 3rem;
   width: 26%;
   z-index: 6;
 }
@@ -166,35 +169,29 @@ width: 100vw;
 .about2 {
   width: 25vw;
 }
-.about_tear3, .tear3 {
-  width: 100vw;
+.about_tear3 {
   position: relative;
-  top: 13rem;
-  z-index: 2;
-
+  width: 100vw;
+  z-index: 5;
+  height: 32vh;
+  top: -32rem;
 }
-.about_tear4{
 
-}
 /* SECTION 5 */
 
 .about_heading3 {
   width: 100vw;
 }
+.about_tear4{
 
-.about_tear5 {
-  position: relative;
-  width: 100vw;
-  z-index: 5;
-  height: 32vh;
-  top: -25rem;
 }
+
 
 .about5 {
   position: relative;
   width: 100vw;
   z-index: 0;
-  top: -16rem;
+  top: -19rem;
 }
 /* SECTION 6 */
 
@@ -211,7 +208,7 @@ width: 100vw;
   position: relative;
   width: 100vw;
   margin-top: 2%;
-  top: 5rem;
+  top: 8rem;
   font-size: 3.5rem;
   color: #3f73a2;
   z-index: 6;
@@ -251,16 +248,16 @@ width: 100vw;
 }
 .icons_text {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 2rem;
-  justify-content: center;
-  padding: 10px -1rem 0 2rem;
-  font-size: smaller;
-  margin-left: 10%;
-  text-align: center;
-  position: relative;
-  top: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    padding: 10px -1rem 0 2rem;
+    font-size: smaller;
+    margin-left: 10%;
+    text-align: center;
+    position: relative;
+    top: 4rem;
 }
 .icon1,
 .icon2,
@@ -291,7 +288,7 @@ width: 100vw;
 }
 
 .block2{
-  margin-top: -10px;
+  margin-top: 1.85rem;
 }
 .block3{
   margin-left: 9%;
@@ -303,27 +300,43 @@ width: 100vw;
   top: 20%;}
 
 
-
 /* MEDIA QUERIES */
 
-s
+@media (min-width:1024px){
+  .container{
+    width: 100%;
+  }
+  .about_tear_upward_img{
+width: 100%;
+  }
+  .about_tear2{
+
+  }
+  .about_tear3{
+
+  }
+  .about_tear5{
+
+  }
+  }
 
   @media (min-width:1024px){
-    .container{
+.container{
       max-width:100%;
     }
 .about_cont{
   max-width: 100%;
 }
-.about_bottomh2{
-  top: 24%;
-}
-.about_tear5{
-  top: -26rem;
-}
+    .about_tear3{
+      top: -9rem;
+    }
+    .about_tear5{
+
+      top: 23rem;
+  }
 }
 
-@media (max-width:960px){
+  @media (max-width:960px){
     .container{
       max-width: 100%;
     }
@@ -340,8 +353,8 @@ s
       top: -7rem;
     }
     .about_tear5 {
-      top: -23rem;
-    }
+      top: 114rem;
+  }
     .heading2{
       top: 30%;
       left: 11%;
@@ -355,7 +368,8 @@ s
     .About_us_6{
       top: -2rem;
     }
+
     .about_p6_1, .about_p6_2{
-    left: -6rem;
+left: -6rem;
     }
   }

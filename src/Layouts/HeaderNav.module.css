@@ -1,13 +1,13 @@
 .header {
-  width: 100%;
-  height: auto;
-  max-height: 7rem;
-  display: flex;
-  padding: 0 10%;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3f73a2;
-  color: #f0e6da;
+  width: 100vw;
+    height: 10rem;
+    max-height: 11rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f73a2;
+    color: #f0e6da;
+    justify-content: center;
 }
 
 
@@ -21,6 +21,9 @@
   display: flex;
   margin: 0;
   padding: 0;
+  position: relative;
+  top: 4rem;
+  left: 4.5rem;
 }
 
 .nav li {
@@ -42,6 +45,61 @@
 
 .pig_logo {
   height: 95%;
-  max-height: 100px;
+  max-height: 3.75rem;
   width: auto;
+  display: flex;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  top: 7%;
+  left: 45%;
+
 }
+
+
+/* MEDIA QUERIES */
+
+
+/* Extra large devices (large desktops, 1240px and up) */
+@media (min-width: 1200px) {
+  .header{
+    margin-top: 0;
+  }
+  .pig_logo {
+    margin-top: 0%;
+  }
+}
+
+
+
+/* max device 768px ) */
+@media (max-width:768px){
+
+  .header{
+    width: 100vw;
+  }
+}
+/* max device 480px ) */
+@media (max-width: 768px) {
+  /* .header{
+      width: 100vw;
+
+    } */
+
+    .pig_logo {
+      margin-top: -2%;
+    }
+
+    .nav ul {
+      display: none;
+    }
+  }
+/* mobile phones small */
+@media (max-width:320px)  {
+  .pig_logo {
+left: 7rem;
+  }
+
+
+}
+
