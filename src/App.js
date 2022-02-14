@@ -6,6 +6,7 @@ import "./App.css";
 import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
 import { ageCheckActions } from "./store/age-check-slice";
+
 import "bootstrap";
 
 import Home from "./pages/Home";

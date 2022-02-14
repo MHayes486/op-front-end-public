@@ -7,7 +7,7 @@ export default function LoginUser() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
-    localStorage.setItem("merchUser", 1)
+    // localStorage.setItem("merchUser", 1)
 
     useEffect(() => {
         if (localStorage.getItem('currentUser')) {

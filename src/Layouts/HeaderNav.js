@@ -8,6 +8,7 @@ import styles from "./HeaderNav.module.css";
 import CartProvider from "../store/CartProvider";
 import { useSelector, useDispatch } from "react-redux";
 import {logoutUser} from "../actions/userActions"
+import { logInCheckActions } from "../store/Login-check-slice";
 
 
 
@@ -16,6 +17,8 @@ import {logoutUser} from "../actions/userActions"
 import { useNavigate } from "react-router-dom";
 
 const HeaderNav = (props) => {
+
+  const dispatch = useDispatch();
   // const [cartIsShown, setCartIsShown] = useState(false);
 
   // const showCartHandler = () => {
@@ -31,15 +34,19 @@ const HeaderNav = (props) => {
     navigate("/cart");
   };
 
+      const logInStorage = localStorage.getItem("merchUser");
+      if (logInStorage === "1") {
+        dispatch(logInCheckActions.validate());
+      }
+
+        const LoginValid = useSelector((state) => state.logInCheck.logedIn);
+
   const userstate = useSelector((state) => state.loginUserReducer || {});
   const { currentUser } = userstate;
   const merchUser = localStorage.getItem("merchUser")//, JSON.stringify({currentUser}))
   console.log(merchUser)
 
   return (
-  
-      
-
     <Fragment>
       <header className={styles.header} onShowCart={showCartHandler}>
         <img
@@ -49,9 +56,8 @@ const HeaderNav = (props) => {
         />
 
         <nav className={styles.nav}>
-
           <ul>
-              <li>
+            <li>
               <NavLink
                 to="/home"
                 className={(navData) => (navData.isActive ? styles.active : "")}
@@ -100,19 +106,60 @@ const HeaderNav = (props) => {
               </NavLink>
             </li>
 
-            <li>
+            {!LoginValid && (
+              <li>
+                <NavLink
+                  to="/login"
+                  className={(navData) =>
+                    navData.isActive ? styles.active : ""
+                  }
+                >
+                  Login
+                </NavLink>
+              </li>
+            )}
+            {LoginValid && (
+              <Fragment>
+                <li>
+                  <NavLink
+                    to="/admin"
+                    className={(navData) =>
+                      navData.isActive ? styles.active : ""
+                    }
+                  >
+                    Admin
+                  </NavLink>
+                </li>
+                <li>
+                
+                   <a
+                      className="nav-link"
+                      href="/login"
+                      onClick={logoutUser()}
+                    >
+                      Logout
+                    </a>
+                  
+                </li>
+              </Fragment>
+            )}
+
+            {/* <li>
               <NavLink
                 to="/login"
                 className={(navData) => (navData.isActive ? styles.active : "")}
               >
-                  
                 {merchUser ? (
                   <li className="nav-item">
-                    <a className="nav-link" href="/admin" >
+                    <a className="nav-link" href="/admin">
                       Admin
                     </a>
 
-                    <a className="nav-link" href="/login" onClick={logoutUser()}>
+                    <a
+                      className="nav-link"
+                      href="/login"
+                      onClick={logoutUser()}
+                    >
                       Logout
                     </a>
                   </li>
@@ -123,9 +170,8 @@ const HeaderNav = (props) => {
                     </a>
                   </li>
                 )}
-
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <HeaderCartButton onClick={showCartHandler} />
             </li>

@@ -22,6 +22,7 @@ export const loginUser=(user) => async dispatch => {
         const response = await axios.post('https://dig33-apricot-backend.herokuapp.com/users/login', user)
         console.log(response)
         dispatch({type: 'USER_LOGIN_SUCCESS'})
+        localStorage.setItem("merchUser", 1);
         localStorage.setItem('currentUser', JSON.stringify(response.data))
         window.location.href='/'
     } catch (error) {
