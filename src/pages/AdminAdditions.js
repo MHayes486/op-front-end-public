@@ -7,7 +7,6 @@ import AddMerchs from "../components/merchandise/AddMerchs";
 const AdminAdds = () => {
   return (
     <Fragment>
-      <hr></hr>
       <h2>Add a Pairing</h2>
       <AddPairings />
       <hr></hr>
@@ -23,4 +22,4 @@ const AdminAdds = () => {
   );
 };
 
-export default AdminAdds();
+export default AdminAdds;

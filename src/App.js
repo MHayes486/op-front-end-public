@@ -5,8 +5,8 @@ import Layouts from "./Layouts/Layouts";
 import "./App.css";
 import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
-import {ageCheckActions} from "./store/age-check-slice";
-import 'bootstrap'
+import { ageCheckActions } from "./store/age-check-slice";
+import "bootstrap";
 
 import Home from "./pages/Home";
 import FindUs from "./pages/FindUs";
@@ -19,16 +19,17 @@ import NotFound from "./pages/NotFound";
 import References from "./pages/References";
 import LoginUser from "./pages/LoginUser";
 import RegisterUser from "./pages/RegisterUser";
+import AdminAdds from "./pages/AdminAdditions";
 import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
 
 function App() {
   const dispatch = useDispatch();
-   const ageValidStorage = localStorage.getItem("ageIsValid");
-   if (ageValidStorage === "1") {
-      dispatch(ageCheckActions.validate());
+  const ageValidStorage = localStorage.getItem("ageIsValid");
+  if (ageValidStorage === "1") {
+    dispatch(ageCheckActions.validate());
   }
-  
+
   const ageValidated = useSelector((state) => state.ageCheck.ageIsValid);
 
   return (
@@ -49,7 +50,8 @@ function App() {
             <Route path="/login" element={<LoginUser />} />
             <Route path="/register" element={<RegisterUser />} />
             <Route path="/admin" element={<Admin />} />
-            <Route path="/cart" element = {<Cart />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/admin/add" element={<AdminAdds />} />
             {/* Capture page not found: */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -7,8 +7,13 @@ import styles from "../UI/SignUp.module.css";
 const isNotEmpty = (value) => value.trim() !== "";
 
 function PairingsForm(props) {
+  const logedIn = localStorage.getItem("merchUser");
   const [selectedProduct, setSelectedProduct] = useState("Entire range");
-
+  let checkResult = false;
+  
+  if (logedIn === 1){
+    checkResult = true;
+  }
   const {
     value: dishNameValue,
     isValid: dishNameIsValid,
@@ -42,11 +47,13 @@ function PairingsForm(props) {
     if (!formIsValid) {
       return;
     }
+   
 
     props.onAddPairing({
       pigProduct: selectedProduct,
       dishName: dishNameValue,
       ingredients: ingredientsValue,
+      isActive: checkResult,
     });
 
     resetDishName();

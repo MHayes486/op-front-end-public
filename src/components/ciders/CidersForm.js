@@ -1,6 +1,6 @@
 import useInput from "../../hooks/use-input";
 
-import classes from "./AddCiders.module.css";
+import classes from "./AddCider.module.css";
 import styles from "../UI/SignUp.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";

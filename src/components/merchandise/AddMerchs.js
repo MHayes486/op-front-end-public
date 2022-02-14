@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { addAMerch } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
@@ -10,11 +10,11 @@ function AddMerchs(props) {
   const addMerchHandler = (MerchData) => {
     sendRequest(MerchData);
   };
-      useEffect(() => {
-        if (status === "completed") {
-          navigate("/Merchs");
-        }
-      }, [status, navigate]);
+  useEffect(() => {
+    if (status === "completed") {
+      navigate("/Merchs");
+    }
+  }, [status, navigate]);
 
   return <MerchsForm onAddMerch={addMerchHandler} />;
 }
