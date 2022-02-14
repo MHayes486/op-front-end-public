@@ -2,7 +2,7 @@ import { addAEvent } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
 import EventsForm from "./EventsForm";
 
-function AddPairings(props) {
+function AddEvents(props) {
   const { sendRequest, status } = useHttp(addAEvent);
 
   const addEventHandler = (eventData) => {
@@ -12,4 +12,4 @@ function AddPairings(props) {
   return <EventsForm onAddEvent={addEventHandler} />;
 }
 
-export default AddPairings;
+export default AddEvents;

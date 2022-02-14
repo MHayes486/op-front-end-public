@@ -5,7 +5,7 @@ import styles from "../UI/SignUp.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
-function PairingsForm(props) {
+function EventsForm(props) {
   const {
     value: eventNameValue,
     isValid: eventNameIsValid,
@@ -83,4 +83,4 @@ function PairingsForm(props) {
   );
 }
 
-export default PairingsForm;
+export default EventsForm;

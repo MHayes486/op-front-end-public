@@ -133,6 +133,40 @@ export async function addAEvent(eventData) {
   return null;
 }
 
+export async function addACider(ciderData) {
+  const response = await fetch(`${OP_DOMAIN}/ciders`, {
+    method: "POST",
+    body: JSON.stringify(ciderData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not add to events database.");
+  }
+
+  return null;
+}
+
+export async function addAMerch(merchData) {
+  const response = await fetch(`${OP_DOMAIN}/merchandise`, {
+    method: "POST",
+    body: JSON.stringify(merchData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not add to events database.");
+  }
+
+  return null;
+}
+
 export async function addAPairing(pairingData) {
   const response = await fetch(`${OP_DOMAIN}/pairings`, {
     method: "POST",

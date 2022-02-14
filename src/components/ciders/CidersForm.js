@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useInput from "../../hooks/use-input";
 
 import classes from "./AddCiders.module.css";
@@ -7,8 +6,6 @@ import styles from "../UI/SignUp.module.css";
 const isNotEmpty = (value) => value.trim() !== "";
 
 function CidersForm(props) {
-
-
   const {
     value: ciderNameValue,
     isValid: ciderNameIsValid,
@@ -41,7 +38,6 @@ function CidersForm(props) {
   if (ciderNameIsValid && ciderTypeValid && ciderSloganValid) {
     formIsValid = true;
   }
-  
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -64,7 +60,7 @@ function CidersForm(props) {
   return (
     <form className={styles.form} onSubmit={submitHandler}>
       <div className={classes.control}>
-        <label htmlFor="submittedciderName">cider Name</label>
+        <label htmlFor="submittedciderName">Cider Name</label>
         <input
           type="text"
           value={ciderNameValue}
@@ -79,18 +75,29 @@ function CidersForm(props) {
         )}
       </div>
       <div className={classes.control}>
-        <label htmlFor="submittedciderType">ciderType</label>
+        <label htmlFor="submittedciderType">Cider Type</label>
         <input
           type="text"
           value={ciderTypeValue}
           onChange={ciderTypeChangeHandler}
           onBlur={ciderTypeBlurHandler}
+          id="submittedCiderSlogan"
+        />
+        {ciderSloganHasError && (
+          <p className="error-text">Please enter Cider's type.</p>
+        )}
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="submittedciderSlogan">Cider's slogan</label>
+        <input
+          type="text"
+          value={ciderSloganValue}
+          onChange={ciderSloganChangeHandler}
+          onBlur={ciderSloganBlurHandler}
           id="submittedciderType"
         />
         {ciderTypeHasError && (
-          <p className="error-text">
-            Please enter at least one (1) ciderSloganient.
-          </p>
+          <p className="error-text">Please enter Cider's slogan.</p>
         )}
       </div>
       <div className="form-actions">
