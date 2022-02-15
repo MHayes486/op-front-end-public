@@ -1,4 +1,7 @@
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
+import { logInCheckActions } from '../store/Login-check-slice';
+
 
 export const registerUser=(user) => async dispatch => {
 
@@ -33,8 +36,11 @@ export const loginUser=(user) => async dispatch => {
 
 
 export const logoutUser = () => dispatch => {
+    const dispatcha = useDispatch();
     localStorage.removeItem('currentUser')
     localStorage.removeItem('merchUser')
+    dispatcha(logInCheckActions.logout());
     window.location.reload(false)
     window.location.href='login'
+
 }

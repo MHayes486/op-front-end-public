@@ -4,6 +4,9 @@ const logInCheckSlice = createSlice({
   name: "logInCheck",
   initialState: { logedIn: false },
   reducers: {
+    logout(state) {
+      state.login = false;
+    },
     validate(state) {
       state.logedIn = true;
     },
