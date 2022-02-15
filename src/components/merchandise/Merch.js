@@ -19,6 +19,8 @@ const Merch = (props) => {
     dispatch(cartActions.addItemToCart({ id, tagline, price, quantity, title }));
   };
 
+  //if admin display active
+
   return (
   
     <li className={classes.merch}>
