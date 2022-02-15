@@ -1,22 +1,25 @@
 .merch {
+  display: flex;
+  flex-direction:row;
   margin: 1rem;
-  padding: 1rem;
-  background-color: #0d273e;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 12px;
-  text-align: center;
-  color: white;
-  height: 400px;
-  width: auto;
+    padding: 1rem;
+    /* background-color: #335c7c; */
+    /* box-shadow: 0 2px 8px rgb(0 0 0 / 26%); */
+    /* border-radius: 12px; */
+    text-align: center;
+    color: rgb(48, 45, 45);
+    height: 400px;
+    width: 100%;
+    margin-top: 5rem;
 }
 
 .merch h2 {
   font-size: 2.1rem;
-  color: #f7e702;
+  color: #f0e6da;
 }
 
 .merch h3 {
-  color: #eccf77;
+  color: #222222;
   margin: 0;
   font-size: 1.5rem;
 }
@@ -24,6 +27,15 @@
 .imageSize {
   height: auto;
   max-width: 180px;
-  /* max-height: 100%;
-  width: auto; */
+
+}
+
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width:480px)  {
+  .merch h2{
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
 }

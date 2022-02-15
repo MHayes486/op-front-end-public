@@ -5,7 +5,9 @@ import styles from "./HeaderNav.module.css";
 // import Cart from "../components/cart/Cart";
 // import CartProvider from "../store/CartProvider";
 //import Cart from "../components/cart/Cart";
-import CartProvider from "../store/CartProvider";
+import {Container, Grid, Col, Row} from "react-bootstrap";
+// import Cart from "../components/cart/Cart";
+// import CartProvider from "../store/CartProvider";
 import { useSelector, useDispatch } from "react-redux";
 import {logoutUser} from "../actions/userActions"
 import { logInCheckActions } from "../store/Login-check-slice";
@@ -15,6 +17,7 @@ import { logInCheckActions } from "../store/Login-check-slice";
 
 //import styles from "./HeaderNav.module.css";
 import { useNavigate } from "react-router-dom";
+
 
 const HeaderNav = (props) => {
 
@@ -47,13 +50,22 @@ const HeaderNav = (props) => {
   console.log(merchUser)
 
   return (
-    <Fragment>
+    <Container fluid="true" >
+        <Col className="justify-content-md-center">
+  
+
+
       <header className={styles.header} onShowCart={showCartHandler}>
-        <img
+      <Row className="justify-content-center">
+      <Col fluid={{ span: 6, offset: 3 }}>  <img
           src="./logo192.png"
           className={styles.pig_logo}
           alt="pics from backend"
-        />
+        /></Col>
+
+</Row>
+<Row>
+      <Col fluid={{ span: 6, offset: 3 }}>
 
         <nav className={styles.nav}>
           <ul>
@@ -68,7 +80,8 @@ const HeaderNav = (props) => {
             <li>
               <NavLink
                 to="/aboutus"
-                className={(navData) => (navData.isActive ? styles.active : "")}
+
+  className={(navData) => (navData.isActive ? styles.active : "" )}
               >
                 About
               </NavLink>
@@ -177,8 +190,13 @@ const HeaderNav = (props) => {
             </li>
           </ul>
         </nav>
-      </header>
-    </Fragment>
+        </Col>
+</Row>
+        </header>
+  
+    </Col>
+
+    </Container>
   );
 };
 

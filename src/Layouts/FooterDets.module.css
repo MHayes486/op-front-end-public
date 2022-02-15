@@ -8,6 +8,7 @@
 
 .footerPara {
   text-align: center;
+  width: 100vw;
 }
 
 .card {
@@ -31,3 +32,11 @@
 .heading1 {
   text-align: center;
 }
+
+/* MEDIA QUERIES */
+/* @media (max-width:480px)  {
+  .footer{
+    width: 160vw;
+  }
+
+} */

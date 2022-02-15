@@ -77,3 +77,20 @@ const FindUs = () => {
 };
 
 export default FindUs;
+   {/* <a
+              href="https://www.theguardian.com/travel/2021/may/20/10-of-the-best-somerset-pubs-with-beer-gardens-or-outdoor-space/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              favourite pubs
+              <em>(external link)</em>
+            </a>{" "}
+            and we a nationally we have a few choices available at every{" "}
+            <a
+              href="https://www.jdwetherspoon.com/pubs/all-pubs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Weatherspoons<em>(external link)</em>
+            </a>{" "}
+            around the UK and Ireland. */}
