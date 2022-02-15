@@ -7,7 +7,7 @@ import CidersForm from "./CidersForm";
 function AddCiders(props) {
   const { sendRequest, status } = useHttp(addACider);
   const navigate = useNavigate();
-  const addciderHandler = (ciderData) => {
+  const addCiderHandler = (ciderData) => {
     sendRequest(ciderData);
   };
       useEffect(() => {
@@ -16,7 +16,7 @@ function AddCiders(props) {
         }
       }, [status, navigate]);
 
-  return <CidersForm onAddcider={addciderHandler} />;
+  return <CidersForm onAddCider={addCiderHandler} />;
 }
 
 export default AddCiders;
