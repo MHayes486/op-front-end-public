@@ -34,6 +34,11 @@ const cartSlice = createSlice({
           parseFloat(existingItem.totalPrice) + parseFloat(newItem.price);
       }
     },
+    resetCart(state, action){
+    state.items= [];
+    state.totalQuantity= 0;
+    state.totalFullPrice= 0.0;
+    },
     removeItemFromCart(state, action) {
       const id = action.payload;
       const existingItem = state.items.find((item) => item.itemId === id);

@@ -1,15 +1,17 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Fragment, useEffect } from "react";
 import CartItem from "../components/cart/CartItem";
 import { placeOrder } from "../lib/api";
 import useHttp from "../hooks/use-http";
+import CartForm from "../components/cart/CartForm";
+import { useNavigate } from "react-router-dom";
+import { cartActions } from "../store/cart-slice";
 
 const Cart = () => {
   const { sendRequest, status } = useHttp(placeOrder);
+    const navigate = useNavigate();
+     const dispatch = useDispatch();
 
-  let nameValue = "";
-  let addressValue = "";
-  let emailAddress = "";
   const cartItems = useSelector((state) => state.cart.items);
   const totalCost = useSelector((state) => state.cart.totalFullPrice);
   const totalQuant = useSelector((state) => state.cart.totalQuantity);
@@ -17,12 +19,25 @@ const Cart = () => {
   const shipping = 25.0;
   const totalCharge = parseFloat(totalCost) + shipping;
 
-  const submitOrder = (e) => {
-    e.preventDefault();
-    const deliveryDetails = (nameValue, addressValue, emailAddress);
-    console.log(deliveryDetails);
-    console.log(cartItems);
+   
+
+  // const submitOrder = (e) => {
+  //   e.preventDefault();
+  //   const deliveryDetails = (nameValue, addressValue, emailAddress);
+
+  //   console.log(deliveryDetails);
+  //   console.log(cartItems);
+  // };
+  const placeOrderHandler = (orderData) => {
+    sendRequest(orderData);
   };
+      useEffect(() => {
+        if (status === "completed") {
+          dispatch(cartActions.resetCart());
+          navigate("/");
+
+        }
+      }, [status, navigate]);
 
   return (
     <Fragment>
@@ -53,8 +68,11 @@ const Cart = () => {
         </span>
       </div>
       <div></div>
-      <div>Ship To:</div>
-      <form>
+      <div>
+        Ship To:
+        <CartForm placeOrder={placeOrderHandler} />
+      </div>
+      {/* <form>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" value={nameValue}></input>
         <label htmlFor="adress">Deliver Address:</label>
@@ -62,7 +80,7 @@ const Cart = () => {
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" value={emailAddress}></input>
         <button onClick={submitOrder}>Place order</button>
-      </form>
+      </form> */}
     </Fragment>
   );
 };
