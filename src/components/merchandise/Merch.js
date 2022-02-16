@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 // import MerchItemForm from "./MerchItemForm";
 import classes from "./Merch.module.css";
@@ -7,6 +7,8 @@ import { cartActions } from "../../store/cart-slice";
 
 const Merch = (props) => {
   const dispatch = useDispatch();
+
+  const LoginValid = useSelector((state) => state.logInCheck.logedIn);
 
   const id = props.id;
   const tagline = props.itemName;
@@ -16,13 +18,14 @@ const Merch = (props) => {
   const active = props.isActive;
 
   const addToCartHandler = () => {
-    dispatch(cartActions.addItemToCart({ id, tagline, price, quantity, title }));
+    dispatch(
+      cartActions.addItemToCart({ id, tagline, price, quantity, title })
+    );
   };
 
   //if admin display active
 
   return (
-  
     <li className={classes.merch}>
       <div>
         <h2>{props.itemType}</h2>
@@ -33,6 +36,7 @@ const Merch = (props) => {
           alt="pic from backend"
           className={classes.imageSize}
         />
+        {LoginValid && <p>{props.isAcive}</p>}
       </div>
       <div>
         <button onClick={addToCartHandler}>Add to Cart</button>
