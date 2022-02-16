@@ -51,9 +51,13 @@ const CiderCarosel = (props) => {
   if (status === "completed" && (!loadedCiders || loadedCiders.length === 0)) {
     return <p>No cider available?!?</p>;
   }
-  const ciderListings = [];
 
-  for (const cider in loadedCiders) {
+  const ciderListings = [];
+  const activeCiders = loadedCiders.filter((loadedCiders) => {
+    return (loadedCiders.isActive = true);
+  });
+
+  for (const cider in activeCiders) {
     const currentCider = (
       <div>
         <Cider

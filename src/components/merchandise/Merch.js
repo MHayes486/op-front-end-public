@@ -34,7 +34,7 @@ const Merch = (props) => {
           alt="pic from backend"
           className={classes.imageSize}
         />
-        {LoginValid && <p>{props.isActive}</p>}
+        {LoginValid && <p>{props.active}</p>}
       </div>
       <div>
         <button onClick={addToCartHandler}>Add to Cart</button>

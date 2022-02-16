@@ -6,6 +6,7 @@ import { Container, Col, Rown } from "react-bootstrap";
 import { Fragment } from "react";
 
 const FindUs = () => {
+  
   return (
     <div className={styles.events_grid}>
       <section class="top_banner_section">

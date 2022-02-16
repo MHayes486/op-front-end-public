@@ -23,6 +23,26 @@ export async function getAllMerch() {
   return transformedMerchData;
 }
 
+export async function getAllActiveMerch() {
+  const response = await fetch(`${OP_DOMAIN}/merchandise`);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch merch.");
+  }
+
+  const transformedMerchData = [];
+
+  for (const key in data) {
+    const merchObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedMerchData.push(merchObj);
+  }
+  return transformedMerchData;
+}
+
 export async function getAllCiders() {
   const response = await fetch(`${OP_DOMAIN}/ciders`);
   const data = await response.json();

@@ -2,7 +2,7 @@ import { Fragment, useEffect } from "react";
 
 import useHttp from "../hooks/use-http";
 import { getAllMerch } from "../lib/api";
-import {Container, Col, Row} from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import MerchList from "../components/merchandise/MerchList";
 import Loading from "../components/Loading";
 
@@ -23,7 +23,6 @@ const Merchandise = () => {
 
   if (status === "pending") {
     return <SlSpinner style={{ fontSize: "3rem" }} />;
- 
   }
 
   if (error) {
@@ -34,34 +33,37 @@ const Merchandise = () => {
     return <p>No merch available?!?</p>;
   }
 
+  const activeMerch = loadedMerch.filter((loadedMerch) => {
+    return (loadedMerch.isActive = true);
+  });
+
   return (
     <Fragment>
       <section>
-
         <div className={styles.merch_main}>
+          <div className="d-flex p-2 cup">
+            <img
+              className={styles.merch_cup}
+              src="\images\merch\coffee_mug.png"
+              alt="pics from backend"
+            ></img>
 
-        <div className="d-flex p-2 cup">
-        <img className={styles.merch_cup}
-        src="\images\merch\coffee_mug.png"
-        alt="pics from backend"></img>
+            <h1 className={styles.merch_heading}>OUR PIG IS TOP DOG!</h1>
+            <div className="d-inline-flex p-2 merch_h1"> </div>
+          </div>
+        </div>
 
-
-      <h1 className={styles.merch_heading}>OUR PIG IS TOP DOG!</h1>
-      <div className="d-inline-flex p-2 merch_h1"> </div>
-      </div>
-      </div>
-
-
-
-      <span><h2 className={styles.merch_h2}>SUPPORT THE PIG</h2>
-      <h3 className={styles.merh_p}>Pick up some swag and show off your inner pig.</h3>
-      </span>
+        <span>
+          <h2 className={styles.merch_h2}>SUPPORT THE PIG</h2>
+          <h3 className={styles.merh_p}>
+            Pick up some swag and show off your inner pig.
+          </h3>
+        </span>
       </section>
       <section>
-        <MerchList merch={loadedMerch} />
+        <MerchList merch={activeMerch} />
       </section>
     </Fragment>
   );
 };
 export default Merchandise;
-

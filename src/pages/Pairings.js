@@ -35,11 +35,15 @@ const Pairings = () => {
     return <p>No pairings available?!?</p>;
   }
 
+  const activePairings = loadedPairings.filter((loadedPairings) => {
+    return (loadedPairings.isActive = true);
+  });
+
   return (
     <Fragment>
       <h2 className={styles.pairsh2}>Pairings</h2>
       <h3 className={styles.pairsh3}>What to eat while you have a drink</h3>
-      <PairingsList pairs={loadedPairings} />
+      <PairingsList pairs={activePairings} />
       <h3 className={styles.pairsh3}>
         Do you have a recipe and pairing to send us?
       </h3>

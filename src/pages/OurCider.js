@@ -30,18 +30,19 @@ const OurCider = () => {
   if (status === "completed" && (!loadedCiders || loadedCiders.length === 0)) {
     return <p>No cider available?!?</p>;
   }
+  const activeCiders = loadedCiders.filter((loadedCiders) => {
+    return (loadedCiders.isActive = true);
+  });
 
-  
   return (
     <Fragment>
       <h2>Our Cider</h2>
       <h3>This is what we are about</h3>
       <section>
-        <CiderList cider={loadedCiders} />
+        <CiderList cider={activeCiders} />
       </section>
     </Fragment>
   );
-  
 };
 
 export default OurCider;
