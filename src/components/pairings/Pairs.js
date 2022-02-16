@@ -22,7 +22,7 @@ const Pairs = (props) => {
         alt="pic from backend"
         className={classes.image}
       />
-      {LoginValid && <p>{props.isAcive}</p>}
+      {LoginValid && <p>{props.isActive}</p>}
     </li>
   );
 };

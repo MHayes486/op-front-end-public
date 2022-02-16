@@ -14,7 +14,7 @@ const Event = (props) => {
         alt="pic from backend"
         className={classes.imageSize}
       />
-      {LoginValid && <p>{props.isAcive}</p>}
+      {LoginValid && <p>{props.isActive}</p>}
     </li>
   );
 };

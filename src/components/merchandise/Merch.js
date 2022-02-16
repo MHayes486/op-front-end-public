@@ -23,8 +23,6 @@ const Merch = (props) => {
     );
   };
 
-  //if admin display active
-
   return (
     <li className={classes.merch}>
       <div>
@@ -36,7 +34,7 @@ const Merch = (props) => {
           alt="pic from backend"
           className={classes.imageSize}
         />
-        {LoginValid && <p>{props.isAcive}</p>}
+        {LoginValid && <p>{props.isActive}</p>}
       </div>
       <div>
         <button onClick={addToCartHandler}>Add to Cart</button>
