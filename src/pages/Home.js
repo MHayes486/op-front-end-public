@@ -13,6 +13,8 @@ import classes from "./styles/static.module.css";
 import styles from "./styles/Home.module.css";
 
 
+
+
 const Home = () => {
   return (
     <div className={styles.home_page}>
@@ -21,96 +23,71 @@ const Home = () => {
         <section className={styles.cider_element}>
           <Row className="justify-content-md-center">
             <Col md="auto">
-          <h2 className={styles.heading}>Cider to snout about</h2></Col>
-         {/* <Button>Learn More</Button> */}
-         <Col col-auto col-6>
-          <img
-            src="./images/ciders/Homepage_Splash_Image_Cider.png"
-            className={styles.bottle_size}
-            alt="pics from backend"
-          /></Col>
+              <h2 className={styles.heading}>Cider to snout about</h2></Col>
+
+                <button className={styles.btn1} type="submit">
+            LEARN MORE
+              </button>
+
+             <Col col-auto col-6>
+            <img
+              src="./images/ciders/Homepage_Splash_Image_Cider.png"
+              className={styles.bottle_size}
+              alt="pics from backend"
+            />
+            </Col>
           </Row>
-          <img
-            src="./images/backgrounds/Paper Rip Texture Upwards.png"
-            className={styles.tear_bottom}
-            alt="pics from backend"
-          />
+
         </section>
 
         <section className={styles.cream}>
-<Container fluid = "true">
-<Row className="justify-content-md-center">
+    <Container fluid = "true">
+      <Col>
+          <img
+            src=".\images\backgrounds\Home-Page-Rip-1.png"
+            className={styles.tear_1st}
+            alt="pics from backend"
+          />
+            <h2 className={styles.heading2}>Rooted in Sommerset</h2>
+            <p className={styles.cream_p}>OUR CORE VALUES</p>
 
-          <h2 className={styles.heading2}>Rooted in Sommerset</h2></Row>
-          <Row className="justify-content-center">
-        <p className={styles.cream_p}>OUR CORE VALUES</p>
-        </Row>
-        <Row className="justify-content-center">
-          <Col>      <img
-            src="./images/values.png"
-            alt="Orchard Pig: BOLD,MISCHEVIOUS AND SIMPLE" className={styles.values}
-          /></Col>
+            <img
+              src="./images/values.png"
+              alt="Orchard Pig: BOLD,MISCHEVIOUS AND SIMPLE"
+              className={styles.values}
+            />
 
-          {/* <Button className={styles.btn2} type="submit">
-          ABOUT US
-        </Button> */}
-        </Row>
-</Container>
+            <button className={styles.btn2} type="submit">
+            ABOUT US
+              </button>
+
+    </Col>
+    </Container>
         </section>
 
-        <Container fluid="true">
-        <section className="farmRip">
-          <div className={styles.div}>
-          <Row>
-            <div className="col-1">
-             <div className="rip-1 w-100">
-               <img
-                src="./images/backgrounds/Paper Rip Texture Downwards.png"
-                className={styles.tear_top}
-                alt="pics from backend"
-              />
-             </div>
-           </div>
-        </Row>
-        <Row>
-          <div className="col-2">
-          <div className="banner-1 w-100">
-             <img
+         <section className={styles.splash}>
+         <img
                 src="./images/backgrounds/Homepage Splash Image.jpg"
                 className={styles.torn_banner}
                 alt="pics from backend"
               />
-           </div>
-         </div>
-     </Row>
-      <Row>
-        <div className="col-3">
-          <div className="rip-1 w-100">
-        <img
-                src="./images/backgrounds/Paper Rip Texture Upwards.png"
-                className={styles.tear_bottom2}
+          <img
+                src="\images\backgrounds\Home-Page-Rip-2.png"
+                className={styles.tear_2}
                 alt="pics from backend"
               />
-            </div>
-            </div>
-         </Row>
-           </div>
 
-        </section>
-    </Container>
-     <Container fluid="true">
-         <section className={styles.cream1}>
-         <Row className="justify-content-center">
-            <h2 className={styles.home_cream_h2}>Our Pig is top dog!</h2></Row>
-            <Row className="justify-content-center">
+              <h2 className={styles.home_cream_h2}>Our Pig is top dog!</h2>
             <Link to="/OurCider" className={styles.links}>
-              Check Out Our Cider Range
-             </Link></Row>
-         </section>
-           <section className={styles.carosel_cider}>
+                Check Out Our Cider Range
+           </Link>
+       </section>
+
+       <section className={styles.carosel_cider}>
+
           <CiderCarosel />
-           </section>
-    </Container>
+      </section>
+
     <Container fluid="true">
         <section className={styles.lightblue}>
           <h2 className={styles.home_merch_h2}>GO PIG OR GO HOME</h2>

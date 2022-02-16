@@ -7,26 +7,11 @@
 .grey {
   background-color: #222222;
 }
-.lightblue {
-  background-color: #3f73a2;
-  width: 100vw;
-  padding: 0;
-  height: 76vh;
-  justify-content: center;
-  position: relative;
-  top: -22rem;
-
-}
 @font-face {
   font-family: dirtyFont;
   /*  src: url(https://www.dafont.com/dirty-headline.font); */
   src: url("./fonts/DirtyHeadline.ttf");
 }
-/*
-.main{
-  display: grid;
-  grid-template-columns: repeat(auto-fit minmax(200px, 1fr));
-} */
 
 .container fluid{
   margin: 0 !important;
@@ -42,14 +27,17 @@
 /* HOME CONTENT  */
 
 /* home button btn1 */
-/* Button,
-.btn1 {
-  margin-left: 27%;
-  margin-top: 5%;
+Button,
+ .btn1 {
   font-size: 0.75rem;
   color: #fff;
-  width: 100px;
+  width: 107px;
+  display: block;
+  position: relative;
   box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+  top: 20rem;
+  left: -4rem;
+
 }
 
 Button,
@@ -59,12 +47,18 @@ Button,
   background: #3f73a2;
   border-color: #0d273e;
   color: #fdfafa;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1);
   box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
-  padding: 0.2rem 1rem;
+  padding: 0rem 1rem;
   width: 100px;
+  height: 38px;
+}
+.btn_2{
+  display: flex;
+  justify-content: center;
+
 }
 
 Button,
@@ -74,13 +68,18 @@ Button,
   background: #3f73a2;
   color: white;
   box-shadow: 0 2 12px rgba(0, 0, 0, 0.26);
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
   border-radius: 3px;
   cursor: pointer;
   height: 2rem;
   width: 8rem;
   justify-items: center;
-  margin: auto;
+  top: -35rem;
+  left: 28.3rem;
+  display: block;
+  justify-content: center;
+  position: relative;
+  z-index: 6;
 }
 .btn2:hover,
 .btn2:active {
@@ -92,7 +91,8 @@ Button,
   transform: scale(1);
   box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
   padding: 0.2rem 1rem;
-} */
+  z-index: 6;
+}
 .container-fluid{
   width: 100vw;
 }
@@ -105,8 +105,8 @@ Button,
   display: block;
   position: relative;
   text-align: left;
-  left: 12rem;
-  top: 6rem;
+  left: 17rem;
+  top: 8rem;
   width: 21rem;
   line-height: 4rem;
   font-feature-settings: 16px;
@@ -132,10 +132,9 @@ Button,
   float: right;
   position: relative;
   bottom: 3rem;
-
   width: 34vw;
-  left: 24rem;
-  bottom: -3rem;
+  left: 19rem;
+  bottom: 0rem;
   animation: Home_bounce-in-right__oq0th 4s ease;
 }
 @keyframes bounce-in-right {
@@ -156,86 +155,87 @@ Button,
   width: 100vw;
   height: 77vh;
 }
-.tear_top {
-  position: relative;
-  top: 4rem;
-  width: 100vw;
-  height: 20vh;
-  z-index: 4;
-
-  width: 100vw;
-  z-index: 4;
-}
-
-.tear_bottom {
-  position: relative;
-  top: -4rem;
-  height: 11rem;
-  width: 100vw;
-}
-.tear_bottom2 {
-  position: relative;
-    top: -10rem;
-    height: 10rem;
-    width: 100vw;
-}
 
 .torn_banner {
   position: relative;
-    top: 0rem;
-    z-index: 0;
+  top: -32rem;
+  z-index: 0;
+  width: 100vw;
+  height: 75vh;
+}
+.tear_1st{
+  z-index: 2;
+    position: relative;
+    top: -8rem;
     width: 100vw;
-    height: 75vh;
 }
-/*
-.button {
-  margin-top: 20%;
-  display: block;
-} */
-
-/* STATIC PAGE - ABOUT US */
-.carosel_cider {
-  background-color: #f0e6da;
-  margin-top: 0;
-  position: relative;
-  top: -25rem;
-  width: 100vw;
-}
-.cream {
-  background-color: #f0e6da;
-  width: 100vw;
-  height: 13rem;
+.heading2 {
+  font-size: 4rem;
   display: flex;
-  flex-wrap: wrap;
-  margin-top: -10%;
-  margin: 0;
-  position: relative;
   justify-content: center;
-  bottom: -1rem;
+  position: relative;
+  width: 100vw;
+  top: -46rem;
+  z-index: 6;
 }
 
-/* .cream_h2, */
+.values{
+  width: 57vw;
+  height: 22vh;
+  z-index: 6;
+  top: 4%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 21%;
+  top: -40rem;
+}
+
+.tear_2{
+  position: relative;
+  width: 100vw;
+  top: -38rem;
+  z-index: 5;
+}
+/* STATIC PAGE - ABOUT US */
+
+.splash{
+  width: 100vw;
+  height: 100vh;
+}
+
 .home_cream_h2 {
   font-size: 4rem;
   position: relative;
   text-align: center;
-  left: 7rem;
-  top: -1rem;
+
+  top: -77rem;
+  z-index: 6;
 }
 
-.values{
-  width: 50vw;
-  height: 20vh;
-  position: relative;
-  top: -2rem;
-}
 .links {
   font-family: dirtyFont, cursive;
   font-size: 1.5rem;
   position: relative;
-  top: 4rem;
-  right: 16rem;
+  top: -74rem;
+  left: 24rem;
   color: #212529;
+  z-index: 6;
+}
+.react-multi-carousel-list{
+z-index: 6;
+}
+.carosel_cider {
+  background-color: #f0e6da;
+  margin-top: 0;
+  position: relative;
+  top: -12rem;
+  width: 100vw;
+
+  z-index: 6;
+}
+.carousel-list{
+
 }
 .links1 {
   font-family: dirtyFont, cursive;
@@ -267,36 +267,18 @@ Button,
 }
 
 
-.title {
-  letter-spacing: 4px;
-}
 
-/* STATIC PAGE- SPLASH */
-.farmRip {
-  width: 100%;
-}
 
-/* STATIC SECTION drinks */
-.cream1 {
-  background-color: #f0e6da;
+.lightblue {
+  background-color: #3f73a2;
   width: 100vw;
-  position: relative;
-  top: -13rem;
-  height: 21rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -10%;
-  margin: 0;
+  padding: 0;
+  height: 76vh;
   justify-content: center;
-  margin-top: -1rem;
-}
-.heading2 {
-  font-size: 4rem;
-    position: relative;
-    top: -1rem;
-    margin-bottom: 13px;
-}
+  position: relative;
 
+  z-index: 5;
+}
 .heading3,
 .home_h2 {
   text-align: right;
@@ -304,9 +286,10 @@ Button,
   font-size: 4rem;
   margin-bottom: 10px;
 }
-/*
-MEDIA QUERIES
-*/
+
+
+
+/***MEDIA QUERIES****/
 
 /* X Large screens */
 @media (min-width:1024px){
@@ -315,37 +298,41 @@ MEDIA QUERIES
 
     height: 100%;
   }
-  .values{
-    width: 100%;
-    z-index: 6;
-    top: 4%;
+  .heading2{
+    top: -42rem;
   }
-  .tear_bottom2{
+  .values{
+    width: 41vw;
+    left: 29%;
+    height: 19vh;
+    z-index: 6;
 
   }
-  .tear_bottom{
-    top: -4rem;
+  .home_cream_h2{
+    top: -92rem;
   }
+.btn2{
+  left: 44%;
+}
+.tear_1st{
+  top: -6rem;
+  height: 100vh;
+}
+.links{
+  top: -90rem;
+  left: 35rem;
+}
   .links1{
-    left: 33%;
+    left: 39%;
   }
 }
-
+  /* screens up to 1024px */
 @media (max-width:1024px){
-
-  .tear_top {
-    top: 4rem;
-  }
-  .Home_tear_bottom{
-    top: 6rem;
-  }
   .links1{
-left: 15rem;
+  left: 15rem;
   }
-
   }
-
-
+  /* screens up to 960px */
   @media (max-width:960px){
 
     /* .col{
@@ -370,6 +357,7 @@ left: 15rem;
       left: 9rem;
     }
   }
+    /* screens up to 768px */
   @media (max-width:768px){
     .heading{
       width: 60%;
@@ -385,56 +373,71 @@ left: 15rem;
       top: 0rem;
     }
   }
-
+   /* smaller screens up to 460px */
   @media (max-width: 460px){
 .heading{
-    left: 3rem;
-    font-size: 2.5rem;
+  left: 3rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  top: 3rem;
+
   }
   .bottle_size{
     width: 50%;
-    top: -1rem;
+    top: -3rem;
     margin-right: -2rem;
   }
+  .btn2{
+    left: 10rem;
+    top: -24rem;
+  }
   .cider_element{
-    height: 50vh;
+    height: 70vh;
+    top: 1rem;
+    margin-top: -2rem;
   }
 .home_cream_h2{
-  left: 0;
   font-size: 3rem;
-  width: 70%;
+  width: 100vw;
+  margin-top: 22rem;
 }
-.home_merch_h2{
-font-size: 2rem;
+.links{
+  left: 29%;
+  font-size: 1rem;
 }
-  .tear_bottom{
-    top: -4rem;
-    height: 20%;
-  }
   .heading2{
     text-align: center;
+    /* width: 235px; */
+    top: -25rem;
+    font-size: 2.5rem;
   }
   .values{
-    width: 300px;
-    height: 94%;
-    top: -1rem;
-    left: 17%;
-    z-index: 2;
+    left: 5.2rem;
+    top: -26rem;
+    width: 60%;
+    height: 10vh;
   }
-  .values{
-    left: 2rem;
-    width: 80%;
+  .torn_banner{
+    top: -27rem;
   }
-  .tear_top{
-    z-index: 1;
+  .tear_2{
+    top: -36rem;
+  }
+  .splash{
+    height: 31vh;
+  }
+  .carosel_cider{
+    top: 1rem;
   }
   .home_cream_h2{
     left: 0;
+    top: -75rem;
   }
   .links1{
     left: 76px;
   }
   }
+     /* mobile and x-small screens up to 320px */
   @media (max-width: 320px){
 
     .tear_bottom{
@@ -469,7 +472,5 @@ font-size: 2rem;
     font-size: 16px;
     left: 4rem;
     }
-
-
   }
 
