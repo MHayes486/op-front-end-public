@@ -31,6 +31,14 @@ function PairingsForm(props) {
     inputBlurHandler: ingredientsBlurHandler,
     reset: resetIngredients,
   } = useInput(isNotEmpty);
+  const {
+    value: pairingsURLValue,
+    isValid: pairingsURLIsValid,
+    hasError: pairingsURLHasError,
+    valueChangeHandler: pairingsURLChangeHandler,
+    inputBlurHandler: pairingsURLBlurHandler,
+    reset: resetpairingsURLName,
+  } = useInput(isNotEmpty);
 
   let formIsValid = false;
 
@@ -54,10 +62,12 @@ function PairingsForm(props) {
       dishName: dishNameValue,
       ingredients: ingredientsValue,
       isActive: checkResult,
+      image: pairingsURLValue,
     });
 
     resetDishName();
     resetIngredients();
+    resetpairingsURLName();
   };
 
   return (
@@ -105,6 +115,21 @@ function PairingsForm(props) {
         {ingredientsHasError && (
           <p className="error-text">
             Please enter at least one (1) ingredient.
+          </p>
+        )}
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="imgUrl">Image Location:</label>
+        <input
+          type="text"
+          value={pairingsURLValue}
+          onChange={pairingsURLChangeHandler}
+          onBlur={pairingsURLBlurHandler}
+          id="imgURL"
+        />
+        {pairingsURLIsValid && (
+          <p className="error-text">
+            Image URL is invalid, put n/a for no image
           </p>
         )}
       </div>

@@ -24,6 +24,15 @@ function EventsForm(props) {
     reset: reseteventAddress,
   } = useInput(isNotEmpty);
 
+  const {
+    value: eventsURLValue,
+    isValid: eventsURLIsValid,
+    hasError: eventsURLHasError,
+    valueChangeHandler: eventsURLChangeHandler,
+    inputBlurHandler: eventsURLBlurHandler,
+    reset: reseteventsURLName,
+  } = useInput(isNotEmpty);
+
   let formIsValid = false;
 
   if (eventNameIsValid && eventAddressValid) {
@@ -40,10 +49,12 @@ function EventsForm(props) {
     props.onAddEvent({
       eventName: eventNameValue,
       eventAddress: eventAddressValue,
+      image: eventsURLValue,
     });
 
     reseteventName();
     reseteventAddress();
+    reseteventsURLName();
   };
 
   return (
@@ -72,6 +83,21 @@ function EventsForm(props) {
         />
         {eventAddressHasError && (
           <p className="error-text">Please enter the location.</p>
+        )}
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="imgUrl">Image Location:</label>
+        <input
+          type="text"
+          value={eventsURLValue}
+          onChange={eventsURLChangeHandler}
+          onBlur={eventsURLBlurHandler}
+          id="imgURL"
+        />
+        {eventsURLIsValid && (
+          <p className="error-text">
+            Image URL is invalid, put n/a for no image
+          </p>
         )}
       </div>
       <div className="form-actions">

@@ -16,6 +16,15 @@ function CidersForm(props) {
   } = useInput(isNotEmpty);
 
   const {
+    value: ciderURLValue,
+    isValid: ciderURLIsValid,
+    hasError: ciderURLHasError,
+    valueChangeHandler: ciderURLChangeHandler,
+    inputBlurHandler: ciderURLBlurHandler,
+    reset: resetCiderURLName,
+  } = useInput(isNotEmpty);
+
+  const {
     value: ciderSloganValue,
     isValid: ciderSloganValid,
     hasError: ciderSloganHasError,
@@ -50,11 +59,13 @@ function CidersForm(props) {
       ciderTitle: ciderNameValue,
       ciderType: ciderTypeValue,
       ciderSlogan: ciderSloganValue,
+      image: ciderURLValue,
     });
 
     resetciderName();
     resetciderType();
     resetciderSlogan();
+    resetCiderURLName();
   };
 
   return (
@@ -98,6 +109,21 @@ function CidersForm(props) {
         />
         {ciderTypeHasError && (
           <p className="error-text">Please enter Cider's slogan.</p>
+        )}
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="imgUrl">Image Location:</label>
+        <input
+          type="text"
+          value={ciderURLValue}
+          onChange={ciderURLChangeHandler}
+          onBlur={ciderURLBlurHandler}
+          id="imgURL"
+        />
+        {ciderURLIsValid && (
+          <p className="error-text">
+            Image URL is invalid, put n/a for no image
+          </p>
         )}
       </div>
       <div className="form-actions">

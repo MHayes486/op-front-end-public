@@ -16,6 +16,15 @@ function MerchsForm(props) {
   } = useInput(isNotEmpty);
 
   const {
+    value: merchURLValue,
+    isValid: merchURLIsValid,
+    hasError: merchURLHasError,
+    valueChangeHandler: merchURLChangeHandler,
+    inputBlurHandler: merchURLBlurHandler,
+    reset: resetMerchURLName,
+  } = useInput(isNotEmpty);
+
+  const {
     value: typeNameValue,
     isValid: typeNameIsValid,
     hasError: typeNameHasError,
@@ -35,7 +44,7 @@ function MerchsForm(props) {
 
   let formIsValid = false;
 
-  if (itemNameIsValid && costValid) {
+  if (itemNameIsValid && costValid && typeNameIsValid) {
     formIsValid = true;
   }
 
@@ -50,11 +59,13 @@ function MerchsForm(props) {
       itemType: typeNameValue,
       itemName: itemNameValue,
       itemCost: costValue,
+      image: merchURLValue,
     });
 
     resetitemName();
     resettypeName();
     resetcost();
+    resetMerchURLName();
   };
 
   return (
@@ -97,6 +108,21 @@ function MerchsForm(props) {
           id="submittedcost"
         />
         {costHasError && <p className="error-text">Please enter a price.</p>}
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="imgUrl">Image Location:</label>
+        <input
+          type="text"
+          value={merchURLValue}
+          onChange={merchURLChangeHandler}
+          onBlur={merchURLBlurHandler}
+          id="imgURL"
+        />
+        {merchURLIsValid && (
+          <p className="error-text">
+            Image URL is invalid, put n/a for no image
+          </p>
+        )}
       </div>
       <div className="form-actions">
         <button className="formButton" disabled={!formIsValid}>
