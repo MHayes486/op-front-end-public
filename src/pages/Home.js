@@ -38,11 +38,11 @@ const Home = () => {
 
       <div>
 
-      <img
-                src=".\images\backgrounds\Home-Page-Rip-1.png"
-                className={styles.tear_1st}
-                alt="pics from backend"
-              />
+        <img
+          src=".\images\backgrounds\Home-Page-Rip-1.png"
+          className={styles.tear_1st}
+          alt="pics from backend"
+        />
       </div>
       <div className={styles.home_page}>
         <Container fluid="true">
@@ -74,7 +74,7 @@ const Home = () => {
           />
           <img
             src="\images\backgrounds\Home-Page-Rip-2.png"
-            className={styles.tear_2}
+            className={styles.home_tear_2}
             alt="pics from backend"
           />
 

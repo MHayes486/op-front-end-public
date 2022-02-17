@@ -285,6 +285,13 @@ Button,
   top: -56rem;
 }
 
+.home_tear_2 {
+  position: relative;
+  width: 100vw;
+  top: -80rem;
+  z-index: 5;
+}
+
 .tear_2 {
   position: relative;
   width: 100vw;
@@ -436,6 +443,14 @@ Button,
     z-index: 0;
     width: 100vw;
   }
+
+  .home_tear_2 {
+    position: relative;
+    width: 100vw;
+    top: -75rem;
+    z-index: 5;
+  }
+  
 }
 
 /*  .torn_banner {
@@ -519,6 +534,14 @@ Button,
     z-index: 0;
     width: 100vw;
   }
+
+  .home_tear_2 {
+    position: relative;
+    width: 100vw;
+    top: -65rem;
+    z-index: 5;
+  }
+  
 }
 
 
@@ -570,6 +593,14 @@ Button,
     z-index: 0;
     width: 100vw;
   }
+
+  .home_tear_2 {
+    position: relative;
+    width: 100vw;
+    top: -50rem;
+    z-index: 5;
+  }
+  
 }
 /*  .bottle_size {
     left: 12rem;
@@ -653,6 +684,14 @@ Button,
     z-index: 0;
     width: 100vw;
   }
+
+  .home_tear_2 {
+    position: relative;
+    width: 100vw;
+    top: -48rem;
+    z-index: 5;
+  }
+  
 }
 /*  .heading {
     width: 60%;
@@ -712,6 +751,14 @@ Button,
     z-index: 0;
     width: 100vw;
   }
+
+  .home_tear_2 {
+    position: relative;
+    width: 100vw;
+    top: -45rem;
+    z-index: 5;
+  }
+  
 }
 
   /*  .heading {
