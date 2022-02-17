@@ -1,6 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import classes from './CiderCarosel.module.css';
+
 import { useEffect } from "react";
 import Cider from "../ciders/Cider";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
@@ -60,7 +62,7 @@ const CiderCarosel = (props) => {
   for (const cider in activeCiders) {
     const currentCider = (
       <div>
-        <Cider
+        <Cider 
           key={cider}
           ciderId={loadedCiders[cider].id}
           ciderTitle={loadedCiders[cider].ciderTitle}
@@ -74,8 +76,9 @@ const CiderCarosel = (props) => {
   }
 
   return (
-    <Carousel responsive={responsive}>
+    <Carousel responsive={responsive} className={classes.cider_carosel_section} >
       {ciderListings}
+      
       {/* <div>
         <Cider
           key={loadedCiders[0].id}

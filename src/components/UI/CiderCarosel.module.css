@@ -39,3 +39,95 @@
 .slider-control-next {
     right: 20px;
 }
+
+.product_tile_inner {
+  position: relative;
+}
+
+.product_tile_inner img {
+  width: 100%;
+  height: auto;
+}
+
+.product_tile_inner .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  opacity: .85;
+}
+
+.cider_carosel_section {
+  position: flex;
+  top: -12rem;
+  width: 100vw;
+  z-index: 9;
+}
+
+
+
+@media (max-width:2400px) {
+  .cider_carosel_section {
+    top: -15rem;
+  }
+}
+
+
+@media (max-width:2250px) {
+  .cider_carosel_section {
+    top: -22rem;
+  }
+}
+
+
+@media (max-width:2050px) {
+  .cider_carosel_section {
+    top: -28rem;
+  }
+}
+
+
+@media (max-width:1800px) {
+  .cider_carosel_section {
+    top: -39rem;
+  }
+}
+
+
+@media (max-width:1600px) {
+  .cider_carosel_section {
+    top: -44rem;
+  }
+}
+
+
+@media (max-width:1400px) {
+  .cider_carosel_section {
+    top: -52rem;
+  }
+}
+
+@media (max-width:1200px) {
+  .cider_carosel_section {
+    top: -50rem;
+  }
+}
+
+@media (max-width:960px) {
+  .cider_carosel_section {
+    top: -48rem;
+  }
+}
+
+@media (max-width:768px) {
+  .cider_carosel_section {
+    top: -52rem;
+  }
+}
+
+@media (max-width:460px) {
+  .cider_carosel_section {
+    top: -52rem;
+  }
+}

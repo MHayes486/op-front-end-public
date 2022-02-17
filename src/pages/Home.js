@@ -79,16 +79,17 @@ const Home = () => {
           />
 
           <h2 className={styles.home_cream_h2}>Our Pig is top dog!</h2>
-          <Link to="/OurCider" className={styles.links}>
+          {/*}       <Link to="/OurCider" className={styles.home_heading4}>
             Check Out Our Cider Range
-          </Link>
+           </Link> */} 
         </section>
-
-        <section className={styles.carosel_cider}>
-
+        </div>
+<div>
+        <section >
           <CiderCarosel />
         </section>
-
+</div>
+<div>
         <Container fluid="true">
           <section className={styles.lightblue}>
             <h2 className={styles.home_merch_h2}>GO PIG OR GO HOME</h2>

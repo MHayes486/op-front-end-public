@@ -13,7 +13,7 @@
   float: left;
   border-style: solid;
   border-width: 5px;
-  clear:both;
+  clear: both;
 }
 
 @font-face {
@@ -33,7 +33,7 @@
   background-color: #f0e6da;
   display: inline;
   float: left;
-  clear:both;
+  clear: both;
   position: relative;
 }
 
@@ -234,7 +234,7 @@ Button,
   position: relative;
   width: 100vw;
   z-index: 2;
-  float:left;
+  float: left;
   color: black;
   top: -62rem;
 }
@@ -247,7 +247,19 @@ Button,
   width: 100vw;
   top: -60rem;
   z-index: 2;
-  float:left;
+  float: left;
+  color: black;
+}
+
+.home_heading4 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  top: -153rem;
+  z-index: 9;
+  float: left;
   color: black;
 }
 
@@ -259,7 +271,7 @@ Button,
   width: 100vw;
   top: -20rem;
   z-index: 2;
-  float:left;
+  float: left;
 }
 
 .values {
@@ -318,15 +330,26 @@ Button,
   font-size: 4rem;
   position: relative;
   text-align: center;
-  
-  z-index: 6;
+  top: -189rem;
+  z-index: 7;
+}
+
+.home_links {
+  font-family: dirtyFont, cursive;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -60rem;
+  text-align: center;
+  color: #212529;
+  z-index: 9;
+margin-left: 33%;
 }
 
 .links {
   font-family: dirtyFont, cursive;
   font-size: 1.5rem;
   position: relative;
-  top: -74rem;
+  top: -94rem;
   left: 24rem;
   color: #212529;
   z-index: 6;
@@ -336,15 +359,52 @@ Button,
   z-index: 6;
 }
 
+.flex-container{
+  display: flex !important;
+}
+
 .carosel_cider {
   background-color: #f0e6da;
   margin-top: 0;
-  position: relative;
+  position: flex;
   top: -12rem;
   width: 100vw;
 
   z-index: 6;
 }
+
+.home_carosel_section {
+  position: flex;
+  top: -52rem;
+  width: 100vw;
+
+  z-index: 6;
+}
+
+
+.home_row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  z-index: 9;
+  top: -52rem;
+}
+
+/* Create four equal columns that sits next to each other */
+.home_column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+  z-index: 9;
+  top: -52rem;
+}
+
+.home_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
 
 .carousel-list {}
 
@@ -401,8 +461,56 @@ Button,
 }
 
 
+.product-tile-inner {
+  position: relative;
+}
+
+.product-tile-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.product-tile-inner .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  opacity: .85;
+}
+
 
 /***MEDIA QUERIES*************************************************************************/
+
+@media (max-width:2500px) {
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -185rem;
+  }
+}
+
+@media (max-width:2250px) {
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -170rem;
+  }
+}
+
+@media (max-width:2050px) {
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -160rem;
+  }
+}
+
+@media (max-width:1800px) {
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -150rem;
+  }
+}
+
+
 
 /* X Large screens */
 @media (max-width:1600px) {
@@ -428,10 +536,10 @@ Button,
     width: 100vw;
     top: -62rem;
     z-index: 2;
-    float:left;
+    float: left;
 
   }
-  
+
   .home_values {
     width: 44vw;
     left: 28%;
@@ -450,7 +558,11 @@ Button,
     top: -75rem;
     z-index: 5;
   }
-  
+
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -135rem;
+  }
 }
 
 /*  .torn_banner {
@@ -495,8 +607,16 @@ Button,
 
 
 
-/* screens up to 1024px */
-@media (max-width:1200px) {
+
+@media (max-width:1400px) {
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -126rem;
+  }
+
+}
+
+  @media (max-width:1200px) {
 
   .home_heading {
     font-size: 5rem;
@@ -519,10 +639,10 @@ Button,
     width: 100vw;
     top: -62rem;
     z-index: 2;
-    float:left;
+    float: left;
     color: black;
   }
-  
+
   .home_values {
     width: 48vw;
     left: 26%;
@@ -541,7 +661,11 @@ Button,
     top: -65rem;
     z-index: 5;
   }
-  
+
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -106rem;
+  }
 }
 
 
@@ -569,7 +693,7 @@ Button,
     width: 100vw;
     top: -62rem;
     z-index: 2;
-    float:left;
+    float: left;
     color: black;
   }
 
@@ -578,10 +702,10 @@ Button,
     width: 100vw;
     top: -60rem;
     z-index: 2;
-    float:left;
+    float: left;
     color: black;
   }
-  
+
   .home_values {
     width: 50vw;
     left: 25%;
@@ -600,8 +724,13 @@ Button,
     top: -50rem;
     z-index: 5;
   }
-  
+
+  .home_cream_h2 {
+    font-size: 3.8rem;
+    top: -82rem;
+  }
 }
+
 /*  .bottle_size {
     left: 12rem;
   }
@@ -652,7 +781,7 @@ Button,
     width: 100vw;
     top: -55rem;
     z-index: 2;
-    float:left;
+    float: left;
   }
 
   .home_heading3 {
@@ -660,10 +789,10 @@ Button,
     width: 100vw;
     top: -52rem;
     z-index: 2;
-    float:left;
+    float: left;
     color: black;
   }
-  
+
   .home_values {
     width: 52vw;
     left: 24%;
@@ -691,8 +820,13 @@ Button,
     top: -48rem;
     z-index: 5;
   }
-  
+
+  .home_cream_h2 {
+    font-size: 2.5rem;
+    top: -68rem;
+  }
 }
+
 /*  .heading {
     width: 60%;
     left: 2rem;
@@ -731,7 +865,7 @@ Button,
   .home_heading2 {
     font-size: 2rem;
   }
-  
+
   .home_values {
     width: 40vw;
     left: 30%;
@@ -758,10 +892,14 @@ Button,
     top: -45rem;
     z-index: 5;
   }
-  
+
+  .home_cream_h2 {
+    font-size: 4rem;
+    top: -55rem;
+  }
 }
 
-  /*  .heading {
+/*  .heading {
     left: 3rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -835,4 +973,3 @@ Button,
     left: 76px;
   }
 }*/
-
