@@ -22,7 +22,7 @@ const AboutUs = () => {
         </Col>
 
           {/* <button className={styles.about_btn} onClick>
-            Learn More
+            Learn More Zac was here
           </button> */}
       </section>
 
