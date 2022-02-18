@@ -171,6 +171,8 @@ Button,
   animation: Home_bounce-in-right__oq0th 4s ease;
   border-color: red;
   border-width: 3px;
+  -webkit-animation: slide-left 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-left 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .bottle_size {
@@ -182,6 +184,30 @@ Button,
   left: 19rem;
   bottom: 0rem;
   animation: Home_bounce-in-right__oq0th 4s ease;
+}
+
+/**
+ * animation slide-left
+ */
+ @-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-0px);
+            transform: translateX(-0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 @keyframes bounce-in-right {
@@ -525,7 +551,6 @@ margin-left: 33%;
     height: 56vh;
     margin-right: 26vw;
     bottom: 0rem;
-    animation: Home_bounce-in-right__oq0th 4s ease;
   }
 
   .home_heading2 {
@@ -628,7 +653,6 @@ margin-left: 33%;
     height: 48vh;
     margin-right: 22vw;
     bottom: 0rem;
-    animation: Home_bounce-in-right__oq0th 4s ease;
   }
 
   .home_heading2 {
@@ -682,7 +706,6 @@ margin-left: 33%;
     height: 48vh;
     margin-right: 20vw;
     bottom: 0rem;
-    animation: Home_bounce-in-right__oq0th 4s ease;
   }
 
   .home_heading2 {
@@ -770,7 +793,6 @@ margin-left: 33%;
     height: 44vh;
     margin-right: 18vw;
     bottom: 0rem;
-    animation: Home_bounce-in-right__oq0th 4s ease;
   }
 
   .home_heading2 {
@@ -859,7 +881,6 @@ margin-left: 33%;
     height: 38vh;
     margin-right: 16vw;
     bottom: 0rem;
-    animation: Home_bounce-in-right__oq0th 4s ease;
   }
 
   .home_heading2 {
