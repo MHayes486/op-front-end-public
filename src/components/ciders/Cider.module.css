@@ -1,11 +1,14 @@
 .cider {
-
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
   padding: 1rem;
   background-color: none;
   text-align: center;
   color: #222222;
   height: 550px;
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 5vh;
 }
 
 .cider h2 {
