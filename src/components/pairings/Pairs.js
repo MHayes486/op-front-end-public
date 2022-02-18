@@ -10,10 +10,11 @@ const Pairs = (props) => {
       <h2>{props.dishName}</h2>
       <p>
         <b>Pairs With:</b>
-        <h3> {props.pigProduct}</h3>
+        <h3>{props.pigProduct}</h3>
       </p>
       <p>
-        <b>Ingredients:</b> {props.ingredients}
+        <b>Ingredients:</b>
+        <h4>{props.ingredients}</h4>
       </p>
 
       <img
