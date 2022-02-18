@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 
-
 import classes from './Pairs.module.css';
 
 const Pairs = (props) => {

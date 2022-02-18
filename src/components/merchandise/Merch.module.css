@@ -1,11 +1,11 @@
 .merch {
-  margin: 0rem;
+  margin: 1rem;
   padding: 1rem;
-  background-color: none;
+  background-color: #0d273e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
   text-align: center;
   color: white;
-  height: 600px;
-  width: auto;
 }
 
 .merch h2 {

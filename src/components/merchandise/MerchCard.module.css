@@ -3,9 +3,9 @@
   flex-direction:row;
   margin: 1rem;
     padding: 1rem;
-    /* background-color: #335c7c; */
-    /* box-shadow: 0 2px 8px rgb(0 0 0 / 26%); */
-    /* border-radius: 12px; */
+    background-color: #335c7c; 
+    box-shadow: 0 2px 8px rgb(0 0 0 / 26%); 
+    border-radius: 12px;
     text-align: center;
     color: rgb(48, 45, 45);
     height: 400px;

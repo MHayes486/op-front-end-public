@@ -81,16 +81,12 @@ const Home = () => {
           <h2 className={styles.home_cream_h2}>Our Pig is top dog!</h2>
           {/*}       <Link to="/OurCider" className={styles.home_heading4}>
             Check Out Our Cider Range
-           </Link> */} 
-        </section>
-        </div>
-<div>
-        <section >
+           </Link> */}
+ 
           <CiderCarosel />
         </section>
-</div>
-<div>
-        <Container fluid="true">
+ 
+      
           <section className={styles.lightblue}>
             <h2 className={styles.home_merch_h2}>GO PIG OR GO HOME</h2>
             <Link to="/Merchandise" className={styles.links1}>
@@ -98,11 +94,7 @@ const Home = () => {
             </Link>
             <MerchCarosel />
           </section>
-        </Container>
-        {/* <section>
-        <SignUp />
-      </section> */}
-        {/* </div> */}
+       
 
 
       </div>

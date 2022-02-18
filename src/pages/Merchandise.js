@@ -40,22 +40,11 @@ const Merchandise = () => {
   return (
     <Fragment>
       <section>
-        <div className={styles.merch_main}>
-          <div className="d-flex p-2 cup">
-            <img
-              className={styles.merch_cup}
-              src="\images\merch\coffee_mug.png"
-              alt="pics from backend"
-            ></img>
 
-            <h1 className={styles.merch_heading}>OUR PIG IS TOP DOG!</h1>
-            <div className="d-inline-flex p-2 merch_h1"> </div>
-          </div>
-        </div>
 
         <span>
           <h2 className={styles.merch_h2}>SUPPORT THE PIG</h2>
-          <h3 className={styles.merh_p}>
+          <h3 className={styles.merch_p}>
             Pick up some swag and show off your inner pig.
           </h3>
         </span>
