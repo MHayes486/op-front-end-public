@@ -9,6 +9,7 @@
   width: 50%;
   margin-left: 25%;
   margin-bottom: 5vh;
+
 }
 
 .cider h2 {
@@ -19,6 +20,13 @@
 .cider h3 {
   color: #3f73a2;
   margin: 0;
+  font-size: 1.5rem;
+}
+
+.cider p {
+  color: #7f73a9;
+  width: 100%;
+  position: fixed;
   font-size: 1.5rem;
 }
 

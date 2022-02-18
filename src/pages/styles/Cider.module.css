@@ -3,6 +3,22 @@
   padding: 0 !important;
 }
 
+.ciders_banner {
+  display: inline-block;
+  width: 100%;
+}
+
+.ciders_tear_background {
+  width: 100%;
+  top: -15vw;
+  position: relative;
+  height: 300px;
+}
+
+.ciders_relative {
+  position: relative;
+}
+
 .ciders_page{
   background-color: #f0e6da;
     max-width: 100vw;
