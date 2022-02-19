@@ -10,6 +10,7 @@
 .lightblue {
   background-color: #3f73a2;
   width: 100%;
+  justify-content: center;
 }
 @font-face {
   font-family: dirtyFont;
@@ -146,6 +147,11 @@ Button,
   z-index: 1;
 }
 
+.torn_banner2 {
+  width: 100%;
+  z-index: 1;
+}
+
 .cider_element,
 .button {
   margin-top: 20%;
@@ -261,7 +267,7 @@ Button,
 .home_merch_h2 {
   color: #f0e6da;
   font-size: 4rem;
-  margin-top: 10px;
+  margin-top: 8vh;
   text-align: center;
 }
 
