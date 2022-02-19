@@ -171,7 +171,7 @@ const HeaderNav = (props) => {
               </NavLink>
             </li> */}
                     <li>
-                 {/*}     <HeaderCartButton onClick={showCartHandler} /> */}
+                      <HeaderCartButton onClick={showCartHandler} /> 
                     </li>
                   </ul>
                 </nav>
