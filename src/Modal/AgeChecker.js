@@ -8,11 +8,6 @@ import { useDispatch } from "react-redux";
 import styles from "./AgeModal.module.css";
 
 const countries = getData();
-// const notLegalAlert = (
-//   <p className={styles.agePara}>
-//     Sorry! You are not old enough to visit the PIG.
-//   </p>
-// );
 
 const AgeModal = (props) => {
   const dispatch = useDispatch();
