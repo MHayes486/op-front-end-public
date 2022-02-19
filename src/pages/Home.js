@@ -1,105 +1,103 @@
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
+
 import CiderCarosel from ".././components/UI/CiderCarosel";
 import MerchCarosel from ".././components/UI/MerchCarosel";
+import SignUp from ".././components/UI/SignUp";
+import Button from ".././components/UI/Button";
 // import ValSVG from ".././components/UI/Values"
 // import ValueSVG from "./images/backgrounds/values.svg";
 
-import SignUp from ".././components/UI/SignUp";
-import Button from ".././components/UI/Button";
-import { Container, Grid, Row, Col, Image } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import classes from "./styles/static.module.css";
 import styles from "./styles/Home.module.css";
-
-
-
 
 const Home = () => {
   return (
-    <div>
-      <div className={styles.home_page}>
-        <Container fluid="true" className={styles.page}>
+    <div >
+      <div className={styles.internal}>
+        <section className={(styles.cider_element, styles.darkblue)}>
+          <h2 className={styles.heading}>Cider to snout about</h2>
+          {/* <Button className={styled.btn1} type="submit">
+          LEARN MORE
+        </Button> */}
+          <img
+            src="./images/ciders/Homepage_Splash_Image_Cider.png"
+            className={styles.bottle_size}
+            alt="pics from backend"
+          />
+          <img
+            src="./images/backgrounds/Paper Rip Texture Upwards.png"
+            className={styles.tear_bottom}
+            alt="pics from backend"
+          />
+        </section>
 
-          <section className={styles.cider_element}>
+        <section className={styles.cream}>
+          <h2 className={styles.heading2}>Rooted in Sommerset</h2>
+          <p className={styles.cream_p}>OUR CORE VALUES</p>
+          <img className={styles.values}
+            src="\images\icons\values.png"
+            alt="Orchard Pig: BOLD,MISCHEVIOUS AND SIMPLE"
+          />
 
-            <h2 className={styles.home_heading}>Cider to snout about</h2>
 
-            <Col col-auto col-6>
+
+          {/* <Button className={styles.btn2} type="submit">
+          ABOUT US
+        </Button> */}
+        </section>
+
+        <section className="farmRip">
+          <div className={styles.div}>
+          <div>
               <img
-                src="./images/ciders/Homepage_Splash_Image_Cider.png"
-                className={styles.home_bottle_size}
+                src="./images/backgrounds/Paper Rip Texture Downwards.png"
+                className={styles.tear_top}
                 alt="pics from backend"
               />
-            </Col>
-
-          </section>
-        </Container>
-
-      </div>
-
-      <div>
-
-        <img
-          src=".\images\backgrounds\Home-Page-Rip-1.png"
-          className={styles.tear_1st}
-          alt="pics from backend"
-        />
-      </div>
-      <div className={styles.home_page}>
-        <Container fluid="true">
-          <section className={styles.home_cream}>
-            <Col>
-
-
-              <h2 className={styles.home_heading2}>Rooted in Sommerset</h2>
-              <p className={styles.home_heading3}>OUR CORE VALUES</p>
-
+            </div>
+          <div>
               <img
-                src="./images/values.png"
-                alt="Orchard Pig: BOLD,MISCHEVIOUS AND SIMPLE"
-                className={styles.home_values}
+                src="./images/backgrounds/Homepage Splash Image.jpg"
+                className={styles.torn_banner}
+                alt="pics from backend"
               />
+            </div>
 
 
-            </Col>
-          </section>
-        </Container>
-      </div>
+            <div>
+              <img
+                src="./images/backgrounds/Paper Rip Texture Upwards.png"
+                className={styles.tear_bottom}
+                alt="pics from backend"
+              />
+            </div>
+          </div>
+        </section>
 
-      <div className={styles.home_page}>
-        <section className={styles.splash}>
-          <img
-            src="./images/backgrounds/Homepage Splash Image.jpg"
-            className={styles.home_torn_banner}
-            alt="pics from backend"
-          />
-          <img
-            src="\images\backgrounds\Home-Page-Rip-2.png"
-            className={styles.home_tear_2}
-            alt="pics from backend"
-          />
-
+        <section className={styles.cream}>
           <h2 className={styles.home_cream_h2}>Our Pig is top dog!</h2>
-          {/*}       <Link to="/OurCider" className={styles.home_heading4}>
+          <Link to="/OurCider" className={styles.links}>
             Check Out Our Cider Range
-           </Link> */}
- 
+          </Link>
+        </section>
+        <section className={styles.carosel_cider}>
           <CiderCarosel />
         </section>
- 
-      
-          <section className={styles.lightblue}>
-            <h2 className={styles.home_merch_h2}>GO PIG OR GO HOME</h2>
-            <Link to="/Merchandise" className={styles.links1}>
-              Enjoy OUR PIG_TASTIC MERCH
-            </Link>
-            <MerchCarosel />
-          </section>
-       
 
+        <section className={styles.lightblue}>
+          <h2 className={styles.home_merch_h2}>GO PIG OR GO HOME</h2>
+          <Link to="/Merchandise" className={styles.links}>
+            Enjoy OUR PIG_TASTIC MERCH
+          </Link>
+          <MerchCarosel />
+        </section>
 
+        {/* <section>
+        <SignUp />
+      </section> */}
       </div>
-    </div >
-
+    </div>
   );
 };
 

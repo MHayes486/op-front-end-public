@@ -13,7 +13,7 @@ const CiderList = (props) => {
           ciderTitle={cider.ciderTitle}
           ciderType={cider.ciderType}
           ciderSlogan={cider.ciderSlogan}
-          image={cider.image}
+          image={cider.image}          
         />
       ))}
     </ul>

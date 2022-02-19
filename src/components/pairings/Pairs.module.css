@@ -1,47 +1,24 @@
 .pairs {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: #0d273e;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 12px;
-  text-align: center;
-  color: white;
-  width: 50%;
-  margin-left: 25%;
-}
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #0d273e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+  
+  .pairs h2 {
+    font-size: 2.2rem;
+    color: #f7e702;
+  }
+  
+  .pairs h3 {
+    color: #eccf77;
+    margin: 0;
+    font-size: 1.7rem;
+  }
 
-.pairs h2 {
-  font-size: 2.2rem;
-  color: #f7e702;
-}
-
-.pairs h3 {
-  color: #eccf77;
-  font-size: 1.7rem;
-  margin-right: 75%;
-}
-.pairs h4 {
-  font-size: 1.4rem;
-  margin-right: 75%;
-}
-
-.pairs b {
-  color: white;
-  font-size: 1rem;
-  margin-right: 75%;
-}
-
-.image {
-  height: 200px;
-}
-
-.pairsh2 {
-  font-size: 2.2rem;
-  color: #f7e702;
-}
-
-.pairsh3 {
-  color: #eccf77;
-  font-size: 1.7rem;
-  text-align: center;
-}
+  .image {
+    height: 200px;
+  }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Pairs from './Pairs';
 import classes from './PairingsList.module.css';
 
@@ -13,8 +12,7 @@ const PairingsList = (props) => {
           pigProduct={pairs.pigProduct}
           dishName={pairs.dishName}
           ingredients={pairs.ingredients}
-          image={pairs.image}   
-          isActive={pairs.isActive}       
+          image={pairs.image}          
         />
       ))}
     </ul>

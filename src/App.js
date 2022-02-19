@@ -5,7 +5,7 @@ import Layouts from "./Layouts/Layouts";
 import "./App.css";
 import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
-import { ageCheckActions } from "./store/age-check-slice";
+import {ageCheckActions} from "./store/age-check-slice";
 
 import "bootstrap";
 
@@ -26,11 +26,11 @@ import Cart from "./pages/Cart";
 
 function App() {
   const dispatch = useDispatch();
-  const ageValidStorage = localStorage.getItem("ageIsValid");
-  if (ageValidStorage === "1") {
-    dispatch(ageCheckActions.validate());
+   const ageValidStorage = localStorage.getItem("ageIsValid");
+   if (ageValidStorage === "1") {
+      dispatch(ageCheckActions.validate());
+      console.log("validation")
   }
-
   const ageValidated = useSelector((state) => state.ageCheck.ageIsValid);
 
   return (
@@ -48,6 +48,7 @@ function App() {
             <Route path="/ourcider/:ciderId" element={<CiderDetails />}></Route>
             <Route path="/pairings" element={<Pairings />} />
             <Route path="/references" element={<References />} />
+            
             <Route path="/login" element={<LoginUser />} />
             <Route path="/register" element={<RegisterUser />} />
             <Route path="/admin" element={<Admin />} />

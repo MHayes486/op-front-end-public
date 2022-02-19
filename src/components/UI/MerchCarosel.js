@@ -52,13 +52,9 @@ const MerchCarosel = (props) => {
   if (status === "completed" && (!loadedMerch || loadedMerch.length === 0)) {
     return <p>No cider available?!?</p>;
   }
-
-  const activeMerch = loadedMerch.filter((loadedMerch) => {
-    return (loadedMerch.isActive = true);
-  });
   const merchListings = [];
 
-  for (const merch in activeMerch) {
+  for (const merch in loadedMerch) {
     const currentMerch = (
       <div>
         <MerchCard

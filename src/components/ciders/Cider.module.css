@@ -1,15 +1,13 @@
 .cider {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #335c7c;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 12px;
-  padding: 1rem;
-  background-color: none;
   text-align: center;
-  color: #222222;
-  height: 550px;
-  width: 50%;
-  margin-left: 25%;
-  margin-bottom: 5vh;
-
+  color: white;
+  height: 650px;
+  width: auto;
 }
 
 .cider h2 {
@@ -18,15 +16,8 @@
 }
 
 .cider h3 {
-  color: #3f73a2;
+  color: #f0e6da;
   margin: 0;
-  font-size: 1.5rem;
-}
-
-.cider p {
-  color: #7f73a9;
-  width: 100%;
-  position: fixed;
   font-size: 1.5rem;
 }
 
@@ -35,46 +26,3 @@
   width: auto;
   max-width: 250px;
 }
-
-
-
-
-
-/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (max-width:480px)  {
-
-  .cider{
-
-    height: 300px;
-  }
-
-  .cider h2 {
-    font-size: 1.5rem;
-
-  }
-
-  .cider h3 {
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  .imageSize {
-    max-height: 50%;
-    width: auto;
-    max-width: 150px;
-  }
-  .cider, .p{
-    font-size: .5rem
-  }
-
-}
-
-
-/* max device 768px ) */
-@media (max-width: 768px) {
-.cider{
-
-  margin-top: -1%;
-}
-}
- /* Stashed changes */

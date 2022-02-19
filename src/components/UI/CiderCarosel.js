@@ -1,8 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import classes from './CiderCarosel.module.css';
-
 import { useEffect } from "react";
 import Cider from "../ciders/Cider";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
@@ -53,16 +51,12 @@ const CiderCarosel = (props) => {
   if (status === "completed" && (!loadedCiders || loadedCiders.length === 0)) {
     return <p>No cider available?!?</p>;
   }
-
   const ciderListings = [];
-  const activeCiders = loadedCiders.filter((loadedCiders) => {
-    return (loadedCiders.isActive = true);
-  });
 
-  for (const cider in activeCiders) {
+  for (const cider in loadedCiders) {
     const currentCider = (
       <div>
-        <Cider 
+        <Cider
           key={cider}
           ciderId={loadedCiders[cider].id}
           ciderTitle={loadedCiders[cider].ciderTitle}
@@ -76,9 +70,8 @@ const CiderCarosel = (props) => {
   }
 
   return (
-    <Carousel responsive={responsive} className={classes.cider_carosel_section} >
+    <Carousel responsive={responsive}>
       {ciderListings}
-      
       {/* <div>
         <Cider
           key={loadedCiders[0].id}

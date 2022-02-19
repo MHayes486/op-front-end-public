@@ -8,7 +8,6 @@ import Loading from "../components/Loading";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
-
 const Admin = () => {
 
 // GET MERCHANDISE
@@ -34,11 +33,6 @@ const Admin = () => {
   if (status === "completed" && (!loadedPairs || loadedPairs.length === 0)) {
     return <p>No merch available?!?</p>;
   }
-
-
-
-
-
 
   return (
     <Fragment>

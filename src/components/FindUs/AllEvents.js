@@ -27,13 +27,10 @@ const AllEvents = () => {
   }
 
   if (status === "completed" && (!loadedEvents || loadedEvents.length === 0)) {
-    return <p>No Events available?!?</p>;
+    return <p>No merch available?!?</p>;
   }
-  const activeEvents = loadedEvents.filter((loadedEvents) => {
-    return (loadedEvents.isActive = true);
-  });
 
-  return <EventList event={activeEvents} />;
+  return <EventList event={loadedEvents} />;
 };
 
 export default AllEvents;
