@@ -79,12 +79,14 @@ Button,
   display: block;
   text-align: left;
   margin-left: 16%;
-  margin-top: 16%;
-  width: 299px;
+  margin-top: 15vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  width: 80vw;
   line-height: 57px;
   font-feature-settings: 16px;
   font-kerning: 16px;
-  font-size: 3.5rem;
+  font-size: 6.5rem;
   color: #f0e6da;
   transform: rotate(
 350deg
@@ -212,16 +214,6 @@ Button,
   z-index: 1;
 }
 
-/*
-.dics {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 15%;
-  margin: auto;
-  justify-content: space-evenly;
-} */
-
 .disc {
   background-color: #3f73a2;
   justify-content: space-between;
@@ -284,4 +276,37 @@ cream_p {
   display: flex;
   margin-top: -6%;
   margin: auto;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+  .heading {
+    font-size: 4.5rem;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1080px) {
+
+  .heading {
+    font-size: 4rem;
+  }
+
+}
+
+@media screen and (max-width: 760px) {
+
+  .heading {
+    font-size: 2rem;
+    padding-top: 8vh;
+  }
+
+
 }
