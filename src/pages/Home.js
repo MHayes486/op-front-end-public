@@ -34,8 +34,6 @@ const Home = () => {
             alt="Orchard Pig: BOLD,MISCHEVIOUS AND SIMPLE"
           />
 
-
-
           {/* <Button className={styles.btn2} type="submit">
           ABOUT US
         </Button> */}
@@ -43,16 +41,10 @@ const Home = () => {
 
         <section className="farmRip">
           <div className={styles.div}>
+
           <div>
-              <img
-                src="./images/backgrounds/Paper Rip Texture Downwards.png"
-                className={styles.tear_top}
-                alt="pics from backend"
-              />
-            </div>
-          <div>
-              <img
-                src="./images/backgrounds/Homepage Splash Image.jpg"
+              <img       // MORE APPLES LESS BUBBLES
+                src="./images/backgrounds/Homepage Splash Image Torn.png" 
                 className={styles.torn_banner}
                 alt="pics from backend"
               />

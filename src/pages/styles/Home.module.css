@@ -105,8 +105,7 @@ Button,
   float: right;
   margin-top: -18%;
   margin-right: 14%;
-  height: 438px;
-  width: 25%;
+  height: 50vh;
   animation: Home_bounce-in-right__2IhGI 4s ease infinite;
 }
 @keyframes bounce-in-right {
@@ -132,19 +131,21 @@ Button,
   height: 100px;
   width: 100%;
   margin-bottom: -3%;
+  z-index: 3;
 }
 
 .tear_top {
   height: 100px;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .torn_banner {
-  height: 400px;
+  margin-top: -1.5vh;
   width: 100%;
   z-index: 1;
 }
+
 .cider_element,
 .button {
   margin-top: 20%;
@@ -201,7 +202,7 @@ Button,
 
 }
 .values{
-  width: 50%;
+  height: 40%;
   z-index: 1;
 }
 
