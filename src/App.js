@@ -5,7 +5,7 @@ import Layouts from "./Layouts/Layouts";
 import "./App.css";
 import { Fragment } from "react";
 import AgeModal from "./Modal/AgeChecker";
-import {ageCheckActions} from "./store/age-check-slice";
+import { ageCheckActions } from "./store/age-check-slice";
 
 import "bootstrap";
 
@@ -20,16 +20,15 @@ import NotFound from "./pages/NotFound";
 import References from "./pages/References";
 import LoginUser from "./pages/LoginUser";
 import RegisterUser from "./pages/RegisterUser";
-import AdminAdds from "./pages/AdminAdditions";
 import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
 
 function App() {
   const dispatch = useDispatch();
-   const ageValidStorage = localStorage.getItem("ageIsValid");
-   if (ageValidStorage === "1") {
-      dispatch(ageCheckActions.validate());
-      console.log("validation")
+  const ageValidStorage = localStorage.getItem("ageIsValid");
+  if (ageValidStorage === "1") {
+    dispatch(ageCheckActions.validate());
+    console.log("validation");
   }
   const ageValidated = useSelector((state) => state.ageCheck.ageIsValid);
 
@@ -48,12 +47,11 @@ function App() {
             <Route path="/ourcider/:ciderId" element={<CiderDetails />}></Route>
             <Route path="/pairings" element={<Pairings />} />
             <Route path="/references" element={<References />} />
-            
+
             <Route path="/login" element={<LoginUser />} />
             <Route path="/register" element={<RegisterUser />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/admin/add" element={<AdminAdds />} />
             {/* Capture page not found: */}
             <Route path="*" element={<NotFound />} />
           </Routes>
