@@ -5,9 +5,11 @@ import { getAllMerch } from "../lib/api";
 import { Container, Col, Row } from "react-bootstrap";
 import MerchList from "../components/merchandise/MerchList";
 import Loading from "../components/Loading";
-
+import HeaderCartButton from "../Layouts/HeaderCartButton";
 import styles from "./styles/Merchandise.modules.css";
+import styling from "./styles/Home.module.css";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
+import { useNavigate } from "react-router-dom";
 
 const Merchandise = () => {
   const {
@@ -16,6 +18,11 @@ const Merchandise = () => {
     data: loadedMerch,
     error,
   } = useHttp(getAllMerch, true);
+
+  const navigate = useNavigate();
+  const showCartHandler = () => {
+    navigate("/cart");
+  };
 
   useEffect(() => {
     sendRequest();
@@ -39,17 +46,19 @@ const Merchandise = () => {
 
   return (
     <Fragment>
+            
       <section>
 
 
-        <span>
-          <h2 className={styles.merch_h2}>SUPPORT THE PIG</h2>
-          <h3 className={styles.merch_p}>
+        <div>
+          <h2 className={styling.home_merch_h2}>Support the PIG</h2>
+          <h3 className={styling.home_merch_h3}>
             Pick up some swag and show off your inner pig.
           </h3>
-        </span>
+        </div>
       </section>
       <section>
+
         <MerchList merch={activeMerch} />
       </section>
     </Fragment>

@@ -75,10 +75,8 @@ Button,
 }
 
 .heading {
-
+  text-align: center;
   display: block;
-  text-align: left;
-  margin-left: 16%;
   margin-top: 15vh;
   padding-top: 10vh;
   padding-bottom: 10vh;
@@ -263,6 +261,13 @@ Button,
   text-align: center;
 }
 
+.home_merch_h3 {
+  color: black;
+  font-size: 2rem;
+  margin-top: 8vh;
+  text-align: center;
+}
+
 .heading3,
 .home_h2 {
   text-align: right;
@@ -282,6 +287,17 @@ cream_p {
 
 
 
+
+
+@media screen and (max-width: 1680px) {
+
+  .heading {
+    font-size: 5.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+}
 
 
 @media screen and (max-width: 1400px) {
