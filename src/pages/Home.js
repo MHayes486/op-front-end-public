@@ -74,7 +74,7 @@ const Home = () => {
         <section className={styles.lightblue}>
           <h2 className={styles.home_merch_h2}>GO PIG OR GO HOME</h2>
           <Link to="/Merchandise" className={styles.links}>
-            Enjoy OUR PIG_TASTIC MERCH
+            Enjoy OUR PIG-TASTIC MERCH
           </Link>
           <MerchCarosel />
         </section>
