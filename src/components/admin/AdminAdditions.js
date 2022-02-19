@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import AddPairings from "../components/pairings/AddPairings";
-import AddCiders from "../components/ciders/AddCider";
-import AddEvents from "../components/FindUs/AddEvent";
-import AddMerchs from "../components/merchandise/AddMerchs";
+import AddPairings from "../pairings/AddPairings";
+import AddCiders from "../ciders/AddCider";
+import AddEvents from "../FindUs/AddEvent";
+import AddMerchs from "../merchandise/AddMerchs";
 
 const AdminAdds = () => {
   return (
