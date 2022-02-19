@@ -147,6 +147,11 @@ Button,
   z-index: 1;
 }
 
+.torn_banner2 {
+  width: 100%;
+  z-index: 1;
+}
+
 .cider_element,
 .button {
   margin-top: 20%;

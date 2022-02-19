@@ -2,7 +2,7 @@ import { Fragment, useEffect } from "react";
 
 import useHttp from "../hooks/use-http";
 import { getAllCiders } from "../lib/api";
-
+import styles from "./styles/Home.module.css";
 import CiderList from "../components/ciders/CiderList";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
@@ -31,17 +31,25 @@ const OurCider = () => {
     return <p>No cider available?!?</p>;
   }
 
-  
+
   return (
-    <Fragment>
-      <h2>Our Cider</h2>
-      <h3>This is what we are about</h3>
-      <section>
-        <CiderList cider={loadedCiders} />
-      </section>
-    </Fragment>
+    <div>
+      <div>
+        <img       // MORE APPLES LESS BUBBLES
+          src="./images/backgrounds/Ciders Page Splash Image Torn.jpg"
+          className={styles.torn_banner2}
+          alt="pics from backend"
+        />
+      </div>
+
+      <Fragment>
+        <section>
+          <CiderList cider={loadedCiders} />
+        </section>
+      </Fragment>
+    </div>
   );
-  
+
 };
 
 export default OurCider;
