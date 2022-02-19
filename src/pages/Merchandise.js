@@ -6,7 +6,6 @@ import { Container, Col, Row } from "react-bootstrap";
 import MerchList from "../components/merchandise/MerchList";
 import Loading from "../components/Loading";
 import HeaderCartButton from "../Layouts/HeaderCartButton";
-import styles from "./styles/Merchandise.modules.css";
 import styling from "./styles/Home.module.css";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 import { useNavigate } from "react-router-dom";
@@ -52,6 +51,7 @@ const Merchandise = () => {
 
         <div>
           <h2 className={styling.home_merch_h2}>Support the PIG</h2>
+          <HeaderCartButton onClick={showCartHandler} className={styling.merch_cart_location}/>
           <h3 className={styling.home_merch_h3}>
             Pick up some swag and show off your inner pig.
           </h3>

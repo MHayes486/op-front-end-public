@@ -7,8 +7,8 @@
   text-align: center;
   color: white;
   height: 620px;
-  width: 33vw;
-  margin-left: 11vw;
+  width: 20vw;
+  margin-left: 10vw;
   float: left;
 }
 
@@ -29,4 +29,33 @@
   margin-bottom: 20px;
   /* max-height: 100%;
   width: auto; */
+}
+
+
+@media screen and (max-width: 1680px) {
+  .merch {
+    width: 33vw;
+    margin-left: 11vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .merch {
+    width: 33vw;
+    margin-left: 11vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .merch {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .merch {
+    width: 76vw;
+    margin-left: 12vw;
+  }
 }
