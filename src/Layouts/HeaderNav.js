@@ -35,19 +35,17 @@ const HeaderNav = (props) => {
   return (
     <Container fluid="true" >
 
-
-
       <Col className="justify-content-md-center">
+        <Row className="justify-content-center">
+          <Col fluid={{ span: 6, offset: 3 }}>  <img
+            src="./logo192.png"
+            className={styles.pig_logo}
+            alt="pics from backend"
+          /></Col>
 
+        </Row>
         <header className={styles.header} onShowCart={showCartHandler}>
-          <Row className="justify-content-center">
-            <Col fluid={{ span: 6, offset: 3 }}>  <img
-              src="./logo192.png"
-              className={styles.pig_logo}
-              alt="pics from backend"
-            /></Col>
 
-          </Row>
           <Row>
             <Col fluid={{ span: 6, offset: 3 }}>
 
@@ -171,18 +169,18 @@ const HeaderNav = (props) => {
               </NavLink>
             </li> */}
                     <li>
-                      <HeaderCartButton onClick={showCartHandler} /> 
+                      <HeaderCartButton onClick={showCartHandler} />
                     </li>
                   </ul>
                 </nav>
               </div>
- 
+
             </Col>
           </Row>
         </header>
       </Col>
     </Container>
-    
+
   );
 };
 
