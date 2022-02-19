@@ -259,6 +259,7 @@ Button,
   font-size: 4rem;
   margin-top: 8vh;
   text-align: center;
+  padding-top: 5vh;
 }
 
 .home_merch_h3 {
@@ -324,5 +325,15 @@ cream_p {
     padding-top: 8vh;
   }
 
+  .home_merch_h2 {
+    font-size: 2.8rem;
+    padding-top: 7vh;
+  }
+  
+  .home_merch_h3 {
+    font-size: 1.4rem;
+    margin-top: 8vh;
+  }
+  
 
 }

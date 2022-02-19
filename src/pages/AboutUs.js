@@ -1,22 +1,27 @@
 import { Fragment } from "react";
 import styles from "./styles/AboutUs.module.css";
-import Layout from "../Layouts/Layouts";
+import styling from "./styles/Home.module.css";
 
 const AboutUs = () => {
   return (
     <Fragment>
-      <section className={styles.cider_element}>
+                <h2 className={styling.home_merch_h2}>Mischief in the Mainstream</h2>
+          <h3 className={styling.home_merch_h3}>
+          We like to poke fun at the world and ourselves... 
+          </h3>
+
+     <section >   {/* 
         <div className={styles.cream}></div>
         <h1 className={styles.about_us_h1}>Mischief in the Mainstream</h1>
         <p className={styles.sub_heading}>
           We like to poke fun at the world and ourselves...And Each Other{" "}
-        </p>
+        </p>*/}
         <div className={styles.tear1}>
-          <img
+  {/*         <img
             className={(styles.tear_upwards, styles.tear_upward_img)}
             src="\images\backgrounds\Paper Rip Texture Downwards.png"
             alt="pics from backend"
-          />
+          />   */}
           {/* <button className={styles.about_btn} onClick>
             Learn More
           </button> */}
