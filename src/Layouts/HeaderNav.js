@@ -165,9 +165,15 @@ const HeaderNav = (props) => {
                 )}
               </NavLink>
             </li> */}
-                    <li>
+
+
+
+ {/*}                   <li>
                       <HeaderCartButton onClick={showCartHandler} />
                     </li>
+          */}
+
+
                   </ul>
                 </nav>
               </div>

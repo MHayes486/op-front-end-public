@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 50vw;
   height: auto;
   max-height: 100px;
   max-height: 1rem;
@@ -9,15 +9,15 @@
   background-color: #3f73a2;
   color: #f0e6da;
   margin-top: 11vh;
-  text-align: center;
+
+
 }
 
 .logo {
   height: 95%;
   max-height: 100px;
-  width: auto;
   margin-top: -19%;
-  margin-left: 40%;
+  margin-left: 50vw;
   margin-right: 0;
   display: flex;
 }
@@ -30,6 +30,7 @@
 */
   margin-top: 12vh;
   text-align: center;
+  margin-left: 10vw;
 }
 
 .nav li {
@@ -66,7 +67,7 @@
   .nav ul {
     text-align: center;
     display: inline-block;
-    margin-left: 22vw;
+    margin-left: 33vw;
     margin-top: 10vh;
     position: flex;
   }

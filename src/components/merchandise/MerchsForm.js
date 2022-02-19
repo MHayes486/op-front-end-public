@@ -126,7 +126,7 @@ function MerchsForm(props) {
       </div>
       <div className="form-actions">
         <button className="formButton" disabled={!formIsValid}>
-          Add a Merch
+          Add Merch
         </button>
       </div>
     </form>

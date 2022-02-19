@@ -1,0 +1,186 @@
+/* .darkblue {
+  background-color: #335c7c;
+} */
+.darkgrey {
+    background-color: #0d273e;
+  }
+  .grey {
+    background-color: #222222;
+  }
+  .lightblue {
+    background-color: #3f73a2;
+    width: 100%;
+    justify-content: center;
+  }
+  @font-face {
+    font-family: dirtyFont;
+    /*  src: url(https://www.dafont.com/dirty-headline.font); */
+    src: url("./fonts/DirtyHeadline.ttf");
+  }
+  
+  /* HOME CONTENT  */
+  
+  /* home button btn1 */
+  
+  Button,
+  .btn1 {
+    margin-left: 27%;
+    margin-top: 5%;
+    font-size: 0.75rem;
+    color: #fff;
+    width: 100px;
+    box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+  }
+  
+  Button,
+  .btn1:hover,
+  Button,
+  .btn1:active {
+    background: #3f73a2;
+    border-color: #0d273e;
+    color: #fdfafa;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1);
+    box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+    padding: 0.2rem 1rem;
+    width: 100px;
+  }
+  
+  Button,
+  .btn2 {
+    font: inherit;
+    border: 1px solid #0d273e;
+    background: #3f73a2;
+    color: white;
+    box-shadow: 0 2 12px rgba(0, 0, 0, 0.26);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 2rem;
+    width: 8rem;
+    justify-items: center;
+    margin: auto;
+  }
+  .btn2:hover,
+  .btn2:active {
+    background: #3f73a2;
+    border-color: #0d273e;
+    color: #494848;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1);
+    box-shadow: 0 2 8px rgba(0, 0, 0, 0.26);
+    padding: 0.2rem 1rem;
+  }
+  
+  .heading {
+    text-align: center;
+    display: block;
+    margin-top: 15vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 80vw;
+    line-height: 57px;
+    font-feature-settings: 16px;
+    font-kerning: 16px;
+    font-size: 6.5rem;
+    color: #f0e6da;
+    transform: rotate(
+  350deg
+  );
+    animation: Home_Home_slide-in-left__2Sl1V__3jkS9 4s ease infinite;
+  }
+  
+  @keyframes bounce-in-right {
+    from {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 100px;
+    }
+  }
+ 
+  
+
+  
+  .cider_element,
+  .button {
+    margin-top: 20%;
+    display: block;
+  }
+  
+  /* STATIC PAGE - ABOUT US */
+   
+   .border {
+    border: 10px inset #0d273e;
+  } 
+ 
+  .title {
+    letter-spacing: 4px;
+  }
+  
+  
+  .admin_h2 {
+    color: #f0e6da;
+    font-size: 3rem;
+    margin-top: 8vh;
+    text-align: center;
+    padding-top: 5vh;
+  }
+  
+  .admin_h3 {
+    color: black;
+    font-size: 1.6rem;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  
+  
+  @media screen and (max-width: 1680px) {
+  
+    .heading {
+      font-size: 5.5rem;
+      width: 100%;
+      text-align: center;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width: 1400px) {
+  
+    .heading {
+      font-size: 4.5rem;
+      width: 100%;
+    }
+  
+  }
+  
+  @media screen and (max-width: 1080px) {
+  
+    .heading {
+      font-size: 4rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 760px) {
+  
+    .heading {
+      font-size: 2rem;
+      padding-top: 8vh;
+    }
+  
+    .home_merch_h2 {
+      font-size: 2.8rem;
+      padding-top: 7vh;
+    }
+    
+    .home_merch_h3 {
+      font-size: 1.4rem;
+      margin-top: 8vh;
+    }
+    
+  
+  }
