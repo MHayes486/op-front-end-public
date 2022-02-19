@@ -1,14 +1,8 @@
-import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 import CiderCarosel from ".././components/UI/CiderCarosel";
 import MerchCarosel from ".././components/UI/MerchCarosel";
-import SignUp from ".././components/UI/SignUp";
-import Button from ".././components/UI/Button";
-// import ValSVG from ".././components/UI/Values"
-// import ValueSVG from "./images/backgrounds/values.svg";
 
-import classes from "./styles/static.module.css";
 import styles from "./styles/Home.module.css";
 
 const Home = () => {
