@@ -2,7 +2,7 @@ import { Fragment, useEffect } from "react";
 
 import useHttp from "../../hooks/use-http";
 import { getAllEvents } from "../../lib/api";
-import EventList from "../FindUs/EventList";
+import EventsTable from "./tables/EventsTable";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
@@ -34,7 +34,7 @@ const AdminEvents = () => {
   return (
     <Fragment>
       <section>
-        <EventList event={loadedEvents} />
+        <EventsTable event={loadedEvents} />
       </section>
     </Fragment>
   );

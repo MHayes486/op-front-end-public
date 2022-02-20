@@ -26,7 +26,7 @@ const EventsTable = (props) => {
         <tbody>
           {props.events.map((events) => {
             let active = "Not Active";
-            if (Events.isActive === true) {
+            if (events.isActive === true) {
               active = "Active";
             }
             return (
@@ -37,10 +37,10 @@ const EventsTable = (props) => {
                 <td>{events.image}</td>
                 <td>{active}</td>
 
-                <button
+                {/* <button
                   className={classes.button1}
                   onClick={() => {
-                    dispatch(activateEvents(Events._id));
+                    dispatch(activateEvents(events._id));
                   }}
                 >
                   Activate
@@ -48,11 +48,11 @@ const EventsTable = (props) => {
                 <button
                   className={classes.button2}
                   onClick={() => {
-                    dispatch(deactivateEvents(Events._id));
+                    dispatch(deactivateEvents(events._id));
                   }}
                 >
                   Deactivate
-                </button>
+                </button> */}
               </tr>
             );
           })}
