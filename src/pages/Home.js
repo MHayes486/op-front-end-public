@@ -11,9 +11,7 @@ const Home = () => {
       <div className={styles.internal}>
         <section className={(styles.cider_element, styles.darkblue)}>
           <h2 className={styles.heading}>Cider to snout about</h2>
-          {/* <Button className={styled.btn1} type="submit">
-          LEARN MORE
-        </Button> */}
+
           <img
             src="./images/ciders/Homepage_Splash_Image_Cider.png"
             className={styles.bottle_size}
@@ -42,9 +40,9 @@ const Home = () => {
         <section className="farmRip">
           <div className={styles.div}>
 
-          <div>
+            <div>
               <img       // MORE APPLES LESS BUBBLES
-                src="./images/backgrounds/Homepage Splash Image Torn.png" 
+                src="./images/backgrounds/Homepage Splash Image Torn.png"
                 className={styles.torn_banner}
                 alt="pics from backend"
               />
