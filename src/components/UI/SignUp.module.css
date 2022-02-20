@@ -2,6 +2,17 @@
   background-color: #3f73a2;
 }
 
+<<<<<<< HEAD
+.decor_form {
+  background-color: #335c7c;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 20px;
+}
+
+.signup_form_input {
+
+}
 .wholeForm {
   /* background-color: antiquewhite; */
 }
@@ -20,6 +31,7 @@
 .wholeFormp {
   color: black;
 }
+>>>>>>> 6b5dfc0a678f7421b4c5da083cdb36cea2e6dbe8
 
 .signup_form_input {
   padding-bottom: 5px;
