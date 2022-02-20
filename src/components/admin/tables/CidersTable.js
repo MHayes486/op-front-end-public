@@ -27,7 +27,7 @@ const CidersTable = (props) => {
         <tbody>
           {props.ciders.map((ciders) => {
             let active = "Not Active";
-            if (Ciders.isActive === true) {
+            if (ciders.isActive === true) {
               active = "Active";
             }
             return (
@@ -38,11 +38,11 @@ const CidersTable = (props) => {
                 <td>{ciders.ciderSlogan}</td>
                 <td>{ciders.image}</td>
                 <td>{active}</td>
-
+{/* 
                 <button
                   className={classes.button1}
                   onClick={() => {
-                    dispatch(activateCiders(Ciders._id));
+                    dispatch(activateCiders(ciders._id));
                   }}
                 >
                   Activate
@@ -50,11 +50,11 @@ const CidersTable = (props) => {
                 <button
                   className={classes.button2}
                   onClick={() => {
-                    dispatch(deactivateCiders(Ciders._id));
+                    dispatch(deactivateCiders(ciders._id));
                   }}
                 >
                   Deactivate
-                </button>
+                </button> */}
               </tr>
             );
           })}

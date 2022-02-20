@@ -3,7 +3,7 @@ import { Fragment, useEffect } from "react";
 import useHttp from "../../hooks/use-http";
 import { getAllCiders } from "../../lib/api";
 
-import CiderList from "../ciders/CiderList";
+import CidersTable from "./tables/CidersTable"
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
@@ -35,7 +35,7 @@ const AdminCiders = () => {
   return (
     <Fragment>
       <section>
-        <CiderList cider={loadedCiders} />
+        <CidersTable cider={loadedCiders} />
       </section>
     </Fragment>
   );
