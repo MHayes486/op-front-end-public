@@ -45,7 +45,7 @@ const Pairings = () => {
       <PairingsList pairs={activePairs} />
       <h3>Do you have a recipe and pairing to send us?</h3>
       <section>
-        <AddPairings onAddPairings={addPairsHandler} />
+        <AddPairings />
       </section>
     </Fragment>
   );
