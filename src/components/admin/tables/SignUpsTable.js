@@ -16,27 +16,23 @@ const SignUpsTable = (props) => {
         <thead className="thead-dark">
           <tr>
             <th>SignUps Id</th>
-            <th>Reciever</th>
+            <th>Name</th>
             <th>Email Address</th>
-            <th>Delivery Address</th>
-            <th>Order</th>
-            <th>Processed</th>
+            <th>Active</th>
           </tr>
         </thead>
 
         <tbody>
           {props.signUps.map((signUps) => {
-            let active = "Unprocessed";
+            let active = "Deactive";
             if (SignUps.isActive === true) {
-              active = "Processed";
+              active = "Active";
             }
             return (
               <tr>
                 <td>{signUps._id}</td>
-                <td>{signUps.name}</td>
-                <td>{signUps.emailAddress}</td>
-                <td>{signUps.delAddress}</td>
-                <td>{signUps.order}</td>
+                <td>{signUps.contactName}</td>
+                <td>{signUps.contactEmail}</td>
                 <td>{active}</td>
 
                 <button
