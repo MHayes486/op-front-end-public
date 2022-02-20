@@ -44,9 +44,9 @@ const Pairings = () => {
       <h3>What to eat while you have a drink</h3>
       <PairingsList pairs={activePairs} />
       <h3>Do you have a recipe and pairing to send us?</h3>
-      {/* <section>
-      <AddPairings onAddPairings={addPairsHandler} />
-    </section> */}
+      <section>
+        <AddPairings onAddPairings={addPairsHandler} />
+      </section>
     </Fragment>
   );
 
