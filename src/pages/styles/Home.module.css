@@ -257,7 +257,7 @@ Button,
 .home_merch_h2 {
   color: #f0e6da;
   font-size: 4rem;
-  margin-top: 8vh;
+  margin-top:11vh;
   text-align: center;
   padding-top: 5vh;
 }
@@ -304,6 +304,11 @@ Button,
   .heading {
     font-size: 4rem;
   }
+  
+  .heading2 {
+    font-size: 3.5rem;
+    margin-top: 17px;
+  }
 
 }
 
@@ -312,6 +317,11 @@ Button,
   .heading {
     font-size: 2rem;
     padding-top: 8vh;
+  }
+
+  .heading2 {
+    font-size: 2.5rem;
+    margin-top: 17px;
   }
 
   .home_merch_h2 {
@@ -324,5 +334,8 @@ Button,
     margin-top: 8vh;
   }
   
+  .values{
+    height: 28%;
+  }
 
 }
