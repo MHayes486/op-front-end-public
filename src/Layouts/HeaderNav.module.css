@@ -11,15 +11,6 @@
   margin-top: 11vh;
 }
 
-.logo {
-  height: 95%;
-  max-height: 100px;
-  margin-top: -19%;
-  margin-left: 50vw;
-  margin-right: 0;
-  display: flex;
-}
-
 
 .nav ul {
   width: 80vw;
@@ -28,7 +19,7 @@
   display: flex;
   /*  margin: 0% 0 0 -4%; 
 */
-  margin-top: 12vh;
+  margin-top: 20vh;
   text-align: center;
   margin-left: 10vw;
 }
@@ -75,13 +66,14 @@
 
 
 .pig_logo {
-  height: 95%;
-  max-height: 100px;
-  width: auto;
+  height: auto;
+  width: 12vw;
+  max-width: 210px;
+  min-width: 80px;
   z-index: 1;
   display: flex;
   margin-top: -9vh;
-  margin-left: 45%;
+  margin-left: 44%;
   position: absolute;
 }
 
@@ -96,7 +88,8 @@
   }
 
   .pig_logo {
-    height: 0px;
+    position: absolute;
+    top: 320px;
   }
 
 
