@@ -44,7 +44,7 @@ const HeaderNav = (props) => {
         <header className={styles.header} onShowCart={showCartHandler}>
 
           <Row>
-            <Col fluid={{ span: 6, offset: 3 }}>
+            <Col >
 
               <div >
                 <nav className={styles.nav}>
