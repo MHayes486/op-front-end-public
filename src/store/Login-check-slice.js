@@ -5,7 +5,7 @@ const logInCheckSlice = createSlice({
   initialState: { logedIn: false },
   reducers: {
     logout(state) {
-      state.login = false;
+      state.logedIn = false;
     },
     validate(state) {
       state.logedIn = true;
