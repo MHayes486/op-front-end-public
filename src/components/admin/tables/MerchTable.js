@@ -21,6 +21,7 @@ const MerchTable = (props) => {
             <th>Item Name</th>
             <th>Image</th>
             <th>Active?</th>
+            <th>Adjust:</th>
           </tr>
         </thead>
 
@@ -40,22 +41,24 @@ const MerchTable = (props) => {
                 <td>{merch.itemName}</td>
                 <td>{merch.image}</td>
                 <td>{active}</td>
-                <button
-                  className={classes.button1}
-                  onClick={() => {
-                    dispatch(activateMerchandise(merch._id));
-                  }}
-                >
-                  Activate
-                </button>
-                <button
-                  className={classes.button2}
-                  onClick={() => {
-                    dispatch(deactivateMerchandise(merch._id));
-                  }}
-                >
-                  Deactivate
-                </button>
+                <td>
+                  <button
+                    className={classes.button1}
+                    onClick={() => {
+                      dispatch(activateMerchandise(merch._id));
+                    }}
+                  >
+                    Activate
+                  </button>
+                  <button
+                    className={classes.button2}
+                    onClick={() => {
+                      dispatch(deactivateMerchandise(merch._id));
+                    }}
+                  >
+                    Deactivate
+                  </button>
+                </td>
               </tr>
             );
           })}
