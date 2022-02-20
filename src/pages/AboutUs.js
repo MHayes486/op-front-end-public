@@ -31,7 +31,7 @@ const AboutUs = () => {
       <section className={styles.About_us_2}>
         <div className={styles.about_img}>
           <img
-            src="\images\backgrounds\About Page Splash Image 1.jpg"
+            src="\images\backgrounds\About Page Splash Image 1 Torn.jpg"
             className={styles.about_splash1}
             alt="pics from backend"
           />
@@ -61,7 +61,7 @@ const AboutUs = () => {
             alt="pics from backend"
           />
         </div>
-        <h2 className={styles.about_heading2}>A PIGS TAIL</h2>
+        <h2 className={styles.about_heading2}>A PIG'S TAIL</h2>
         <div className={styles.about_pigstail_text}>
           <p className={styles.about_pg1}>
             It all started in the naughties, when Andrew and Neil were enjoying
@@ -79,14 +79,14 @@ const AboutUs = () => {
 
       <section className={styles.About_us_5}>
         <div className={styles.tear4}>
-          <img
+          <img /*
             src="\images\backgrounds\Paper Rip Texture Downwards (Black).png"
             className={styles.about_tear3}
             alt="pics from backend"
-          />
+          *//>
           <div className={styles.about_img5}>
             <img
-              src="\images\backgrounds\About Page Splash Image 2.jpg"
+              src="\images\backgrounds\About Page Splash Image 2 Torn.jpg"
               className={styles.about5}
               alt="pics from backend"
             />
