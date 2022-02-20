@@ -34,7 +34,7 @@ const AdminEvents = () => {
   return (
     <Fragment>
       <section>
-        <EventsTable event={loadedEvents} />
+        <EventsTable events={loadedEvents} />
       </section>
     </Fragment>
   );

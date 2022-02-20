@@ -1,10 +1,10 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import {
-  activateEvents,
-  deactivateEvents,
-} from "../../../actions/adminActions";
+// import {
+//   activateEvents,
+//   deactivateEvents,
+// } from "../../../actions/adminActions";
 import classes from "../Admin.module.css";
 
 const EventsTable = (props) => {
@@ -20,27 +20,28 @@ const EventsTable = (props) => {
             <th>Event Location</th>
             <th>Image</th>
             <th>Active?</th>
+            <th>Toggle</th>
           </tr>
         </thead>
 
         <tbody>
-          {props.events.map((events) => {
+          {props.events.map((event) => {
             let active = "Not Active";
-            if (events.isActive === true) {
+            if (event.isActive === true) {
               active = "Active";
             }
             return (
               <tr>
-                <td>{events._id}</td>
-                <td>{events.eventName}</td>
-                <td>{events.eventAddress}</td>
-                <td>{events.image}</td>
+                <td>{event._id}</td>
+                <td>{event.eventName}</td>
+                <td>{event.eventAddress}</td>
+                <td>{event.image}</td>
                 <td>{active}</td>
-
-                {/* <button
+                <td>
+                  {/* <button
                   className={classes.button1}
                   onClick={() => {
-                    dispatch(activateEvents(events._id));
+                    dispatch(activateEvents(event._id));
                   }}
                 >
                   Activate
@@ -48,11 +49,12 @@ const EventsTable = (props) => {
                 <button
                   className={classes.button2}
                   onClick={() => {
-                    dispatch(deactivateEvents(events._id));
+                    dispatch(deactivateEvents(event._id));
                   }}
                 >
                   Deactivate
                 </button> */}
+                </td>
               </tr>
             );
           })}

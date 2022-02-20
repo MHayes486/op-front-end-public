@@ -32,10 +32,10 @@ const Admin = () => {
       </section>
       <hr></hr>
       <section>
-        {/* <h4 className={styles.admin_h3}>Update Events</h4>
+        <h4 className={styles.admin_h3}>Update Events</h4>
         <AdminEvents />
         <h4 className={styles.admin_h3}>Add an Event</h4>
-        <AddEvents /> */}
+        <AddEvents />
       </section>
       <hr></hr>
       <section>
