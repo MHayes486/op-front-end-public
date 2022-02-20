@@ -61,6 +61,7 @@ function CidersForm(props) {
       ciderType: ciderTypeValue,
       ciderSlogan: ciderSloganValue,
       image: ciderURLValue,
+      isActive: true,
     });
 
     resetciderName();

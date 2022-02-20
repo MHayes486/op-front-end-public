@@ -61,6 +61,7 @@ function MerchsForm(props) {
       itemName: itemNameValue,
       itemCost: costValue,
       image: merchURLValue,
+      isActive: true,
     });
 
     resetitemName();

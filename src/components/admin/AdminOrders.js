@@ -1,20 +1,20 @@
 import { Fragment, useEffect } from "react";
 
 import useHttp from "../../hooks/use-http";
-import { getAllCiders } from "../../lib/api";
+import { getAllOrders } from "../../lib/api";
 
-import CidersTable from "./tables/CidersTable";
+import OrdersTable from "./tables/OrdersTable";
 
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
-const AdminCiders = () => {
-  // GET Ciders
+const AdminOrders = () => {
+  // GET Events
   const {
     sendRequest,
     status,
-    data: loadedCiders,
+    data: loadedOrders,
     error,
-  } = useHttp(getAllCiders, true);
+  } = useHttp(getAllOrders, true);
 
   useEffect(() => {
     sendRequest();
@@ -28,16 +28,16 @@ const AdminCiders = () => {
     return <p>{error}</p>;
   }
 
-  if (status === "completed" && (!loadedCiders || loadedCiders.length === 0)) {
-    return <p>No cider available?!?</p>;
+  if (status === "completed" && (!loadedOrders || loadedOrders.length === 0)) {
+    return <p>No order available?!?</p>;
   }
 
   return (
     <Fragment>
       <section>
-        <CidersTable ciders={loadedCiders} />
+        <OrdersTable orders={loadedOrders} />
       </section>
     </Fragment>
   );
 };
-export default AdminCiders;
+export default AdminOrders;

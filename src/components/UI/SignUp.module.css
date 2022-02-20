@@ -2,6 +2,7 @@
   background-color: #3f73a2;
 }
 
+<<<<<<< HEAD
 .decor_form {
   background-color: #335c7c;
   border-radius: 15px;
@@ -10,7 +11,28 @@
 }
 
 .signup_form_input {
+=======
+.wholeForm {
+  /* background-color: antiquewhite; */
+}
 
+.wholeFormh2,
+.wholeFormp {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wholeFormh2 {
+  box-shadow: 0 2 8px rgb(115, 197, 207);
+  color: #61dafb;
+}
+
+.wholeFormp {
+  color: black;
+}
+>>>>>>> 6b5dfc0a678f7421b4c5da083cdb36cea2e6dbe8
+
+.signup_form_input {
   padding-bottom: 5px;
   border: none;
   background-color: #fff;
@@ -23,9 +45,7 @@
   padding-top: 5px;
 }
 
-
 .signup_form_register_button {
-
   padding-bottom: 30px;
   border: none;
   background-color: #335c7c;
@@ -38,9 +58,7 @@
   margin-left: 1vw;
 }
 
-
 @media screen and (max-width: 1280px) {
-
   .signup_form_input {
     width: 35vw;
   }
@@ -51,7 +69,6 @@
 }
 
 @media screen and (max-width: 760px) {
-
   .signup_form_input {
     width: 70vw;
   }

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { useDispatch, useSelector } from "react-redux";
-import {
-  activateOrders,
-  deactivateOrders,
-} from "../../../actions/adminActions";
+import { useDispatch } from "react-redux";
+// import {
+//   activateOrders,
+//   deactivateOrders,
+// } from "../../../actions/adminActions";
 import classes from "../Admin.module.css";
 
 const OrdersTable = (props) => {
@@ -21,40 +21,43 @@ const OrdersTable = (props) => {
             <th>Delivery Address</th>
             <th>Order</th>
             <th>Processed</th>
+            <th>Process Order</th>
           </tr>
         </thead>
 
         <tbody>
-          {props.orders.map((orders) => {
+          {props.orders.map((order) => {
             let active = "Unprocessed";
-            if (Orders.isActive === true) {
+            if (order.isActive === true) {
               active = "Processed";
             }
+            const stringOrder = JSON.stringify(order.order);
             return (
               <tr>
-                <td>{orders._id}</td>
-                <td>{orders.name}</td>
-                <td>{orders.emailAddress}</td>
-                <td>{orders.delAddress}</td>
-                <td>{orders.order}</td>
+                <td>{order._id}</td>
+                <td>{order.name}</td>
+                <td>{order.emailAddress}</td>
+                <td>{order.delAddress}</td>
+                <td>{stringOrder}</td>
                 <td>{active}</td>
-
-                <button
-                  className={classes.button1}
-                  onClick={() => {
-                    dispatch(activateOrders(Orders._id));
-                  }}
-                >
-                  Process
-                </button>
-                <button
-                  className={classes.button2}
-                  onClick={() => {
-                    dispatch(deactivateOrders(Orders._id));
-                  }}
-                >
-                  Recall
-                </button>
+                <td>
+                  {/* <button
+                    className={classes.button1}
+                    onClick={() => {
+                      dispatch(activateOrders(order._id));
+                    }}
+                  >
+                    Process
+                  </button>
+                  <button
+                    className={classes.button2}
+                    onClick={() => {
+                      dispatch(deactivateOrders(order._id));
+                    }}
+                  >
+                    Recall
+                  </button> */}
+                </td>
               </tr>
             );
           })}

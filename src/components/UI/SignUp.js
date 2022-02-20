@@ -22,19 +22,23 @@ const SignUp = () => {
 
   return (
     <div className={styles.wholeForm}>
-      <h2>Connect with us</h2>
+      <h2 className={styles.wholeFormh2}>Connect with us</h2>
 
       {!signUpValidated && (
         <Fragment>
           {" "}
-          <p>
-            Please get in contact with any queries you have and a member of our
-            team will get back to you soon.
+          <p className={styles.wholeFormp}>
+            Sign up to the mailing list to get the latest news, straight from
+            the PIG.
           </p>
           <SignUpForm onSignUp={signUpHandler} />
         </Fragment>
       )}
-      {signUpValidated && <h3>Thanks for joining the community!</h3>}
+      {signUpValidated && (
+        <h3 className={styles.wholeFormh2}>
+          Thanks for joining the community!
+        </h3>
+      )}
     </div>
   );
 };
