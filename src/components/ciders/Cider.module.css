@@ -7,7 +7,9 @@
   text-align: center;
   color: white;
   height: 625px;
-  width: auto;
+  width: 19vw;
+  margin-left: 4vw;
+  float: left;
 }
 
 .cider h2 {
@@ -29,15 +31,15 @@
 
 @media screen and (max-width: 1680px) {
   .cider {
-    width: 28vw;
-    margin-left: 4vw;
+    width: 33vw;
+    margin-left: 11vw;
   }
 }
 
 @media screen and (max-width: 1400px) {
   .cider {
-    width: 28vw;
-    margin-left: 4vw;
+    width: 33vw;
+    margin-left: 11vw;
   }
 }
 
@@ -50,7 +52,7 @@
 
 @media screen and (max-width: 760px) {
   .cider {
-    width: 76vw;
-    margin-left: 12vw;
+    width: 70vw;
+    margin-left: 15vw;
   }
 }
