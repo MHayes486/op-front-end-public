@@ -1,10 +1,10 @@
 import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import {
-  activateSignUps,
-  deactivateSignUps,
-} from "../../../actions/adminActions";
+// import {
+//   activateSignUps,
+//   deactivateSignUps,
+// } from "../../../actions/adminActions";
 import classes from "../Admin.module.css";
 
 const SignUpsTable = (props) => {
@@ -19,26 +19,27 @@ const SignUpsTable = (props) => {
             <th>Name</th>
             <th>Email Address</th>
             <th>Active</th>
+            <th>Deactivate</th>
           </tr>
         </thead>
 
         <tbody>
-          {props.signUps.map((signUps) => {
+          {props.signUps.map((signUp) => {
             let active = "Deactive";
-            if (SignUps.isActive === true) {
+            if (signUp.isActive === true) {
               active = "Active";
             }
             return (
               <tr>
-                <td>{signUps._id}</td>
-                <td>{signUps.contactName}</td>
-                <td>{signUps.contactEmail}</td>
+                <td>{signUp._id}</td>
+                <td>{signUp.contactName}</td>
+                <td>{signUp.contactEmail}</td>
                 <td>{active}</td>
-
-                <button
+                <td>
+                  {/* <button
                   className={classes.button1}
                   onClick={() => {
-                    dispatch(activateSignUps(SignUps._id));
+                    dispatch(activateSignUps(SignUp._id));
                   }}
                 >
                   Process
@@ -46,11 +47,12 @@ const SignUpsTable = (props) => {
                 <button
                   className={classes.button2}
                   onClick={() => {
-                    dispatch(deactivateSignUps(SignUps._id));
+                    dispatch(deactivateSignUps(SignUp._id));
                   }}
                 >
                   Recall
-                </button>
+                </button> */}
+                </td>
               </tr>
             );
           })}

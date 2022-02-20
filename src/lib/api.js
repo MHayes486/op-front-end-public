@@ -23,6 +23,26 @@ export async function getAllMerch() {
   return transformedMerchData;
 }
 
+export async function getAllOrders() {
+  const response = await fetch(`${OP_DOMAIN}/orders`);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch merch.");
+  }
+
+  const transformedOrderData = [];
+
+  for (const key in data) {
+    const merchObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedOrderData.push(merchObj);
+  }
+  return transformedOrderData;
+}
+
 export async function getAllActiveMerch() {
   const response = await fetch(`${OP_DOMAIN}/merchandise`);
   const data = await response.json();
@@ -79,6 +99,26 @@ export async function getAllPairings() {
     transformedPairingsData.push(pairingObj);
   }
   return transformedPairingsData;
+}
+
+export async function getAllContacts() {
+  const response = await fetch(`${OP_DOMAIN}/contacts`);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch contacts.");
+  }
+
+  const transformedEventData = [];
+
+  for (const key in data) {
+    const eventObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedEventData.push(eventObj);
+  }
+  return transformedEventData;
 }
 
 export async function getAllEvents() {
