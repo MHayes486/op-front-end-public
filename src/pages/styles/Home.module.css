@@ -4,14 +4,17 @@
 .darkgrey {
   background-color: #0d273e;
 }
+
 .grey {
   background-color: #222222;
 }
+
 .lightblue {
   background-color: #3f73a2;
   width: 100%;
   justify-content: center;
 }
+
 @font-face {
   font-family: dirtyFont;
   /*  src: url(https://www.dafont.com/dirty-headline.font); */
@@ -62,6 +65,7 @@ Button,
   justify-items: center;
   margin: auto;
 }
+
 .btn2:hover,
 .btn2:active {
   background: #3f73a2;
@@ -86,9 +90,7 @@ Button,
   font-kerning: 16px;
   font-size: 6.5rem;
   color: #f0e6da;
-  transform: rotate(
-350deg
-);
+  transform: rotate(350deg);
   animation: Home_Home_slide-in-left__2Sl1V__3jkS9 4s ease infinite;
 }
 
@@ -96,10 +98,12 @@ Button,
   from {
     margin-left: 0px;
   }
+
   50% {
     margin-left: 100px;
   }
 }
+
 /* HERO IMAGE - BOTTLE */
 .bottle_size {
   display: flex;
@@ -109,10 +113,12 @@ Button,
   height: 50vh;
   animation: Home_bounce-in-right__2IhGI 4s ease infinite;
 }
+
 @keyframes bounce-in-right {
   from {
     margin-right: 0px;
   }
+
   50% {
     margin-right: 100px;
   }
@@ -163,6 +169,7 @@ Button,
   background-color: #f0e6da;
   margin-top: 0;
 }
+
 .cream {
   background-color: #f0e6da;
   width: 100%;
@@ -183,12 +190,14 @@ Button,
   text-align: center;
 }
 
- .border {
+.border {
   border: 10px inset #0d273e;
-} 
+}
+
 .internal {
   margin: 10px;
 }
+
 .links {
   text-align: center;
   font-family: dirtyFont, cursive;
@@ -207,7 +216,8 @@ Button,
   margin-top: -2%;
 
 }
-.values{
+
+.values {
   height: 40%;
   z-index: 1;
 }
@@ -231,6 +241,7 @@ Button,
   text-align: center;
   margin-top: 1%;
 }
+
 .title {
   letter-spacing: 4px;
 }
@@ -249,6 +260,7 @@ Button,
   height: 300px;
   background-color: #f0e6da;
 }
+
 .heading2 {
   font-size: 4rem;
   margin-top: 17px;
@@ -257,7 +269,7 @@ Button,
 .home_merch_h2 {
   color: #f0e6da;
   font-size: 4rem;
-  margin-top:11vh;
+  margin-top: 11vh;
   text-align: center;
   padding-top: 5vh;
 }
@@ -275,6 +287,62 @@ Button,
   margin-top: 1%;
   font-size: 4rem;
   margin-bottom: 10px;
+}
+
+.form_input {
+
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* usual styles */
+  padding-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  color: #335c7c;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 30vw;
+  margin-top: 10px;
+  margin-left: 35vw;
+  padding-top: 10px;
+}
+
+
+.form_register_button {
+
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* usual styles */
+  padding-bottom: 20px;
+  border: none;
+  background-color: #335c7c;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 30vw;
+  margin-left: 35vw;
+  margin-top: 10px;
+}
+
+.form_login_button {
+
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* usual styles */
+  padding-bottom: 15px;
+  border: none;
+  background-color: #0d273e;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 30vw;
+  margin-left: 35vw;
+  margin-top: 10px;
 }
 
 
@@ -297,6 +365,21 @@ Button,
     width: 100%;
   }
 
+  .form_input {
+    width: 40vw;
+    margin-left: 30vw;
+  }
+  
+  
+  .form_register_button {
+    width: 40vw;
+    margin-left: 30vw;
+  }
+  
+  .form_login_button {
+    width: 40vw;
+    margin-left: 30vw;
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -304,12 +387,27 @@ Button,
   .heading {
     font-size: 4rem;
   }
-  
+
   .heading2 {
     font-size: 3.5rem;
     margin-top: 17px;
   }
 
+  .form_input {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  
+  
+  .form_register_button {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  
+  .form_login_button {
+    width: 50vw;
+    margin-left: 25vw;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -328,14 +426,28 @@ Button,
     font-size: 2.8rem;
     padding-top: 7vh;
   }
-  
+
   .home_merch_h3 {
     font-size: 1.4rem;
     margin-top: 8vh;
   }
-  
-  .values{
+
+  .values {
     height: 28%;
   }
 
+  .form_input {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  
+  .form_register_button {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  
+  .form_login_button {
+    width: 80vw;
+    margin-left: 10vw;
+  }
 }

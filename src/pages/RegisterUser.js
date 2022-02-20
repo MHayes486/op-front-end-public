@@ -4,6 +4,7 @@ import { registerUser } from '../actions/userActions'
 import Error from '../components/Error'
 import Success from '../components/Success'
 import Loading from '../components/Loading'
+import styles from "./styles/Home.module.css";
 
 export default function RegisterUser() {
     const [name, setName] = useState('')
@@ -36,24 +37,24 @@ export default function RegisterUser() {
 
                     <h2 className="text-center" style={{ fontSize: '35px', color: "black" }}>Register User</h2>
                     <div>
-                        <input required type="text" placeholder="name" className="form-control" value={name} onChange={(e) => { setName(e.target.value) }} />
-                        <input required type="text" placeholder="email" className="form-control" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                        <input required type="text" placeholder="name" className={styles.form_input} value={name} onChange={(e) => { setName(e.target.value) }} />
+                        <input required type="text" placeholder="email" className={styles.form_input} value={email} onChange={(e) => { setEmail(e.target.value) }} />
                         <input
                             required
                             type="text"
                             placeholder="password"
-                            className="form-control"
+                            className={styles.form_input}
                             value={password}
                             onChange={(e) => { setPassword(e.target.value) }} />
                         <input
                             required
                             type="text"
                             placeholder="confirm password"
-                            className="form-control"
+                            className={styles.form_input}
                             value={confirmPassword}
                             onChange={(e) => { setConfirmPassword(e.target.value) }} />
-                        <button className="btn mt-3" onClick={register}> REGISTER </button>
-                        <a href='/login'> Click Here to Login </a>
+                        <button className={styles.form_register_button} onClick={register}> REGISTER </button>
+                        <button href='/login' className={styles.form_login_button} > LOGIN </button>
                     </div>
 
 
