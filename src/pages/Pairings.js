@@ -34,16 +34,20 @@ const Pairings = () => {
     return <p>No pairings available?!?</p>;
   }
 
+  const activePairs = loadedPairings.filter((loadedPairings) => {
+    return loadedPairings.isActive === true;
+  });
+
   return (
-  <Fragment>
-    <h2>Pairings</h2>
-    <h3>What to eat while you have a drink</h3>
-    <PairingsList pairs={loadedPairings} />
-    <h3>Do you have a recipe and pairing to send us?</h3>
-    {/* <section>
+    <Fragment>
+      <h2>Pairings</h2>
+      <h3>What to eat while you have a drink</h3>
+      <PairingsList pairs={activePairs} />
+      <h3>Do you have a recipe and pairing to send us?</h3>
+      {/* <section>
       <AddPairings onAddPairings={addPairsHandler} />
     </section> */}
-  </Fragment>
+    </Fragment>
   );
 
   // const [pairs, setPairs] = useState([]);

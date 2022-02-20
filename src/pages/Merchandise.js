@@ -40,7 +40,7 @@ const Merchandise = () => {
   }
 
   const activeMerch = loadedMerch.filter((loadedMerch) => {
-    return (loadedMerch.isActive = true);
+    return (loadedMerch.isActive === true);
   });
 
   return (

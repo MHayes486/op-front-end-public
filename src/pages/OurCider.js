@@ -31,11 +31,14 @@ const OurCider = () => {
     return <p>No cider available?!?</p>;
   }
 
+  const activeCiders = loadedCiders.filter((loadedCiders) => {
+    return loadedCiders.isActive === true;
+  });
 
   return (
     <div>
       <div>
-        <img       // MORE APPLES LESS BUBBLES
+        <img // MORE APPLES LESS BUBBLES
           src="./images/backgrounds/Ciders Page Splash Image Torn.jpg"
           className={styles.torn_banner2}
           alt="pics from backend"
@@ -44,12 +47,11 @@ const OurCider = () => {
 
       <Fragment>
         <section>
-          <CiderList cider={loadedCiders} />
+          <CiderList cider={activeCiders} />
         </section>
       </Fragment>
     </div>
   );
-
 };
 
 export default OurCider;
