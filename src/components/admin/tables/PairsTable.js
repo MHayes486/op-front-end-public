@@ -21,6 +21,7 @@ const PairsTable = (props) => {
             <th>Ingredients</th>
             <th>Image</th>
             <th>Active?</th>
+            <th>Adjust:</th>
           </tr>
         </thead>
 
@@ -38,23 +39,24 @@ const PairsTable = (props) => {
                 <td>{pairs.ingredients}</td>
                 <td>{pairs.image}</td>
                 <td>{active}</td>
-
-                <button
-                  className={classes.button1}
-                  onClick={() => {
-                    dispatch(activatePairings(pairs._id));
-                  }}
-                >
-                  Activate
-                </button>
-                <button
-                  className={classes.button2}
-                  onClick={() => {
-                    dispatch(deactivatePairings(pairs._id));
-                  }}
-                >
-                  Deactivate
-                </button>
+                <td>
+                  <button
+                    className={classes.button1}
+                    onClick={() => {
+                      dispatch(activatePairings(pairs._id));
+                    }}
+                  >
+                    Activate
+                  </button>
+                  <button
+                    className={classes.button2}
+                    onClick={() => {
+                      dispatch(deactivatePairings(pairs._id));
+                    }}
+                  >
+                    Deactivate
+                  </button>
+                </td>
               </tr>
             );
           })}

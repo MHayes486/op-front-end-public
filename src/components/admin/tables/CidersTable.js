@@ -1,10 +1,10 @@
 import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import {
-  activateCiders,
-  deactivateCiders,
-} from "../../../actions/adminActions";
+// import {
+//   activateCiders,
+//   deactivateCiders,
+// } from "../../../actions/adminActions";
 import classes from "../Admin.module.css";
 
 const CidersTable = (props) => {
@@ -21,28 +21,30 @@ const CidersTable = (props) => {
             <th>Cider Slogan</th>
             <th>Image</th>
             <th>Active?</th>
+            <th>Toggle</th>
           </tr>
         </thead>
 
         <tbody>
-          {props.ciders.map((ciders) => {
+          {props.ciders.map((cider) => {
             let active = "Not Active";
-            if (ciders.isActive === true) {
+            if (cider.isActive === true) {
               active = "Active";
             }
             return (
               <tr>
-                <td>{ciders._id}</td>
-                <td>{ciders.ciderTitle}</td>
-                <td>{ciders.ciderType}</td>
-                <td>{ciders.ciderSlogan}</td>
-                <td>{ciders.image}</td>
+                <td>{cider._id}</td>
+                <td>{cider.ciderTitle}</td>
+                <td>{cider.ciderType}</td>
+                <td>{cider.ciderSlogan}</td>
+                <td>{cider.image}</td>
                 <td>{active}</td>
-{/* 
+                <td>
+                  {/* 
                 <button
                   className={classes.button1}
                   onClick={() => {
-                    dispatch(activateCiders(ciders._id));
+                    dispatch(activateCiders(cider._id));
                   }}
                 >
                   Activate
@@ -50,11 +52,12 @@ const CidersTable = (props) => {
                 <button
                   className={classes.button2}
                   onClick={() => {
-                    dispatch(deactivateCiders(ciders._id));
+                    dispatch(deactivateCiders(cider._id));
                   }}
                 >
                   Deactivate
                 </button> */}
+                </td>
               </tr>
             );
           })}
