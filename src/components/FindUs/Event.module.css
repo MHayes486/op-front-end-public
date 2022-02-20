@@ -26,3 +26,31 @@
   width: auto;
   max-width: 150px;
 }
+
+@media screen and (max-width: 1680px) {
+  .event {
+    width: 28vw;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .event {
+    width: 28vw;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .event {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .event {
+    width: 76vw;
+    margin-left: 12vw;
+  }
+}

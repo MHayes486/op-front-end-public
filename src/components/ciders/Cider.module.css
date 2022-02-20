@@ -26,3 +26,31 @@
   width: auto;
   max-width: 250px;
 }
+
+@media screen and (max-width: 1680px) {
+  .cider {
+    width: 28vw;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .cider {
+    width: 28vw;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .cider {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .cider {
+    width: 76vw;
+    margin-left: 12vw;
+  }
+}
