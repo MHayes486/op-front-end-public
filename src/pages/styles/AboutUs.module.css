@@ -83,6 +83,13 @@
 
 }
 
+.about_img .about_splash1 {
+  width: 100%;
+  z-index: -1;
+  margin-top: 7%;
+
+}
+
 .About_us_4 {
   background-color: #222222;
   height: 500px;
@@ -91,6 +98,12 @@
 }
 
 .tear2 {
+  width: 100%;
+  margin-top: -20%;
+  z-index: 4;
+}
+
+.about_tear2 {
   width: 100%;
   margin-top: -20%;
   z-index: 4;
@@ -106,6 +119,18 @@
   margin-left: 51%;
   font-size: 3rem;
 }
+
+.about_heading2 {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  color: #f0e6da;
+  z-index: 4;
+  width: 100%;
+  margin-left: 51%;
+  font-size: 3rem;
+}
+
 .pigstail_text {
   color: #f0e6da;
   font-size: 16px;
@@ -113,12 +138,29 @@
   margin-top: 10%;
   font-weight: 400;
 }
+
+.about_pigstail_text {
+  color: #f0e6da;
+  font-size: 16px;
+  margin-left: 20%;
+  margin-top: 10%;
+  font-weight: 400;
+}
+
 .pg1,
 .pg2 {
 
   width: 78%;
   padding-top: 2rem;
 }
+
+.about_pg1,
+.about_pg2 {
+
+  width: 78%;
+  padding-top: 2rem;
+}
+
 .about_img4 {
   width: 100%;
 }
@@ -141,11 +183,19 @@
   margin-top: 1%;
   width: 80%;
 }
+
 .about2 {
   margin-top: 6%;
   width: 80%;
 }
+
 .tear3 {
+  width: 100%;
+  margin-top: -9%;
+  z-index: 4;
+}
+
+.about_tear3 {
   width: 100%;
   margin-top: -9%;
   z-index: 4;
@@ -158,6 +208,13 @@
 }
 
 .tear5 {
+  display: flex;
+  width: 100%;
+  z-index: 5;
+  margin-top: -10%;
+}
+
+.about_tear5 {
   display: flex;
   width: 100%;
   z-index: 5;
@@ -209,17 +266,35 @@
   display: flexbox;
   width: 30%;
 }
+
+.about_bottom_p_1 {
+  display: flexbox;
+  width: 30%;
+}
+
 .about_s1_h3 {
   display: flexbox;
   width: 30%;
 }
+
 .bottom_p_2 {
   display: flexbox;
   width: 30%;
 }
+
+.about_bottom_p_2 {
+  display: flexbox;
+  width: 30%;
+}
+
 .bottom_p_3 {
   width: 30%;
 }
+
+.about_bottom_p_3 {
+  width: 30%;
+}
+
 .icons_text {
   display: flex;
   flex-direction: row;
@@ -231,6 +306,19 @@
   margin-left: 10%;
   text-align: center;
 }
+
+.about_icons_text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: center;
+  padding: 10px -1rem 0 2rem;
+  font-size: smaller;
+  margin-left: 10%;
+  text-align: center;
+}
+
 .icon1,
 .icon2,
 .icon3 {
@@ -239,15 +327,35 @@
   display: flex;
 }
 
+.about_icon1,
+.about_icon2,
+.about_icon3 {
+  height: 50%;
+  width: 50%;
+  display: flex;
+}
+
 .about_s1, .about_s2, .about_s3 {
   display: flex;
 }
+
 .about_s2{
   margin-left: 8%;
 }
+
 .block1,
 .block2,
 .block3 {
+  display: flex;
+  justify-content: center;
+  width: 72%;
+  margin-left: -9%;
+  font-weight: 400;
+}
+
+.about_block1,
+.about_block2,
+.about_block3 {
   display: flex;
   justify-content: center;
   width: 72%;
