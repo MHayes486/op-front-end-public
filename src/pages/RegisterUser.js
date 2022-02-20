@@ -35,7 +35,7 @@ export default function RegisterUser() {
 
 
 
-                    <h2 className="text-center" style={{ fontSize: '35px', color: "black" }}>Register User</h2>
+                    <h2 className={styles.home_merch_h2}>Register User</h2>
                     <div>
                         <input required type="text" placeholder="name" className={styles.form_input} value={name} onChange={(e) => { setName(e.target.value) }} />
                         <input required type="text" placeholder="email" className={styles.form_input} value={email} onChange={(e) => { setEmail(e.target.value) }} />
@@ -54,7 +54,7 @@ export default function RegisterUser() {
                             value={confirmPassword}
                             onChange={(e) => { setConfirmPassword(e.target.value) }} />
                         <button className={styles.form_register_button} onClick={register}> REGISTER </button>
-                        <button href='/login' className={styles.form_login_button} > LOGIN </button>
+                        < a href='/login' className={styles.form_login_button} > LOGIN </a>
                     </div>
 
 

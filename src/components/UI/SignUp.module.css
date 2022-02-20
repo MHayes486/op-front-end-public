@@ -1,3 +1,55 @@
 .form {
   background-color: #3f73a2;
 }
+
+.signup_form_input {
+
+  padding-bottom: 5px;
+  border: none;
+  background-color: #fff;
+  color: #335c7c;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 20vw;
+  margin-top: 10px;
+  margin-left: 1vw;
+  padding-top: 5px;
+}
+
+
+.signup_form_register_button {
+
+  padding-bottom: 30px;
+  border: none;
+  background-color: #335c7c;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 20vw;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 1vw;
+}
+
+
+@media screen and (max-width: 1280px) {
+
+  .signup_form_input {
+    width: 35vw;
+  }
+
+  .signup_form_register_button {
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  .signup_form_input {
+    width: 70vw;
+  }
+
+  .signup_form_register_button {
+    width: 70vw;
+  }
+}

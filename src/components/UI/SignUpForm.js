@@ -72,11 +72,13 @@ const SignUpForm = (props) => {
     <form className={styles.form} onSubmit={submitHandler}>
       <div className="control-group">
         <div className={firstNameClasses}>
-          <label htmlFor="name">First Name</label>
+          {/*      <label htmlFor="name"></label> */}
           <input
+            placeholder="First Name"
             type="text"
             id="name"
             value={firstNameValue}
+            className={styles.signup_form_input}
             onChange={firstNameChangeHandler}
             onBlur={firstNameBlurHandler}
           />
@@ -85,11 +87,13 @@ const SignUpForm = (props) => {
           )}
         </div>
         <div className={lastNameClasses}>
-          <label htmlFor="name">Last Name</label>
+          {/*     <label htmlFor="name">Last Name</label>*/}
           <input
+            placeholder="Last Name"
             type="text"
             id="name"
             value={lastNameValue}
+            className={styles.signup_form_input}
             onChange={lastNameChangeHandler}
             onBlur={lastNameBlurHandler}
           />
@@ -99,11 +103,13 @@ const SignUpForm = (props) => {
         </div>
       </div>
       <div className={emailClasses}>
-        <label htmlFor="name">E-Mail Address</label>
+        {/*      <label htmlFor="name">E-Mail Address</label>*/}
         <input
+          placeholder="E-Mail Address"
           type="text"
           id="name"
           value={emailValue}
+          className={styles.signup_form_input}
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
         />
@@ -112,7 +118,7 @@ const SignUpForm = (props) => {
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styles.signup_form_register_button} disabled={!formIsValid}>
           Submit
         </button>
       </div>
