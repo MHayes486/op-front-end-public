@@ -2,6 +2,13 @@
   background-color: #3f73a2;
 }
 
+.decor_form {
+  background-color: #335c7c;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 20px;
+}
+
 .signup_form_input {
 
   padding-bottom: 5px;

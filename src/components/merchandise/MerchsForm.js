@@ -2,6 +2,7 @@ import useInput from "../../hooks/use-input";
 
 import classes from "./AddMerchs.module.css";
 import styles from "../UI/SignUp.module.css";
+import styling from "../admin/Admin.module.css"
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -69,10 +70,13 @@ function MerchsForm(props) {
   };
 
   return (
-    <form className={styles.form} onSubmit={submitHandler}>
+    <form className={styles.decor_form} onSubmit={submitHandler}>
+      <h1>Add Merchandise</h1>
       <div className={classes.control}>
         <label htmlFor="submitteditemName">Merch Byline</label>
         <input
+          placeholder="Merch Byline"
+          className={styling.admin_form_input}
           type="text"
           value={itemNameValue}
           onChange={itemNameChangeHandler}
@@ -125,7 +129,7 @@ function MerchsForm(props) {
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styling.admin_form_button} disabled={!formIsValid}>
           Add Merch
         </button>
       </div>
