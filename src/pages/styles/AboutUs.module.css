@@ -91,7 +91,7 @@
 }
 
 .About_us_4 {
-  background-color: #222222;
+  background-color: #232323;
   height: 500px;
   margin-top: -1%;
   display: flex;
@@ -126,9 +126,10 @@
   flex-wrap: wrap;
   color: #f0e6da;
   z-index: 4;
-  width: 100%;
-  margin-left: 51%;
+  width: 80%;
+  margin-left: 63%;
   font-size: 3rem;
+  text-align: right;
 }
 
 .pigstail_text {
@@ -149,16 +150,15 @@
 
 .pg1,
 .pg2 {
-
   width: 78%;
   padding-top: 2rem;
 }
 
 .about_pg1,
 .about_pg2 {
-
-  width: 78%;
+  width: 50%;
   padding-top: 2rem;
+  text-align: right;
 }
 
 .about_img4 {
@@ -225,7 +225,7 @@
   position: relative;
   width: 100%;
   z-index: -1;
-  margin-top: -16%;
+  margin-top: -10%;
 }
 
 
