@@ -10,8 +10,8 @@ function PairingsForm(props) {
   const logedIn = localStorage.getItem("merchUser");
   const [selectedProduct, setSelectedProduct] = useState("Entire range");
   let checkResult = false;
-  
-  if (logedIn === 1){
+
+  if (logedIn === 1) {
     checkResult = true;
   }
   const {
@@ -55,7 +55,6 @@ function PairingsForm(props) {
     if (!formIsValid) {
       return;
     }
-   
 
     props.onAddPairing({
       pigProduct: selectedProduct,
@@ -63,6 +62,7 @@ function PairingsForm(props) {
       ingredients: ingredientsValue,
       isActive: checkResult,
       image: pairingsURLValue,
+      isActive: true,
     });
 
     resetDishName();

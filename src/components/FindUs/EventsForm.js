@@ -50,6 +50,7 @@ function EventsForm(props) {
       eventName: eventNameValue,
       eventAddress: eventAddressValue,
       image: eventsURLValue,
+      isActive: true,
     });
 
     reseteventName();

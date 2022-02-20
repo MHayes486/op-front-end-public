@@ -53,6 +53,7 @@ function CartForm(props) {
       emailAddress: emailAddressValue,
       delAddress: deliveryAddressValue,
       order: cartItems,
+      isActive: false,
     });
 
     resetname();
