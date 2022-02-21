@@ -228,6 +228,8 @@ export async function addAMerch(merchData) {
 }
 
 export async function addAPairing(pairingData) {
+  console.log(pairingData);
+  console.log(JSON.stringify(pairingData));
   const response = await fetch(`${OP_DOMAIN}/pairings`, {
     method: "POST",
     body: JSON.stringify(pairingData),
