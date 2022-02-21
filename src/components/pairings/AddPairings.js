@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 
 import classes from './AddPairings.module.css';
+import styles from "../UI/SignUp.module.css";
+import styling from "../admin/Admin.module.css"
 
 function AddPairings(props) {
   const productRef = useRef('');
@@ -22,8 +24,9 @@ function AddPairings(props) {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className={classes.control}>
+    <form className={styles.decor_form} onSubmit={submitHandler}>
+      <h1>Add Pairing</h1>
+      <div className={classes.control} >
         <label htmlFor='title'>Product</label>
         <input type='text' id='title' ref={productRef} />
       </div>
@@ -35,7 +38,7 @@ function AddPairings(props) {
         <label htmlFor='date'>Ingredients</label>
         <input type='text' id='date' ref={ingredientsRef} />
       </div>
-      <button>Add Pairing</button>
+      <button className={styling.admin_form_button}>Add Pairing</button>
     </form>
   );
 }

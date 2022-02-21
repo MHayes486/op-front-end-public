@@ -72,7 +72,7 @@ function PairingsForm(props) {
   };
 
   return (
-    <form className={styles.form} onSubmit={submitHandler}>
+    <form className={styles.decor_form} onSubmit={submitHandler}>
       <div className={classes.control}>
         <select id="range" onChange={handleChange}>
           <option id="opt1" selected value="Entire range">
@@ -90,8 +90,9 @@ function PairingsForm(props) {
         </select>
       </div>
       <div className={classes.control}>
-        <label htmlFor="submittedDishName">Dish Name</label>
+        <label htmlFor="submittedDishName">Dishes Name</label>
         <input
+          placeholder="Dish Name"
           type="text"
           value={dishNameValue}
           onChange={dishNameChangeHandler}
