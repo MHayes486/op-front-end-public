@@ -95,6 +95,7 @@
   height: 500px;
   margin-top: -1%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tear2 {
@@ -122,14 +123,14 @@
 
 .about_heading2 {
   display: flex;
-  position: absolute;
-  flex-wrap: wrap;
-  color: #f0e6da;
-  z-index: 4;
-  width: 80%;
-  margin-left: 63%;
-  font-size: 3rem;
-  text-align: right;
+    position: absolute;
+    flex-wrap: wrap;
+    color: #f0e6da;
+    z-index: 4;
+    width: 80%;
+    margin-left: 53%;
+    font-size: 3rem;
+    text-align: left;
 }
 
 .pigstail_text {
@@ -156,10 +157,13 @@
 
 .about_pg1,
 .about_pg2 {
-  width: 50%;
+  width: 79%;
   padding-top: 2rem;
-  text-align: right;
+  text-align: left;
 }
+
+
+
 
 .about_img4 {
   width: 100%;
@@ -362,3 +366,114 @@
   margin-left: -9%;
   font-weight: 400;
 }
+
+
+
+@media screen and (max-width: 1680px) {
+  .about_pigstail_text{
+    margin-left: 14%;
+  }
+  .about_pg1, .about_pg2{
+    width: 60%;
+  }
+}
+  @media screen and (max-width: 1400px) {
+
+
+  }
+  @media screen and (max-width: 1080px) {
+  .about_img3{
+  top: 10%;
+  }
+    .about_pg1, .about_pg2{
+      margin-left: 14%;
+  }
+}
+  @media screen and (max-width: 760px) {
+    .about_img3{
+      top: 10%;
+      top: 10%;
+      width: 197%;
+      }
+    .about_heading2{
+      margin-left: 46%;
+    }
+    .about_pg1, .about_pg2{
+      margin-left: -9%;
+      width: 100%;
+  }
+  }
+
+  @media screen and (max-width: 460px) {
+    .About_us_4{
+      margin-top: -2vh;
+      height: 100vh;
+  }
+  .about_img3{
+    width: 60%;
+    margin-left: 15%;
+  }
+  .about_heading2{
+    margin-top: -2vh;
+    margin-left: 25vw;
+  }
+  .about_pg1, .about_pg2{
+    width: 100%;
+    margin: auto;
+    padding-right: 2rem;
+}
+.about_bottomh2{
+  text-align: center;
+}
+.about_p6_1, .about_p6_2{
+  text-align: center;
+  width: 60%;
+}
+.About_us_6{
+  height: 150vh;
+}
+.about_icons_text{
+  width: 160vw;
+  margin-left: 26%;
+  flex-flow: column;
+}
+
+
+}
+.about_bottom_p_3, .about_bottom_p_2, .about_bottom_p_1{
+  width: 44%;
+}
+.AboutUs_about_s3{
+margin-left: -2%;
+}
+
+@media screen and (max-width: 320px) {
+  .about_heading2{
+    font-size: 2.5rem;
+    left: -1vw;
+  }
+  .about_p6_1, .about_p6_2{
+    width: 81vw;
+  }
+  .about_pigstail_text{
+    margin-left: 18vw;
+  }
+  .about_bottomh2{
+    font-size: 2.5rem;
+  }
+  .about_icons_text{
+    margin-left: 23vw;
+  }
+
+  .about_s1, .about_s2, .about_s3{
+    width: 61%;
+  }
+  .about_s2{
+    margin-left: 2%;
+  }
+  .about_s3{
+    margin-left: -3%;
+}
+
+  }
+
