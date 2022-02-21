@@ -26,6 +26,7 @@ function AddPairings(props) {
   return (
     <form className={styles.decor_form} onSubmit={submitHandler}>
       <h1>Add Pairing</h1>
+      <p>The Pig is hungry.  If you have a better idea, we're all ears...</p>
       <div className={classes.control} >
         <label htmlFor='title'>Product</label>
         <input type='text' id='title' ref={productRef} />
