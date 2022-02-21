@@ -1,4 +1,3 @@
-
 /* ABOUT US CONTENT */
 .AboutUs {
   background-color: #f0e6da;
@@ -90,13 +89,32 @@
 
 }
 
-.About_us_4 {
+.about_section {
+  width: 100%;
   background-color: #232323;
-  height: 500px;
-  margin-top: -1%;
-
-
 }
+
+.about_tear_image,
+.about_tear_image > *{
+  width: 100%;
+  margin: 0;
+}
+
+.about_tear_image img { display: block; }
+
+.about3_inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-gap: 2em;
+  align-items: flex-start;
+  max-width: 65rem;
+  width: calc(100% - 4em);
+  margin: auto;
+}
+
+  @media screen and (max-width: 768px) {
+    .about3_inner{ grid-template-columns: minmax(0, 1fr); }
+  }
 
 .tear2 {
   width: 100%;
@@ -122,15 +140,9 @@
 }
 
 .about_heading2 {
-  display: flex;
-    position: absolute;
-    flex-wrap: wrap;
-    color: #f0e6da;
-    z-index: 4;
-    width: 80%;
-    margin-left: 53%;
-    font-size: 3rem;
-    text-align: left;
+  color: #f0e6da;
+  font-size: 3rem;
+  margin-top: 0;
 }
 
 .pigstail_text {
@@ -143,10 +155,7 @@
 
 .about_pigstail_text {
   color: #f0e6da;
-  font-size: 16px;
-  margin-left: 20%;
-  margin-top: 10%;
-  font-weight: 400;
+  text-align: left;
 }
 
 .pg1,
@@ -154,16 +163,6 @@
   width: 78%;
   padding-top: 2rem;
 }
-
-.about_pg1,
-.about_pg2 {
-  width: 79%;
-  padding-top: 2rem;
-  text-align: left;
-}
-
-
-
 
 .about_img4 {
   width: 100%;
@@ -176,12 +175,53 @@
 }
 
 .about_img3 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 11%;
-  width: 100%;
+  object-fit: contain;
 }
+.about_img3 img {
+  width: 100%;
+  height: auto;
+}
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 1680px) {
+  .about_pigstail_text{
+font-size: 1.7rem;
+}
+}
+
+@media screen and (max-width: 1400px) {
+  .about_pigstail_text{
+font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .about_pigstail_text{
+font-size: 1.5rem;
+  }
+  .pg1,
+.pg2 {
+  width: 78%;
+  padding-top: 2rem;
+}
+}
+
+  @media screen and (max-width: 768px) {
+   .about_img3 {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 2em;
+     margin: auto;
+   }
+
+  }
+
+
+
+  @media screen and (min-width: 769px) {
+    .about_img3 img + img { margin-top: 1em; }
+  }
 
 .about1 {
   margin-top: 1%;
@@ -235,19 +275,26 @@
 
 .About_us_6 {
   background-color: #f0e6da;
-  height: 500px;
-  margin-top: -10%;
+  padding-bottom: 6em;
+}
+
+.About_us_6 > div {
+  padding: 0 2em;
 }
 
 .about_bottomh2 {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-left: 0;
-  margin-right: 0;
   font-size: 3rem;
-  margin-top: 4%;
+  margin: 0 auto 1em;
 }
+
+  @media screen and (max-width: 450px) {
+    .about_bottomh2 {
+      font-size: 2.4rem;
+    }
+  }
 
 .about_p6_1 {
   width: 100%;
@@ -267,27 +314,10 @@
 }
 
 .bottom_p_1 {
-  display: flexbox;
-  width: 30%;
-}
-
-.about_bottom_p_1 {
-  display: flexbox;
-  width: 30%;
-}
-
-.about_s1_h3 {
-  display: flexbox;
   width: 30%;
 }
 
 .bottom_p_2 {
-  display: flexbox;
-  width: 30%;
-}
-
-.about_bottom_p_2 {
-  display: flexbox;
   width: 30%;
 }
 
@@ -295,9 +325,6 @@
   width: 30%;
 }
 
-.about_bottom_p_3 {
-  width: 30%;
-}
 
 .icons_text {
   display: flex;
@@ -312,15 +339,24 @@
 }
 
 .about_icons_text {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 2rem;
-  justify-content: center;
-  padding: 10px -1rem 0 2rem;
-  font-size: smaller;
-  margin-left: 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 2em;
+  width: 100%;
+  max-width: 65rem;
+  margin: 2em auto;
+  padding: 0 2em;
   text-align: center;
+}
+
+.about_icons_text > div {
+  object-fit: contain;
+}
+
+.about_icons_text img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
 }
 
 .icon1,
@@ -329,22 +365,6 @@
   height: 50%;
   width: 50%;
   display: flex;
-}
-
-.about_icon1,
-.about_icon2,
-.about_icon3 {
-  height: 50%;
-  width: 50%;
-  display: flex;
-}
-
-.about_s1, .about_s2, .about_s3 {
-  display: flex;
-}
-
-.about_s2{
-  margin-left: 8%;
 }
 
 .block1,
@@ -356,163 +376,3 @@
   margin-left: -9%;
   font-weight: 400;
 }
-
-.about_block1,
-.about_block2,
-.about_block3 {
-  display: flex;
-  justify-content: center;
-  width: 72%;
-  margin-left: -9%;
-  font-weight: 400;
-}
-
-
-
-@media screen and (max-width: 1680px) {
-  .About_us_4{
-    display: flex;
-  }
-  .about_pigstail_text{
-    margin-left: 14%;
-  }
-  .about_pg1, .about_pg2{
-    width: 60%;
-  }
-  .about_icons_text{
-    width: 100vw;
-    width: 76vw;
-    margin-left: 16vw;
-  }
-}
-  @media screen and (max-width: 1400px) {
-    .About_us_4{
-      display: flex;
-    }
-    .about_img3{
-  }
-}
-  @media screen and (max-width: 1080px) {
-  .about_img3{
-  top: 10%;
-  width: 107%;
-  }
-    .about_pg1, .about_pg2{
-      margin-left: 14%;
-  }
-}
-  @media screen and (max-width: 760px) {
-    .About_us_4{
-      display: flex;
-    }
-    .about_img3{
-      top: 10%;
-      top: 22%;
-      width: 197%;
-      }
-
-    .about_heading2{
-      margin-left: 46%;
-    }
-    .about_pigstail_text{
-
-    }
-    .about_pg1, .about_pg2{
-      margin-left: -9%;
-      width: 78%;
-  }
-  .about_s1, .about_s2, .about_s3{
-    margin-left: -11%;
-    width: 18vw;
-  }
-  }
-
-  @media screen and (max-width: 460px) {
-  .About_us_4{
-      margin-top: -2vh;
-      height: 100vh;
-      display: block;
-
-  }
-  .about_img3{
-    width: 77%;
-    margin-left: 8%;
-  }
-  .about_pigstail_text{
-    margin-left: 14%;
-    margin-top: 41%;
-  }
-  .about_heading2{
-    margin-top: -41vh;
-    margin-left: 22vw;
-  }
-  .about_pg1, .about_pg2{
-    width: 100%;
-    margin: auto;
-    padding-right: 2rem;
-}
-.about_bottomh2{
-  text-align: center;
-}
-.about_p6_1, .about_p6_2{
-  text-align: center;
-  width: 60%;
-}
-.About_us_6{
-  height: 162vh;
-}
-.about_icons_text{
-  width: 160vw;
-  margin-left: 26%;
-  flex-flow: column;
-}
-.about_bottom_p_3, .about_bottom_p_2, .about_bottom_p_1{
-  width: 44%;
-}
-.AboutUs_about_s3{
-margin-left: -2%;
-}
-.about_s1, .about_s2, .about_s3{
-  margin-left: 6vw;
-}
-
-  }
-@media screen and (max-width: 320px) {
-  .About_us_4{
-    display: block;
-  }
-.about_heading2{
-  margin-top: -67vw;
-  font-size: 2.5rem;
-  left: -1vw;
-  }
-  .about_p6_1, .about_p6_2{
-    width: 81vw;
-  }
-  .about_pigstail_text{
-    margin-left: 18vw;
-    margin-top: 20vh;
-  }
-  .about_bottomh2{
-    font-size: 2.5rem;
-  }
-  .about_icons_text{
-    margin-left: 23vw;
-  }
-
-  .about_s1, .about_s2, .about_s3{
-    width: 61%;
-  }
-  .about_s1{
-    margin-left: -3vw;
-  }
-
-  .about_s2{
-    margin-left: 2%;
-  }
-  .about_s3{
-    margin-left: -3%;
-}
-
-  }
-

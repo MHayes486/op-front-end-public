@@ -271,7 +271,7 @@ Button,
   font-size: 4rem;
   margin-top: 21vh;
   text-align: center;
-  padding-top: 5vh;
+  padding-top: 2vh;
 }
 
 .home_merch_h3 {
@@ -361,9 +361,17 @@ Button,
     width: 100%;
     text-align: center;
   }
+  .home_merch_h2{
+    font-size: 6rem;
 
+  }
+  .home_merch_h3{
+    font-size: 3rem;
+    margin-top: -1rem;
+    width: 70%;
+    margin-left: 14%;
 }
-
+}
 
 @media screen and (max-width: 1400px) {
 
@@ -371,7 +379,17 @@ Button,
     font-size: 4.5rem;
     width: 100%;
   }
+.home_merch_h2{
+  font-size: 6rem;
 
+}
+.home_merch_h3{
+  font-size: 3rem;
+  margin-top: -1rem;
+  width: 70%;
+  margin-left: 14%;
+
+}
   .form_input {
     width: 40vw;
     margin-left: 30vw;
@@ -398,7 +416,9 @@ Button,
     font-size: 3.5rem;
     margin-top: 17px;
   }
+  .home_merch_h2{
 
+  }
   .form_input {
     width: 50vw;
     margin-left: 25vw;
@@ -428,13 +448,13 @@ Button,
   }
 
   .home_merch_h2 {
-    font-size: 2.8rem;
+    font-size: 5rem;
     padding-top: 1vh;
   }
 
   .home_merch_h3 {
     font-size: 1.4rem;
-    margin-top: 4vh;
+    margin-top: 1vh;
   }
 
   .home_merch_h6 {
@@ -461,11 +481,23 @@ Button,
   }
 }
 
+@media screen and (max-width: 420px) {
+  .home_merch_h2 {
+    font-size: 4rem;
+    margin-top: 14rem;
+  }
+}
 @media screen and (max-width: 320px) {
+  .home_merch_h2 {
+    font-size: 2.8rem;
+    padding-top: 0vh;
+    margin-top: 74%;
+  }
+
   .home_merch_h3{
     text-align: center;
     font-size: 1.2rem;
-    margin-left: 5%;
+    margin-left: 15%;
     padding-left: 1rem;
     padding-right: 1.2rem;
 }
