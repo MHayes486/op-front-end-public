@@ -16,39 +16,36 @@ import styles from "./styles/Admin.module.css";
 const Admin = () => {
   return (
     <Fragment>
-      <h1 className={styles.admin_h2}>Admin</h1>
+      <h1 className={styles.admin_h2_black}>Admin</h1>
       <section>
-        <h4 className={styles.admin_h3}>Merchandise</h4>
+        <h4 className={styles.admin_h2}>Merchandise</h4>
         <AdminMerch />
         <AddMerchs />
       </section>
       <hr></hr>
       <section>
-        <h4 className={styles.admin_h3}>Pairings</h4>
+        <h4 className={styles.admin_h2}>Pairings</h4>
         <AdminPairs />
-        <h4 className={styles.admin_h3}>Add a Pairing</h4>
         <AddPairings />
       </section>
       <hr></hr>
       <section>
-        <h4 className={styles.admin_h3}>Update Events</h4>
+        <h4 className={styles.admin_h2}>Update Events</h4>
         <AdminEvents />
-        <h4 className={styles.admin_h3}>Add an Event</h4>
         <AddEvents />
       </section>
       <hr></hr>
       <section>
-        <h4 className={styles.admin_h3}>Update Ciders</h4>
+        <h4 className={styles.admin_h2}>Update Ciders</h4>
         <AdminCiders />
-        <h4 className={styles.admin_h3}>Add a new Cider</h4>
         <AddCiders />
       </section>
       <hr></hr>
       <section>
-        <h4 className={styles.admin_h3}>Orders List</h4>
+        <h4 className={styles.admin_h2}>Orders List</h4>
         <AdminOrders />
         <hr></hr>
-        <h4 className={styles.admin_h3}>Contacts List</h4>
+        <h4 className={styles.admin_h2}>Contacts List</h4>
         <AdminContacts />
       </section>
     </Fragment>
