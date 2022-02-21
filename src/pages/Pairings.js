@@ -3,7 +3,7 @@ import AddPairings from "../components/pairings/AddPairings";
 
 import useHttp from "../hooks/use-http";
 import { getAllPairings } from "../lib/api";
-
+import styling from "./styles/Home.module.css";
 import PairingsList from "../components/pairings/PairingsList";
 import { SlSpinner } from "@shoelace-style/shoelace/dist/react";
 
@@ -40,10 +40,8 @@ const Pairings = () => {
 
   return (
     <Fragment>
-      <h2>Pairings</h2>
-      <h3>What to eat while you have a drink</h3>
+      <h2 className={styling.home_merch_h2}>Feeling hungry?</h2>
       <PairingsList pairs={activePairs} />
-      <h3>Do you have a recipe and pairing to send us?</h3>
       <section>
         <AddPairings />
       </section>

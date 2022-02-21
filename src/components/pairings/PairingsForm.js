@@ -3,7 +3,7 @@ import useInput from "../../hooks/use-input";
 
 import classes from "./AddPairings.module.css";
 import styles from "../UI/SignUp.module.css";
-import styling from "../admin/Admin.module.css"
+import styling from "../admin/Admin.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -61,9 +61,9 @@ function PairingsForm(props) {
       pigProduct: selectedProduct,
       dishName: dishNameValue,
       ingredients: ingredientsValue,
-      isActive: checkResult,
+      isActive: JSON.stringify(checkResult),
       image: pairingsURLValue,
-      isActive: true,
+      // isActive: true,
     });
 
     resetDishName();
@@ -92,7 +92,6 @@ function PairingsForm(props) {
       <div className={classes.control}>
         <label htmlFor="submittedDishName">Dishes Name</label>
         <input
-          placeholder="Dish Name"
           type="text"
           value={dishNameValue}
           onChange={dishNameChangeHandler}
@@ -129,14 +128,14 @@ function PairingsForm(props) {
           onBlur={pairingsURLBlurHandler}
           id="imgURL"
         />
-        {pairingsURLIsValid && (
+        {!pairingsURLIsValid && (
           <p className="error-text">
             Image URL is invalid, put n/a for no image
           </p>
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styling.admin_form_button} disabled={!formIsValid}>
           Add a Pairing
         </button>
       </div>

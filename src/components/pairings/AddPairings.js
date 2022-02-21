@@ -1,46 +1,29 @@
-import React, { useRef } from 'react';
-
-import classes from './AddPairings.module.css';
-import styles from "../UI/SignUp.module.css";
-import styling from "../admin/Admin.module.css"
+import React, { useEffect, Fragment } from "react";
+import { useNavigate } from "react-router-dom";
+import { addAPairing } from "../../lib/api";
+import useHttp from "../../hooks/use-http";
+import PairingsForm from "./PairingsForm";
+import styling from "../../pages/styles/Home.module.css"
 
 function AddPairings(props) {
-  const productRef = useRef('');
-  const dishnameRef = useRef('');
-  const ingredientsRef = useRef('');
-
-  function submitHandler(event) {
-    event.preventDefault();
-
-    // could add validation here...
-
-    const pairs = {
-        pigProduct: productRef.current.value,
-        dishName: dishnameRef.current.value,
-        ingredients: ingredientsRef.current.value,
-    };
-
-    props.onAddPairings(pairs);
-  }
+  const { sendRequest, status } = useHttp(addAPairing);
+  const navigate = useNavigate();
+  const addPairingHandler = (pairingData) => {
+    console.log(pairingData);
+    sendRequest(pairingData);
+  };
+  useEffect(() => {
+    if (status === "completed") {
+      navigate("/pairings");
+    }
+  }, [status, navigate]);
 
   return (
-    <form className={styles.decor_form} onSubmit={submitHandler}>
-      <h1>Add Pairing</h1>
-      <p>The Pig is hungry.  If you have a better idea, we're all ears...</p>
-      <div className={classes.control} >
-        <label htmlFor='title'>Product</label>
-        <input type='text' id='title' ref={productRef} />
-      </div>
-      <div className={classes.control}>
-        <label htmlFor='opening-text'>Dish Name</label>
-        <textarea rows='1' id='opening-text' ref={dishnameRef}></textarea>
-      </div>
-      <div className={classes.control}>
-        <label htmlFor='date'>Ingredients</label>
-        <input type='text' id='date' ref={ingredientsRef} />
-      </div>
-      <button className={styling.admin_form_button}>Add Pairing</button>
-    </form>
+    <Fragment>
+      <h1 className={styling.home_merch_h3}>Know something we don't know?</h1>
+      <p className={styling.home_merch_h4}>The Pig is hungry. Do you have an idea that will help feed him?</p>
+      <PairingsForm onAddPairing={addPairingHandler} />;
+    </Fragment>
   );
 }
 

@@ -2,6 +2,7 @@ import useInput from "../../hooks/use-input";
 
 import classes from "./AddEvent.module.css";
 import styles from "../UI/SignUp.module.css";
+import styling from "../admin/Admin.module.css"
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -59,9 +60,10 @@ function EventsForm(props) {
   };
 
   return (
-    <form className={styles.form} onSubmit={submitHandler}>
+    <form className={styles.decor_form} onSubmit={submitHandler}>
+      <h1>Add an Event</h1>
       <div className={classes.control}>
-        <label htmlFor="submittedeventName">event Name</label>
+        <label htmlFor="submittedeventName">Event Name</label>
         <input
           type="text"
           value={eventNameValue}
@@ -74,7 +76,7 @@ function EventsForm(props) {
         )}
       </div>
       <div className={classes.control}>
-        <label htmlFor="submittedeventAddress">eventAddress</label>
+        <label htmlFor="submittedeventAddress">Event Location</label>
         <input
           type="text"
           value={eventAddressValue}
@@ -87,7 +89,7 @@ function EventsForm(props) {
         )}
       </div>
       <div className={classes.control}>
-        <label htmlFor="imgUrl">Image Location:</label>
+        <label htmlFor="imgUrl">Image Location</label>
         <input
           type="text"
           value={eventsURLValue}
@@ -102,7 +104,7 @@ function EventsForm(props) {
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styling.admin_form_button} disabled={!formIsValid}>
           Add an Event
         </button>
       </div>

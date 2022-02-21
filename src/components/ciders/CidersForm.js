@@ -71,7 +71,8 @@ function CidersForm(props) {
   };
 
   return (
-    <form className={styles.form} onSubmit={submitHandler}>
+    <form className={styles.decor_form} onSubmit={submitHandler}>
+      <h1>Add new Cider</h1>
       <div className={classes.control}>
         <label htmlFor="submittedciderName">Cider Name</label>
         <input
@@ -129,7 +130,7 @@ function CidersForm(props) {
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styling.admin_form_button} disabled={!formIsValid}>
           Add a Cider
         </button>
       </div>
