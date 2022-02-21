@@ -81,14 +81,14 @@ export default function RegisterUser() {
               }}
             />
             <button className={styles.form_register_button} onClick={register}>
-              {" "}
-              REGISTER{" "}
+              {" "}REGISTER{" "}
             </button>
-            <button onClick={onClickNavHandler}>Login</button>
-            {/* <a href="/login" className={styles.form_login_button}>
-              {" "}
-              LOGIN{" "}
-            </a> */}
+            {/*    <button onClick={onClickNavHandler}>Login</button>  */}
+          
+            <div className={styles.home_merch_h6}>
+              <a href="/login" >Click here to login</a>
+            </div>
+
           </div>
         </div>
       </div>

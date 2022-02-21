@@ -48,10 +48,9 @@ const Home = () => {
               />
             </div>
 
-
             <div>
               <img
-                src="./images/backgrounds/Paper Rip Texture Upwards.png"
+                src="./images/backgrounds/bit-of-cream.jpg"
                 className={styles.tear_bottom}
                 alt="pics from backend"
               />
