@@ -18,14 +18,13 @@ const Admin = () => {
     <Fragment>
       <h1 className={styles.admin_h2}>Admin</h1>
       <section>
-        <h4 className={styles.admin_h3}>Update Merchandise</h4>
+        <h4 className={styles.admin_h3}>Merchandise</h4>
         <AdminMerch />
-        <h4 className={styles.admin_h3}>Add Merch</h4>
         <AddMerchs />
       </section>
       <hr></hr>
       <section>
-        <h4 className={styles.admin_h3}>Update Pairings</h4>
+        <h4 className={styles.admin_h3}>Pairings</h4>
         <AdminPairs />
         <h4 className={styles.admin_h3}>Add a Pairing</h4>
         <AddPairings />

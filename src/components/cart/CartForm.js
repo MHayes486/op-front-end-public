@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 import classes from "./Cart.module.css";
 import styles from "../UI/SignUp.module.css";
+import styling from "../../pages/styles/Home.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -60,12 +61,15 @@ function CartForm(props) {
     resetemailAddress();
     resetdeliveryAddress();
   };
-
+  
   return (
     <form className={styles.form} onSubmit={submitHandler}>
+      <p className={styling.home_merch_h3}>Ship to:</p>
       <div className={classes.control}>
-        <label htmlFor="submittedname">Name:</label>
+        <label htmlFor="submittedname"></label>
         <input
+          className={styling.form_input}
+          placeholder="First and last name"
           type="text"
           value={nameValue}
           onChange={nameChangeHandler}
@@ -75,8 +79,10 @@ function CartForm(props) {
         {nameHasError && <p className="error-text">Please enter your name.</p>}
       </div>
       <div className={classes.control}>
-        <label htmlFor="submittedemailAddress">Email address</label>
+        <label htmlFor="submittedemailAddress"></label>
         <input
+          className={styling.form_input}
+          placeholder="Email address"
           type="text"
           value={emailAddressValue}
           onChange={emailAddressChangeHandler}
@@ -88,8 +94,10 @@ function CartForm(props) {
         )}
       </div>
       <div className={classes.control}>
-        <label htmlFor="submitteddeliveryAddress">Delivery Address</label>
+        <label htmlFor="submitteddeliveryAddress"></label>
         <input
+          className={styling.form_input}
+          placeholder="Delivery shipping address"
           type="text"
           value={deliveryAddressValue}
           onChange={deliveryAddressChangeHandler}
@@ -101,7 +109,7 @@ function CartForm(props) {
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styling.form_register_button} disabled={!formIsValid}>
           Place order
         </button>
       </div>

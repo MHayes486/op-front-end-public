@@ -15,35 +15,33 @@ export default function AdminEditPairs({ match }) {
   const { pairings, error, loading } = getpairingbyidstate;
 
   const editpairingstate = useSelector((state) => state.editPairingReducer)
-  const {editloading , editerror , editsuccess} = editpairingstate;
+  const { editloading, editerror, editsuccess } = editpairingstate;
 
   useEffect(() => {
 
-    if(pairings)
-    {
-        if(pairings._id===match.params.pairingsid)
-        {
-            setname(pairings.dishName)
-            setimage(pairings.image)
-        }
-        else{
-            dispatch(getPairingById(match.params.pairingsid));
-        }
-        
-    }
-    else{
+    if (pairings) {
+      if (pairings._id === match.params.pairingsid) {
+        setname(pairings.dishName)
+        setimage(pairings.image)
+      }
+      else {
         dispatch(getPairingById(match.params.pairingsid));
+      }
+
+    }
+    else {
+      dispatch(getPairingById(match.params.pairingsid));
     }
 
 
 
-  }, [pairings , dispatch]);
+  }, [pairings, dispatch]);
 
   function formHandler(e) {
     e.preventDefault();
 
     const editedpairing = {
-      _id : match.params.pairingisd,
+      _id: match.params.pairingisd,
       name,
       image
     };
@@ -53,14 +51,14 @@ export default function AdminEditPairs({ match }) {
 
   return (
     <div>
-    
-     
+      
+
 
       <div className="text-left shadow-lg p-3 mb-5 bg-white rounded">
-      <h1>Edit Pizza</h1>
+        <h1>Edit Pizza</h1>
         {loading && <Loading />}
         {error && <Error error="Something went wrong" />}
-        {editsuccess && (<Success success='Pizza details edited successfully'/>)}
+        {editsuccess && (<Success success='Pizza details edited successfully' />)}
         {editloading && (<Loading />)}
 
         <form onSubmit={formHandler}>

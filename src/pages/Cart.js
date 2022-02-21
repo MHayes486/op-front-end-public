@@ -6,6 +6,7 @@ import useHttp from "../hooks/use-http";
 import CartForm from "../components/cart/CartForm";
 import { useNavigate } from "react-router-dom";
 import { cartActions } from "../store/cart-slice";
+import styles from "./styles/Home.module.css"
 
 const Cart = () => {
   const { sendRequest, status } = useHttp(placeOrder);
@@ -57,8 +58,8 @@ const Cart = () => {
           />
         ))}
       </ul>
-      <div>
-        <span>
+      <div className={styles.home_merch_h6}>
+        <span >
           Total Cost: £{totalCost} ({totalQuant} items) || (£{avgCost} per
           item);
         </span>
@@ -68,8 +69,8 @@ const Cart = () => {
         </span>
       </div>
       <div></div>
-      <div>
-        Ship To:
+      <div >
+     
         <CartForm placeOrder={placeOrderHandler} />
       </div>
       {/* <form>
