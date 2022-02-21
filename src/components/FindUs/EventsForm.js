@@ -2,7 +2,7 @@ import useInput from "../../hooks/use-input";
 
 import classes from "./AddEvent.module.css";
 import styles from "../UI/SignUp.module.css";
-import styling from "../admin/Admin.module.css"
+import styling from "../admin/Admin.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -84,7 +84,7 @@ function EventsForm(props) {
           onBlur={eventAddressBlurHandler}
           id="submittedeventAddress"
         />
-        {eventAddressHasError && (
+        {!eventAddressHasError && (
           <p className="error-text">Please enter the location.</p>
         )}
       </div>

@@ -177,7 +177,7 @@ export async function deleteMerchandise(merchDeleteData) {
 }
 
 export async function addAEvent(eventData) {
-  const response = await fetch(`${OP_DOMAIN}/pairings`, {
+  const response = await fetch(`${OP_DOMAIN}/events`, {
     method: "POST",
     body: JSON.stringify(eventData),
     headers: {

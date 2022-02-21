@@ -12,7 +12,8 @@ function AddMerchs(props) {
   };
   useEffect(() => {
     if (status === "completed") {
-      navigate("/Merchs");
+      alert("Merch added");
+      navigate("/admin");
     }
   }, [status, navigate]);
 
