@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { addAPairing } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
 import PairingsForm from "./PairingsForm";
+import styling from "../../pages/styles/Home.module.css"
 
 function AddPairings(props) {
   const LoginValid = useSelector((state) => state.logInCheck.logedIn);
@@ -25,8 +26,8 @@ function AddPairings(props) {
 
   return (
     <Fragment>
-      <h1>Add Pairing</h1>
-      <p>The Pig is hungry. If you have a better idea, we're all ears...</p>
+      <h1 className={styling.home_merch_h3}>Know something we don't know?</h1>
+      <p className={styling.home_merch_h4}>The Pig is hungry. Do you have an idea that will help feed him?</p>
       <PairingsForm onAddPairing={addPairingHandler} />;
     </Fragment>
   );

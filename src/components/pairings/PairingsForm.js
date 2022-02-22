@@ -136,7 +136,7 @@ function PairingsForm(props) {
         )}
       </div>
       <div className="form-actions">
-        <button className="formButton" disabled={!formIsValid}>
+        <button className={styling.admin_form_button} disabled={!formIsValid}>
           Add a Pairing
         </button>
       </div>
