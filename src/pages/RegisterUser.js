@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { registerUser } from "../actions/userActions";
-import Error from "../components/Error";
-import Success from "../components/Success";
-import Loading from "../components/Loading";
 import styles from "./styles/Home.module.css";
 
 export default function RegisterUser() {
@@ -24,15 +21,10 @@ export default function RegisterUser() {
         email,
         password,
       };
-      console.log(user);
       dispatch(registerUser(user));
       navigate("/login");
     }
   }
-
-  const onClickNavHandler = () => {
-    navigate("/login");
-  };
 
   return (
     <div>
@@ -81,14 +73,14 @@ export default function RegisterUser() {
               }}
             />
             <button className={styles.form_register_button} onClick={register}>
-              {" "}REGISTER{" "}
+              {" "}
+              REGISTER{" "}
             </button>
             {/*    <button onClick={onClickNavHandler}>Login</button>  */}
-          
-            <div className={styles.home_merch_h6}>
-              <a href="/login" >Click here to login</a>
-            </div>
 
+            <div className={styles.home_merch_h6}>
+              <a href="/login">Click here to login</a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+
+import { useDispatch } from "react-redux";
 import { loginUser } from "../actions/userActions";
 import styles from "./styles/Home.module.css";
 
 export default function LoginUser() {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate();
+
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  // localStorage.setItem("merchUser", 1)
 
   useEffect(() => {
     if (localStorage.getItem("currentUser")) {
-      window.location.href = "/";
+      window.location.href = "/admin";
     }
   }, []);
-
-  const onClickHandler = () => {
-    navigate("/register");
-  };
 
   function login() {
     const user = {
@@ -61,11 +56,12 @@ export default function LoginUser() {
                 LOGIN{" "}
               </button>
               <br />
-              { /* <button onClick={onClickHandler}>Register a User</button> */}
+              {/* <button onClick={onClickHandler}>Register a User</button> */}
               <div className={styles.home_merch_h6}>
-
-                <a style={{ color: 'black' }} href='/register'> Click here to register </a>
-
+                <a style={{ color: "black" }} href="/register">
+                  {" "}
+                  Click here to register{" "}
+                </a>
               </div>
             </div>
           </div>
