@@ -60,7 +60,7 @@ function MerchsForm(props) {
       itemType: typeNameValue,
       itemName: itemNameValue,
       itemCost: costValue,
-      image: merchURLValue,
+      image: JSON.stringify(merchURLValue),
       isActive: true,
     });
 

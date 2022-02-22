@@ -39,6 +39,7 @@ function EventsForm(props) {
   if (eventNameIsValid && eventAddressValid) {
     formIsValid = true;
   }
+  const active = true;
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -51,7 +52,7 @@ function EventsForm(props) {
       eventName: eventNameValue,
       eventAddress: eventAddressValue,
       image: eventsURLValue,
-      isActive: true,
+      isActive: { active },
     });
 
     reseteventName();
