@@ -32,59 +32,32 @@ const AboutUs = () => {
               alt="Bottle of Hog Father"
             />
           </figure>
+
+          <article className={styles.about_pigstail_text}>
+            <h2 className={styles.about_heading2}>A PIG'S TAIL</h2>
+            <p className={styles.about_pg1}>
+              It all started in the naughties, when Andrew and Neil were
+              enjoying their home-made cider and hog's roast with friends...
+            </p>
+            <p className={styles.about_pg2}>
+              When our founder started dabbing with cider making in his garden
+              shed, he found that West Country Apples make great tasting cider.
+              Following this happy discovery, Orchard Pig arrived out of a
+              shared thrist for great tasting cider, great food and old spots,
+              The Original Orchard Pigs.
+            </p>
+          </article>
         </div>
       </section>
-
-      <article className={styles.about_pigstail_text}>
-        <h2 className={styles.about_heading2}>A PIG'S TAIL</h2>
-        <section className={styles.About_us_4}>
-          <div className={styles.about_col_left}>
-            <div className={styles.about_img3}>
-              <img
-                src="\images\backgrounds\About Page Image 1.jpg"
-                className={styles.about1}
-                alt="pics from backend"
-              />
-              <img
-                src="\images\backgrounds\About Page Image 2.jpg"
-                className={styles.about2}
-                alt="pics from backend"
-              />
-            </div>
-          </div>
-          <div className={styles.about_col_right}>
-            <h2 className={styles.about_heading2}>A PIG'S TAIL</h2>
-            <div className={styles.about_pigstail_text}>
-              <p className={styles.about_pg1}>
-                It all started in the naughties, when Andrew and Neil were
-                enjoying their home-made cider and hog's roast with friends...
-              </p>
-              <p className={styles.about_pg2}>
-                When our founder started dabbing with cider making in his garden
-                shed, he found that West Country Apples make great tasting
-                cider. Following this happy discovery, Orchard Pig arrived out
-                of a shared thrist for great tasting cider, great food and old
-                spots, The Original Orchard Pigs.
-              </p>
-            </div>
-          </div>
-        </section>
-      </article>
 
       <section className={styles.about_tear_image}>
-        <figure className={styles.about_img5} />
-      </section>
-
-      <section className={styles.About_us_5}>
-        <div className={styles.tear4}>
-          <div className={styles.about_img5}>
-            <img
-              src="\images\backgrounds\About Page Splash Image 2 Torn.jpg"
-              className={styles.about5}
-              alt="pics from backend"
-            />
-          </div>
-        </div>
+        <figure className={styles.about_img5}>
+          <img
+            src="\images\backgrounds\About Page Splash Image 2 Torn.jpg"
+            className={styles.about5}
+            alt="pics from backend"
+          />
+        </figure>
       </section>
 
       <section className={styles.About_us_6}>
