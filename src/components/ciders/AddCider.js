@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { addACider } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
@@ -10,11 +10,12 @@ function AddCiders(props) {
   const addCiderHandler = (ciderData) => {
     sendRequest(ciderData);
   };
-      useEffect(() => {
-        if (status === "completed") {
-          navigate("/ciders");
-        }
-      }, [status, navigate]);
+  useEffect(() => {
+    if (status === "completed") {
+      alert("Cider added");
+      navigate("/admin");
+    }
+  }, [status, navigate]);
 
   return <CidersForm onAddCider={addCiderHandler} />;
 }

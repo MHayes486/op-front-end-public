@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useInput from "../../hooks/use-input";
+import { useSelector } from "react-redux";
 
 import classes from "./AddPairings.module.css";
 import styles from "../UI/SignUp.module.css";
@@ -8,11 +9,11 @@ import styling from "../admin/Admin.module.css";
 const isNotEmpty = (value) => value.trim() !== "";
 
 function PairingsForm(props) {
-  const logedIn = localStorage.getItem("merchUser");
   const [selectedProduct, setSelectedProduct] = useState("Entire range");
+  const LoginValid = useSelector((state) => state.logInCheck.logedIn);
   let checkResult = false;
 
-  if (logedIn === 1) {
+  if (LoginValid) {
     checkResult = true;
   }
   const {
@@ -61,7 +62,7 @@ function PairingsForm(props) {
       pigProduct: selectedProduct,
       dishName: dishNameValue,
       ingredients: ingredientsValue,
-      isActive: JSON.stringify(checkResult),
+      isActive: checkResult,
       image: pairingsURLValue,
       // isActive: true,
     });

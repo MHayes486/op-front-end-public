@@ -2,7 +2,7 @@ import useInput from "../../hooks/use-input";
 
 import classes from "./AddMerchs.module.css";
 import styles from "../UI/SignUp.module.css";
-import styling from "../admin/Admin.module.css"
+import styling from "../admin/Admin.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -76,7 +76,6 @@ function MerchsForm(props) {
       <div className={classes.control}>
         <label htmlFor="submitteditemName">Merch Byline</label>
         <input
-          placeholder="Merch Byline"
           className={styling.admin_form_input}
           type="text"
           value={itemNameValue}
@@ -123,7 +122,7 @@ function MerchsForm(props) {
           onBlur={merchURLBlurHandler}
           id="imgURL"
         />
-        {merchURLIsValid && (
+        {!merchURLIsValid && (
           <p className="error-text">
             Image URL is invalid, put n/a for no image
           </p>

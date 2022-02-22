@@ -2,7 +2,7 @@ import useInput from "../../hooks/use-input";
 
 import classes from "./AddCider.module.css";
 import styles from "../UI/SignUp.module.css";
-import styling from "../admin/Admin.module.css"
+import styling from "../admin/Admin.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
@@ -123,7 +123,7 @@ function CidersForm(props) {
           onBlur={ciderURLBlurHandler}
           id="imgURL"
         />
-        {ciderURLIsValid && (
+        {!ciderURLIsValid && (
           <p className="error-text">
             Image URL is invalid, put n/a for no image
           </p>

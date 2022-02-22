@@ -1,4 +1,5 @@
 import React, { useEffect, Fragment } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addAPairing } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
@@ -6,15 +7,20 @@ import PairingsForm from "./PairingsForm";
 import styling from "../../pages/styles/Home.module.css"
 
 function AddPairings(props) {
+  const LoginValid = useSelector((state) => state.logInCheck.logedIn);
   const { sendRequest, status } = useHttp(addAPairing);
   const navigate = useNavigate();
   const addPairingHandler = (pairingData) => {
-    console.log(pairingData);
     sendRequest(pairingData);
   };
   useEffect(() => {
     if (status === "completed") {
-      navigate("/pairings");
+      if (LoginValid) {
+        navigate("/admin");
+        alert("Pairings added");
+      } else {
+        navigate("/pairings");
+      }
     }
   }, [status, navigate]);
 
