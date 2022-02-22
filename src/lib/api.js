@@ -2,6 +2,8 @@
 //Code modifed from that source
 
 const OP_DOMAIN = "https://dig33-apricot-backend.herokuapp.com";
+//Location for local storage only
+// const OP_DOMAIN = "http://localhost:8000/";
 
 export async function getAllMerch() {
   const response = await fetch(`${OP_DOMAIN}/merchandise`);
