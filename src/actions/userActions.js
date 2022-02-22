@@ -37,8 +37,9 @@ export const loginUser = (user) => async (dispatch) => {
 
 export const logoutUser = () => (dispatch) => {
   const dispatcha = useDispatch();
-  localStorage.removeItem("currentUser");
-  localStorage.removeItem("merchUser");
+  localStorage.clear();
+  // localStorage.removeItem("currentUser");
+  // localStorage.removeItem("merchUser");
   dispatcha(logInCheckActions.logout());
   window.location.reload(false);
   window.location.href = "login";
